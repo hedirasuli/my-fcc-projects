@@ -1,0 +1,138 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Experience Survey</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">User Feedback Survey</h1>
+        <p id="description">Thank you for helping us improve our services. We value your input!</p>
+    </header>
+    
+    <form id="survey-form">
+        <!-- Name Field -->
+        <div>
+            <label id="name-label" for="name">Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="e.g., Jane Doe"
+                required
+            >
+        </div>
+
+        <!-- Email Field -->
+        <div>
+            <label id="email-label" for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="e.g., jane.doe@example.com"
+                required
+            >
+        </div>
+
+        <!-- Number Field -->
+        <div>
+            <label id="number-label" for="number">Age</label>
+            <input
+                type="number"
+                id="number"
+                name="number"
+                placeholder="e.g., 25"
+                min="18"
+                max="99"
+            >
+        </div>
+
+        <!-- Dropdown -->
+        <div>
+            <label for="dropdown">How did you hear about us?</label>
+            <div>
+                <select id="dropdown" name="source">
+                    <option value="">(Select an option)</option>
+                    <option value="social-media">Social Media</option>
+                    <option value="friend-referral">Friend Referral</option>
+                    <option value="online-search">Online Search</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Radio Buttons -->
+        <fieldset>
+            <legend>How would you describe your experience?</legend>
+            <div>
+                <div>
+                    <input type="radio" id="experience-excellent" name="user-experience" value="excellent" required>
+                    <label for="experience-excellent">Excellent</label>
+                </div>
+                <div>
+                    <input type="radio" id="experience-good" name="user-experience" value="good" required>
+                    <label for="experience-good">Good</label>
+                </div>
+                <div>
+                    <input type="radio" id="experience-fair" name="user-experience" value="fair" required>
+                    <label for="experience-fair">Fair</label>
+                </div>
+                <div>
+                    <input type="radio" id="experience-poor" name="user-experience" value="poor" required>
+                    <label for="experience-poor">Poor</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Checkboxes -->
+        <fieldset>
+            <legend>What features would you like to see improved? (Check all that apply)</legend>
+            <div>
+                <div>
+                    <input type="checkbox" id="improve-ui" name="improvements" value="ui-design">
+                    <label for="improve-ui">UI/UX Design</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="improve-performance" name="improvements" value="performance">
+                    <label for="improve-performance">Performance</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="improve-features" name="improvements" value="more-features">
+                    <label for="improve-features">More features</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="improve-support" name="improvements" value="customer-support">
+                    <label for="improve-support">Customer support</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Textarea -->
+        <div>
+            <label for="comments">Any additional comments?</label>
+            <textarea
+                id="comments"
+                name="comments"
+                rows="4"
+                placeholder="Share your thoughts with us..."
+            ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button
+            type="submit"
+            id="submit"
+        >
+            Submit Feedback
+        </button>
+    </form>
+</body>
+</html>
+
+
+** end of index.html **
+
