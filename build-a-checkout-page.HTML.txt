@@ -1,0 +1,44 @@
+** start of index.html **
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+</head>
+<body>
+
+    <h1>Checkout</h1>
+
+    <section>
+        <h2>Your Cart</h2>
+        <img src="https://cdn.freecodecamp.org/curriculum/labs/cube.jpg" alt="A floating blue geometric cube.">
+    </section>
+
+    <section>
+        <h2>Payment Information</h2>
+        <form>
+            <label for="card-name">
+                Cardholder Name:
+                <span aria-hidden="true">*</span>
+            </label>
+            <input type="text" id="card-name" name="card-name" required>
+
+            <label for="card-number">
+                Card Number:
+                <span aria-hidden="true">*</span>
+            </label>
+            <input type="text" id="card-number" name="card-number" required aria-describedby="card-number-help">
+            <p id="card-number-help">Please enter a valid 16-digit card number.</p>
+
+            <button type="submit">Submit Payment</button>
+        </form>
+    </section>
+
+</body>
+</html>
+
+
+** end of index.html **
+
