@@ -1,0 +1,85 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Styled To-Do List</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <ul class="todo-list">
+
+        <li>
+            <input type="checkbox" id="like-video">
+            <label for="like-video">Like this video</label>
+            <ul class="sub-item">
+                <li>
+                    <a class="sub-item-link" href="https://www.example.com/video-link" target="_blank">Link to video</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <input type="checkbox" id="subscribe">
+            <label for="subscribe">Subscribe to the channel</label>
+            <ul class="sub-item">
+                <li>
+                    <a class="sub-item-link" href="https://www.example.com/subscribe-link" target="_blank">Link to subscribe</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <input type="checkbox" id="visit-site">
+            <label for="visit-site">Visit the website</label>
+            <ul class="sub-item">
+                <li>
+                    <a class="sub-item-link" href="https://www.example.com/site-link" target="_blank">Visit site</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <input type="checkbox" id="linkedin">
+            <label for="linkedin">Connect on LinkedIn</label>
+            <ul class="sub-item">
+                <li>
+                    <a class="sub-item-link" href="https://www.example.com/linkedin-link" target="_blank">Link to LinkedIn</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+body {
+    background-color: green;
+}
+a {
+    text-decoration: none;
+    color: pink;
+}
+a:visited {
+    color: salmon;
+}
+a:hover {
+    color: orange;
+}
+a:focus {
+    outline: 1px solid red;
+}
+a:active {
+    color: purple;
+}
+
+
+** end of styles.css **
+
