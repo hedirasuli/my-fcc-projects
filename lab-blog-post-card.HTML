@@ -1,0 +1,71 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="blog-post-card">
+        <img class="post-img" alt="A cover image showing code on a monitor"
+        src="https://cdn.freecodecamp.org/curriculum/labs/cover-photo.jpg">
+        
+        <div class="post-content">
+            <h2 class="post-title">The Latest in Web Technology</h2>
+            <p class="post-excerpt">Discover new frameworks and essential development techniques that are shaping the web in the coming year.</p>
+            <a class="read-more" href="#">Read More</a>
+        </div>
+    </div>
+</body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+.blog-post-card {
+    background-color: white;
+    border-radius: 5px;
+    width: 280px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.post-img {
+    width: 100%;
+    border-bottom: 2px solid black; 
+}
+
+.post-content {
+    padding: 10px; 
+}
+
+.post-title {
+    color: #444;
+    margin: 8px 0;
+}
+
+.post-excerpt {
+    color: #777;
+    margin: 5px 0 10px 0; 
+}
+
+.read-more {
+    color: white;
+    background-color: #555;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 6px 12px; 
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.read-more:hover {
+    background-color: #333;
+}
+
+** end of styles.css **
+
