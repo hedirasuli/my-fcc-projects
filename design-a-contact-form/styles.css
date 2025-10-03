@@ -1,0 +1,45 @@
+body{
+background: linear-gradient(45deg, #33ccff, #99ffcc);
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: Arial, sens-serif;
+}
+
+
+.form-container{
+background-color: white ;
+border-radius: 10px;
+padding: 10px;
+width: 300px;
+text-align: center;
+}
+
+label{
+color: #555;
+display: block;
+margin: 10px 0 5px;
+}
+input, textarea{
+width: 100%; 
+padding: 10px;
+box-sizing: border-box;
+margin-bottom: 10px;
+border: 1px solid #ddd;
+resize: vertical;
+}
+button{
+Background: #4caf50;
+color: white; 
+Font-size: 1em;
+padding: 10px 15px;
+cursor: pointer;
+border-radius: 5px;
+border: none;
+}
+button:hover{
+background-color: #45a049;
+}
+
+
