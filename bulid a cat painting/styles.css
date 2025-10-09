@@ -75,7 +75,8 @@ body {
 .cat-left-eye {
   position: absolute;
   top: 54px;
-  left: 39rem: rotate(25deg);
+  left: 39px;
+  transform: rotate(25deg);
   border-radius: 60%;
   width: 30px;
   height: 40px;
