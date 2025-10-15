@@ -1,0 +1,147 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Painting</title>
+  <link rel="stylesheet" href="styles.css">  
+</head>
+<body>
+<div id="house">
+<div id="roof"></div>
+<div id="chimney"></div>
+<div id="window-1"></div>
+<div id="window-2"></div>
+<div id="door">
+  <div id="door-handle"></div>
+   <div id="welcome-mat">WELCOME</div>
+</div>
+</div>
+</body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+body{
+background: linear-gradient(to bottom,skyblue 50% ,  olivedrab 50%);
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+margin: 0;
+}
+
+#house{
+position: relative;
+width: 500px;
+height: 400px;
+background-color: lightsalmon;
+border: 2px solid black;
+
+
+}
+
+#house > div{
+position: absolute;  
+}
+
+
+#roof{
+background-color: brown;
+width: 500px;
+height: 120px;
+border: 1px solid black;
+background: repeating-linear-gradient(45deg,
+#b22222 0px,
+#b22222 10px,
+#d2691e 10px,
+#d2691e 20px
+);
+top: 0;
+left: 0;
+}
+
+#chimney {
+width: 60px;
+height: 190px;
+top: -190px;
+border: 1px solid black;
+ background: repeating-linear-gradient(
+        to bottom,
+        #999 0px,
+        #999 5px,
+        lightgray 5px,
+        lightgray 15px);
+
+left: 20px;
+z-index: -1; 
+}
+
+
+#window-1{
+background-color: gold;
+width: 110px;
+height: 110px;
+border: 2px solid black;
+top: 130px;
+left: 60px;
+}
+
+#window-2{
+background-color: gold;
+width: 110px;
+height: 110px;
+border: 2px solid black;
+top: 130px;
+right: 60px;
+
+}
+
+
+#door {
+    width: 100px;
+    height: 130px;
+    border: 2px solid darkred;
+    background-color: skyblue;
+    
+    /* Test 38: Door at the bottom */
+    bottom: 0; 
+    
+    /* Test 39 FIX: Use left/right AND position it within borders (centering) */
+    left: 50%; /* Sets the left edge of the door to the center of the house (250px) */
+    transform: translateX(-50%); /* Shifts the door back by half its own width (50px) to truly center it */
+}
+#door-handle{
+width:15px;
+height:15px;
+border-radius:50%;
+background-color: black;
+position: absolute;
+top: 50%;
+left: 75%;
+transform: translate(-50%, -50%);
+}
+#welcome-mat{
+position: absolute;
+width:120px;
+height:30px;
+bottom: -30px;
+left:-10px;
+background-color: pink;
+border-radius: 5px;
+color: white;
+font-size: 14px;
+text-align: center;
+line-height: 30px;
+
+}
+
+
+
+
+** end of styles.css **
+

@@ -1,0 +1,67 @@
+
+/* Base Styles */
+span {
+  display: inline-block;
+}
+
+/* Table row backgrounds */
+tr[class="read"] {
+  background-image: linear-gradient(to right, #e8f5e8, #d4edda);
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(to right, #fff9e6, #fff3cd);
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(to right, #e6f2ff, #cce7ff);
+}
+
+/* Status styles */
+tr[class="to-read"] span[class="status"] {
+  border: 2px solid #ffc107;
+  background-image: linear-gradient(to bottom, #fff3cd, #ffeaa7);
+}
+
+tr[class="read"] span[class="status"] {
+  border: 2px solid #28a745;
+  background-image: linear-gradient(to bottom, #d4edda, #c3e6cb);
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 2px solid #007bff;
+  background-image: linear-gradient(to bottom, #cce7ff, #b3d9ff);
+}
+
+/* Common styles for status and rate */
+span[class="status"],
+span[class^="rate"] {
+  height: 25px;
+  width: 100px;
+  padding: 4px;
+}
+
+/* Rate stars */
+span[class^="rate"] > span {
+  border: 1px solid #bdc3c7;
+  border-radius: 50%;
+  margin: 2px;
+  height: 15px;
+  width: 15px;
+  background-color: #ecf0f1;
+}
+
+/* Fixed rating styles - using ~= for exact word match */
+span[class~="one"] span:first-child {
+  background-image: linear-gradient(to bottom, #ffd700, #ffa500);
+}
+
+span[class~="two"] span:first-child,
+span[class~="two"] span:nth-child(2) {
+  background-image: linear-gradient(to bottom, #ffd700, #ffa500);
+}
+
+span[class~="three"] span {
+  background-image: linear-gradient(to bottom, #ffd700, #ffa500);
+}
+
