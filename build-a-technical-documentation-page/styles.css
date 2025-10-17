@@ -1,0 +1,79 @@
+
+** start of styles.css **
+
+#navbar{
+position: fixed;
+top: 0;
+left: 0;
+width: 300px;
+height: 100%;
+border-right:  3px solid #333;
+background-color: #f9f9f9;
+padding: 10px;
+}
+
+#navber headr{
+font-size:1.em;
+font-weight: bold;
+text-align: center;
+padding: 15px;
+margin-bottom: 5px;
+}
+
+.nav-link{
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+  color: #4a4a4a;
+  transition: background-color 0.3s;
+  
+}
+
+.nav-link:hover{
+  background-color: #e0e0e0;
+}
+
+#main-doc{
+margin-left: 310px;
+padding: 20px;
+font-family: 'open Sans', Arial, sans-serif;
+}
+
+#main-doc p{
+line-height: 1.5;
+margin: 15px 0;
+}
+
+#main-doc code{
+display: block;
+text-align: left;
+white-space: pre-line;
+padding: 15px;
+margin: 10px;
+border-radius: 5px;
+background-color: #f7f7f7;
+border: 1px solid #ddd;
+font-family: monospace;
+}
+
+
+@media (max-width: 600px){
+#navbar{
+position: relative;
+width: 100%;
+height: auto;
+}
+
+#main-doc{
+margin-left: 0;
+margin-top: 10px;
+}
+
+
+}
+
+
+
+** end of styles.css **
+
