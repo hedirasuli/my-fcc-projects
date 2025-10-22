@@ -1,0 +1,82 @@
+.newspaper-layout{
+    display: grid;
+    gap: 10px;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    grid-template-rows: auto 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "title title title"
+    "feature-article  feature-article  cover-image"
+    "secondary-article  secondary-article  cover-image"
+    "small-article1 small-article2 small-article3";
+     
+}
+body{
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.title{
+    grid-area: title;
+    text-align: center;
+}
+ .figure-article{
+    grid-area: cover-image;
+    
+}
+.cover-image{
+    grid-area: cover-image;
+}
+small-article{
+    grid-area: small;
+}
+.cover-image img{
+    max-width: 100%;
+    height: auto;
+}
+.small-article1{
+    grid-area: small-article1;
+    background-color: aqua;
+}
+.small-article2{
+    grid-area: small-article2;
+    background-color: aqua;
+}
+.small-article3{
+    grid-area: small-article3;
+    background-color: aqua;
+}
+.feature-article{
+    grid-area: feature-article;
+    background-color: beige;
+
+}.secondary-article{
+    grid-area: secondary-article;
+    background-color: beige;
+}
+
+.feature-article, .secondary-article, .small-article1, .small-article2, .small-article3{
+    padding: 10px;
+    border: 1px solid #000;
+}
+.feature-article h2, .secondary-article h2, .small-article1 h2, .small-article2 h2, .small-article3 h2{
+    margin-top: 0;
+}
+.feature-article p, .secondary-article p, .small-article1 p, .small-article2 p, .small-article3 p{
+    text-align: justify;
+}
+@media (max-width: 600px) {
+    .newspaperlayout{
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-columns:1fr; 
+        grid-template-areas: 
+        "title"
+        "feature-article"
+        "secondary-article"
+        "cover-image"
+        "small-article1"
+        "small-article2"
+        "small-article3";
+    }
+}
