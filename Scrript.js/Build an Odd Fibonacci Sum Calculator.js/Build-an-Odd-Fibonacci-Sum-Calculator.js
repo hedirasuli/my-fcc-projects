@@ -1,7 +1,7 @@
 /**
 
- * @param {number} num - عدد صحیح مثبتی که به عنوان حد بالایی در نظر گرفته می‌شود.
- * @returns {number} مجموع اعداد فرد فیبوناچی در محدوده.
+ * @param {number} num 
+ * @returns {number} 
  */
 function sumFibs(num) {
    
