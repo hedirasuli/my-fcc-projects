@@ -1,0 +1,29 @@
+
+.favorite-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ccc;
+    border: none;
+    background: none;
+}
+
+
+.filled { 
+    color: red; 
+    font-weight: bold;
+}
+
+.item-list {
+    list-style: none;
+    padding: 0;
+    font-family: Tahoma, sans-serif;
+    direction: rtl;
+}
+
+.item-list li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
