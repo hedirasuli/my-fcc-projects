@@ -1,0 +1,37 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: aqua;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.counter-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: beige;
+    border: 1px solid #333;
+    border-radius: 8px;
+    width: fit-content;
+}
+
+textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+p#char-count {
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.char-limit-reached {
+    color: red;
+    font-weight: bold;
+}
