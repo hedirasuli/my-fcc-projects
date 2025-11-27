@@ -28,10 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
     bodyElement.classList.remove('theme-light', 'theme-dark');
     bodyElement.classList.add(`theme-${themeName}`);
 
-    // Update status message
+    
     themeStatus.textContent = themeMessage;
 
-    // Close dropdown after selection
+   
     themeDropdown.setAttribute('hidden', '');
     themeSwitcherButton.setAttribute('aria-expanded', 'false');
   }
