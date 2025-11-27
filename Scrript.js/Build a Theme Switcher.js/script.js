@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function switchTheme(themeName, themeMessage) {
-    // Only remove theme classes, not everything
+    
     bodyElement.classList.remove('theme-light', 'theme-dark');
     bodyElement.classList.add(`theme-${themeName}`);
 
