@@ -1,0 +1,64 @@
+/* Base body styles */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  transition: background 0.3s, color 0.3s;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Theme styles */
+body.theme-light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.theme-dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Theme switcher container */
+.theme-switcher-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Button styles */
+#theme-switcher-button {
+  background: none;
+  border: 2px solid currentColor;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#theme-switcher-button:hover,
+#theme-switcher-button:focus {
+  background-color: rgba(0,0,0,0.1);
+  outline: none;
+}
+
+/* Status message */
+#theme-status {
+  text-align: center;
+  min-height: 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#theme-dropdown li {
+  cursor: pointer; 
+  font-size: 1.1rem; 
+  padding: 10px 20px; 
+  list-style-type: none; 
+}
+
+#theme-dropdown li:hover {
+  background-color: rgba(128, 128, 128, 0.3);
+}
