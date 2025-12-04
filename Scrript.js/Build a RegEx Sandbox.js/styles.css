@@ -1,0 +1,148 @@
+/*
+ * Regex Sandbox Stylesheet
+ * Theme: Light, Bright, and Professional
+ * Focus: Improved layout using Flexbox and a vibrant color palette.
+ */
+
+/* =================================
+ * 1. Global Setup and Typography
+ * ================================= */
+
+body {
+    /* Main Background: Very light, calming gray */
+    background-color: #f0f4f8; 
+    
+    /* Center the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    
+    /* Font: Clean and modern sans-serif */
+    font-family: Arial, sans-serif; 
+    /* Main Text Color: Dark gray for excellent readability */
+    color: #37474f; 
+}
+
+h1 {
+    /* Accent Color for Title: Rich Purple */
+    color: #7e57c2; 
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* =================================
+ * 2. Container and Layout Fixes
+ * ================================= */
+
+.container {
+    /* Central Card: Pure White */
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 15px;
+    /* Soft shadow for depth */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+    width: 90%;
+    max-width: 650px; /* Appropriate width for a sandbox tool */
+    
+    /* Layout Fix: Arrange sections vertically */
+    display: flex;
+    flex-direction: column; 
+    gap: 25px; /* Spacing between major sections (input groups) */
+    box-sizing: border-box;
+}
+
+/* Grouping for Label + Input/Result */
+.input-group {
+    display: flex;
+    flex-direction: column; 
+    gap: 8px; /* Spacing between label and input field */
+    padding: 0; 
+    background-color: transparent; 
+}
+
+label {
+    display: block;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: #42a5f5; /* Light Blue for primary labels */
+}
+
+/* =================================
+ * 3. Input Fields and Controls
+ * ================================= */
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 12px;
+    /* Gentle border */
+    border: 1px solid #cfd8dc; 
+    border-radius: 6px;
+    background-color: #ffffff; 
+    color: #37474f;
+    font-family: inherit;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* Flags Checkboxes Layout */
+.flags-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.flags-group label {
+    display: inline-block;
+    color: #37474f; /* Darker text for checkbox labels */
+    font-weight: normal;
+}
+
+/* Test Button (Accent Color: Bright Blue) */
+#test-btn {
+    background-color: #42a5f5; 
+    color: #ffffff; 
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#test-btn:hover {
+    background-color: #26a69a; /* Transition to a Teal/Green on hover */
+}
+
+/* =================================
+ * 4. Output and Highlight Styles
+ * ================================= */
+
+/* Result List and Highlight Display Container */
+#result, #highlight-display {
+    padding: 15px;
+    /* Very light blue background for output area */
+    background-color: #e0f7fa; 
+    border: 1px solid #b2ebf2;
+    border-radius: 6px;
+    min-height: 30px;
+    font-size: 1em;
+    /* Ensure long strings wrap correctly */
+    word-wrap: break-word; 
+}
+
+/* Highlight Style (Yellow/Gold) */
+.highlight {
+    /* Bright yellow/gold for high contrast highlight */
+    background-color: #ffeb3b; 
+    color: #37474f; /* Dark text on bright highlight */
+    padding: 1px 3px;
+    border-radius: 3px;
+    font-weight: bold;
+}
