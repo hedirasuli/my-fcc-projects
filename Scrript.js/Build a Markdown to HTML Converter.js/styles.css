@@ -1,0 +1,141 @@
+/**
+ * @fileoverview Stylesheet for the Markdown to HTML Converter.
+ * Implements an improved light violet theme with a centered, three-column layout
+ * ensuring adequate sizing for all output areas.
+ */
+
+/* 1. Global Reset and Body Styles */
+body {
+    /* Background: Slightly darker and richer Light Violet/Lavender */
+    background-color: #d8cde8; /* Light Periwinkle/Lavender */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all content horizontally */
+    min-height: 100vh;
+}
+
+/* 2. Main Title and Subheadings */
+h1 {
+    color: #4a148c; /* Dark Purple for strong contrast */
+    text-align: center;
+    margin-bottom: 40px; 
+    font-size: 2.5em;
+    font-weight: 700;
+    border-bottom: 3px solid #9c7aa6; /* Underline for emphasis */
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #6a1b9a; /* Medium Dark Violet */
+    /* Alignment changed to Left for better flow inside columns */
+    text-align: left; 
+    margin-top: 0; 
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+/* 3. Main Container Layout (Three Columns) */
+.container-wrapper {
+    /* The main wrapper to hold the three columns */
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    max-width: 1300px; /* Increased max width for more space */
+    width: 100%;
+}
+
+/* 4. Column Styles (Input, Raw Output, Preview) - CRITICAL FIX FOR SIZE */
+.column {
+    flex: 1; /* Ensures equal width distribution */
+    display: flex;
+    flex-direction: column; /* Allows content (h2 and output area) to stack */
+    padding: 15px;
+    background-color: #ffffff; /* Clean White for output areas */
+    border: 1px solid #c9c3e6;
+    border-radius: 8px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+    min-width: 300px; 
+}
+
+/* 5. Input and Raw Output Styles - Ensure they fill the available column height */
+#markdown-input {
+    width: 100%;
+    /* Fixed height for input area */
+    height: 350px; 
+    padding: 10px;
+    border: 2px solid #9c7aa6; 
+    border-radius: 4px;
+    resize: vertical; 
+    font-family: 'Consolas', 'Courier New', monospace; 
+    font-size: 14px;
+}
+
+/* Common style for the two output containers (Raw HTML and Preview) */
+#html-output, #preview {
+    /* CRITICAL FIX: Ensure output boxes fill remaining height of the column */
+    flex-grow: 1; 
+    min-height: 350px; /* Set a minimum height to ensure visibility */
+    padding: 15px;
+    overflow: auto; 
+    border-radius: 4px;
+}
+
+#html-output {
+    background-color: #f5f5ff; /* Very light blue-violet for code box */
+    border: 1px solid #e0e0e0;
+    white-space: pre-wrap; 
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 13px;
+    color: #4b4b4b;
+}
+
+#preview {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    line-height: 1.6;
+}
+
+/* 7. Styles for converted Markdown elements inside #preview */
+#preview h1, #preview h2, #preview h3 {
+    color: #4a148c;
+    margin-top: 20px;
+    border-bottom: 1px solid #d8cde8;
+    padding-bottom: 5px;
+}
+
+#preview blockquote {
+    border-left: 5px solid #6a1b9a;
+    margin: 10px 0;
+    padding: 10px 15px;
+    background-color: #f0f0ff; 
+    color: #4b4b4b;
+    font-style: italic;
+}
+
+#preview strong {
+    color: #4a148c; 
+}
+
+#preview em {
+    color: #8870ae; 
+}
+
+#preview img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+    border: 1px solid #c9c3e6;
+    border-radius: 4px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1000px) {
+    .container-wrapper {
+        flex-direction: column; /* Stack the columns vertically on small screens */
+    }
+}
