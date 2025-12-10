@@ -1,0 +1,189 @@
+/* ==================================== */
+/* 1. Global Styles and Typography */
+/* ==================================== */
+
+:root {
+    /* Define Color Variables */
+    --color-background: #0D1B2A; /* Deep Navy Blue */
+    --color-form-bg: #1B263B;    /* Dark Slate Blue (Good Contrast) */
+    --color-text-light: #E0FBFC; /* Off-White / Light Cyan for High Contrast */
+    --color-text-dark: #A9D6E5;  /* Secondary Light Blue */
+    --color-valid: #4CAF50;      /* Green */
+    --color-invalid: #FF6B6B;    /* Red/Salmon */
+    --color-border-default: #415A77; /* Neutral Border Color */
+
+    /* Define Font Family */
+    --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text-light);
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: var(--color-text-light);
+    font-size: 2.5em;
+    font-weight: 300; /* Lighter weight for a modern look */
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* ==================================== */
+/* 2. Form Container and Fieldsets */
+/* ==================================== */
+
+#form {
+    background-color: var(--color-form-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Deep shadow */
+    max-width: 700px;
+    width: 100%;
+}
+
+fieldset {
+    border: 1px solid var(--color-border-default);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: border-color 0.3s ease; /* For JS validation feedback */
+}
+
+legend {
+    color: var(--color-text-dark);
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+/* Separate the fieldsets visually */
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--color-border-default);
+    margin: 20px 0;
+}
+
+/* ==================================== */
+/* 3. Input, Labels, and Visual Feedback */
+/* ==================================== */
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--color-text-dark);
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-border-default);
+    border-radius: 6px;
+    background-color: var(--color-background); /* Darker input background */
+    color: var(--color-text-light);
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Focus State: Clear visual feedback when an input is selected */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-text-light); /* Highlight border on focus */
+    box-shadow: 0 0 0 2px rgba(169, 214, 229, 0.3); /* Subtle blue glow */
+}
+
+/* Placeholder Text Styling */
+::placeholder {
+    color: #415A77; /* Subtle, readable dark color */
+    opacity: 1; 
+}
+
+/* Styling for Input Groups (Checkboxes/Radio) */
+#complaints-group div,
+#solutions-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#complaints-group div {
+    margin-bottom: 10px;
+}
+
+#complaints-group label,
+#solutions-group label {
+    margin-left: 8px;
+    margin-right: 20px;
+    margin-bottom: 0; 
+}
+
+
+/* ==================================== */
+/* 4. Submission Button */
+/* ==================================== */
+
+#submit-btn {
+    background-color: var(--color-valid); /* Use the green validation color for the button */
+    color: var(--color-background);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#submit-btn:hover {
+    background-color: #5CB85C; /* Slightly lighter green on hover */
+}
+
+#submit-btn:active {
+    transform: translateY(1px);
+}
+
+#btn-container {
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* ==================================== */
+/* 5. JavaScript Validation Feedback (Mandatory Colors) */
+/* ==================================== */
+
+/* These classes/styles are controlled by the JavaScript setFieldBorder function */
+
+/* Invalid State (Empty/Incorrect Fields) - Must have proper color */
+/* The JS will apply inline style (e.g., border-color: red;) but this ensures contrast */
+input[style*="red"], 
+textarea[style*="red"], 
+fieldset[style*="red"] {
+    border: 1px solid var(--color-invalid) !important;
+    box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.4);
+}
+
+/* Valid State */
+input[style*="green"], 
+textarea[style*="green"], 
+fieldset[style*="green"] {
+    border: 1px solid var(--color-valid) !important;
+}
