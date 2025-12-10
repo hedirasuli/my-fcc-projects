@@ -1,0 +1,86 @@
+/*
+ * General Styles and Typography Reset
+ * Applies to the entire page (body)
+ */
+body {
+    /* Set the background to a medium dark green color */
+    background-color: #2E8B57; /* Sea Green - a good, medium dark green shade */
+    
+    /* Set a professional, modern, and common font stack */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Ensure no margins/padding are pushing content unexpectedly */
+    margin: 0;
+    padding: 20px;
+    
+    /* Set a default text color for readability against the dark background */
+    color: #f0f0f0; 
+}
+
+/*
+ * Main Heading Styling
+ */
+h1 {
+    text-align: center;
+    color: #f0f0f0; /* Light color for contrast */
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    /* Adding a subtle border for separation */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); 
+}
+
+/*
+ * Content Container Styling
+ * Centers the content block and gives it a distinct background
+ */
+.container {
+    /* Setting a fixed maximum width for better readability on large screens */
+    max-width: 800px;
+    
+    /* Center the container horizontally on the page */
+    margin: 0 auto;
+    
+    /* A subtle, light background to contrast the dark body background */
+    background-color: #f7f7f7; 
+    
+    /* Add padding inside the container */
+    padding: 25px;
+    
+    /* Rounded corners for a modern look */
+    border-radius: 10px;
+    
+    /* Light shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    
+    /* Darker text color inside the light container */
+    color: #333; 
+}
+
+/*
+ * Output DIV Styling
+ * Styles the individual date results
+ */
+.output-result {
+    /* Add some vertical space between output lines */
+    margin: 15px 0;
+    
+    /* Internal padding for the output box */
+    padding: 12px;
+    
+    /* Very subtle background for internal distinction */
+    background-color: #eaeaea; 
+    
+    /* Subtle border */
+    border-left: 5px solid #2E8B57; /* Use the main body color for a nice accent */
+    
+    /* Slightly smaller font size for data */
+    font-size: 1.05em;
+    
+    /* Ensuring text is not wrapped aggressively */
+    word-wrap: break-word;
+}
+
+/* Specific styling for the Long Format result to give it emphasis */
+#long-format-output {
+    font-weight: bold; /* Highlight the long format result */
+}
