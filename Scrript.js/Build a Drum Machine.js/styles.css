@@ -1,0 +1,79 @@
+/* General styling for the body */
+body {
+    background-color: #333;
+    color: #fff;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Styling for the main container */
+#drum-machine {
+    border: 5px solid #00ff00;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #222;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+/* Styling for the display element */
+#display {
+    background-color: #000;
+    color: #00ff00;
+    padding: 10px;
+    margin-bottom: 20px;
+    min-height: 1.2em; /* Ensure it stays consistent even when empty */
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    user-select: none; /* Prevent text selection */
+}
+
+/* Styling for the drum pad bank (container) */
+#pad-bank {
+    display: grid;
+    /* Create a 3x3 grid for the 9 pads */
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 10px;
+}
+
+/* Styling for each individual drum pad */
+.drum-pad {
+    background-color: #555;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: bold;
+    user-select: none;
+    transition: background-color 0.1s, transform 0.1s, box-shadow 0.1s;
+    border: 3px solid #777;
+    height: 60px; /* Uniform height for a better look */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hover and active state for visual feedback */
+.drum-pad:hover {
+    background-color: #666;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Class added by JavaScript when a pad is triggered */
+.drum-pad.active {
+    background-color: #00ff00; /* Bright green when active */
+    color: #000;
+    transform: scale(0.95); /* Slight scale down */
+    box-shadow: 0 0 15px #00ff00;
+}
+
+/* The audio elements are not meant to be visible */
+.clip {
+    display: none;
+}
