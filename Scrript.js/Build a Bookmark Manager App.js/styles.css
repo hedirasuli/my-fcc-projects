@@ -1,0 +1,120 @@
+/* --- Color Variables --- */
+:root {
+  /* Darker Background: Deep Teal/Emerald */
+  --bg-color: #004d40; 
+  /* Container Color: Soft White/Off-White for good contrast */
+  --container-color: #f0f8ff; 
+  /* Primary Font/Text Color: Darker Grey/Black for readability */
+  --font-color: #1e1e1e; 
+  /* Button Color (Default): Vibrant Purple */
+  --button-default-color: #6a5acd; 
+  /* Button Color (Hover/Active): Bright Yellow/Green */
+  --button-hover-color: #ffd700; 
+  /* Button Text Color */
+  --button-text-color: #ffffff; 
+  /* Button Text Color on Hover (for Yellow/Green) */
+  --button-text-color-hover: #1e1e1e; 
+  /* Accent Border Color */
+  --accent-color: #9370db; /* Medium Purple */
+}
+
+/* --- Global Reset & Typography --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Applying the darker background */
+  background-color: var(--bg-color); 
+  /* Professional, clean typography */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--font-color); /* Updated font color */
+  line-height: 1.6;
+  padding: 20px;
+  /* Setup for centering the container */
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  min-height: 100vh;
+}
+
+/* --- Container Styling (Centered) --- */
+.container {
+  /* Soft white container color */
+  background-color: var(--container-color); 
+  /* Center the container and give it a max width */
+  max-width: 450px; 
+  width: 100%;
+  margin-top: 50px; /* Space from the top */
+  padding: 30px;
+  border-radius: 12px;
+  /* Strong shadow for separation from dark background */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+  /* Accent border */
+  border: 3px solid var(--accent-color); 
+  text-align: center;
+}
+
+/* --- Heading Styles --- */
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 25px;
+  color: var(--button-default-color); /* Use purple accent color */
+}
+
+/* --- Form and Input Styles --- */
+label, select, input[type="text"] {
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  color: var(--font-color);
+}
+
+select, input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  color: #333;
+  margin-top: 5px;
+  background-color: #fff;
+}
+
+/* --- Button Styles with Hover Effect --- */
+.button-container {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px; 
+}
+
+button {
+  background-color: var(--button-default-color); /* Vibrant Purple */
+  color: var(--button-text-color); /* White text */
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+  flex-grow: 1;
+}
+
+/* --- Hover Effect (Yellow/Green Spectrum) --- */
+button:hover {
+  background-color: var(--button-hover-color); /* Bright Yellow/Gold */
+  color: var(--button-text-color-hover); /* Dark text on bright background */
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Hidden Class for JS Functionality --- */
+.hidden {
+  display: none;
+}
