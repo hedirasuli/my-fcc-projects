@@ -1,0 +1,111 @@
+/* --- CSS Variables for easy theme management --- */
+:root {
+  --bg-purple:    #D1C4E9;          /* Light Lavender Purple */
+  --container-bg: #e0f7fa;      /* Light Cyan/Blue-Green */
+  --primary-text: #2c3e50;      /* Dark Navy for readability */
+  --accent-color: #ff4081;      /* High contrast Pink/Red for buttons */
+  --accent-hover: #c60055;      /* Darker shade for hover effect */
+  --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* --- Global Styles --- */
+body {
+  background-color: var(--bg-purple);
+  font-family: var(--font-main);
+  color: var(--primary-text);
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+/* --- Layout Containers --- */
+#products-container, .cart-container {
+  background-color: var(--container-bg);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+  color: #4a148c; /* Deep Purple for headings */
+  font-weight: 700;
+  text-align: center;
+}
+
+p, span {
+  font-size: 1.1rem;
+}
+
+/* --- Dynamic Buttons --- */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: all 0.3s ease; /* Smooth transition for hover */
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* --- Hover & Interaction State --- */
+button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* --- Specific Button Styling --- */
+#clear-cart-btn {
+  background-color: #7b1fa2; /* Purple variant for contrast */
+  display: block;
+  margin: 20px auto;
+}
+
+#clear-cart-btn:hover {
+  background-color: #4a148c;
+}
+
+/* --- Products Grid Layout --- */
+#products-container {
+  display: flex; /* Activate Flexbox */
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  gap: 20px; /* Space between the cards */
+  justify-content: center; /* Centers the cards in the container */
+  background-color: var(--container-bg);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+/* --- Responsive Product Card --- */
+.product-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1 1 calc(25% - 20px); /* This logic creates the 4-column layout */
+  min-width: 250px; /* Prevents cards from getting too narrow */
+  display: flex;
+  flex-direction: column; /* Stacks info and button vertically inside the card */
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: scale(1.03); /* Subtle zoom effect on hover */
+}
+
+/* Typography alignment for cards */
+.product-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
