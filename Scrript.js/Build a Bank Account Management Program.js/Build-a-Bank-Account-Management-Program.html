@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="bank-card">
+        <h2>My Bank</h2>
+        <div class="balance-box">
+            <p id="balance-display">Current balance: $0</p>
+        </div>
+        <p id="message-log" class="msg">Welcome! Enter an amount.</p>
+        <input type="number" id="amount-input" placeholder="Amount...">
+        <div class="btn-group">
+            <button class="btn-deposit" onclick="handleDeposit()">Deposit</button>
+            <button class="btn-withdraw" onclick="handleWithdraw()">Withdraw</button>
+        </div>
+        <div class="history">
+            <p id="deposit-list">Deposits: </p>
+            <p id="withdraw-list">Withdrawals: </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
