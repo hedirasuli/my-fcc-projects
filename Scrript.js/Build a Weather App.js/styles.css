@@ -1,0 +1,110 @@
+/* Base Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Sky blue gradient background */
+  background: linear-gradient(135deg, #87ceeb, #a5f2ff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+main {
+  /* Card Container */
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  color: #0077b6;
+  margin-bottom: 1.5rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+select, button {
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+select {
+  border: 2px solid #ddd;
+  outline: none;
+}
+
+select:focus {
+  border-color: #0077b6;
+}
+
+/* Button Hover Effects */
+button {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00b4d8;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 119, 182, 0.3);
+}
+
+/* Weather Information Styling */
+#weather-display {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  animation: fadeIn 0.6s ease-out;
+}
+
+#location {
+  font-size: 1.6rem;
+  color: #222;
+}
+
+#weather-icon {
+  width: 80px;
+  height: 80px;
+  margin: 10px auto;
+}
+
+p {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+span {
+  font-weight: 600;
+  color: #0077b6;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
