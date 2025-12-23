@@ -1,0 +1,57 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.4s ease; 
+}
+
+#color-picker-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+
+.color-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#color-input {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 50%; 
+    cursor: pointer;
+    background: none;
+    transition: transform 0.2s ease;
+}
+
+#color-input:hover {
+    transform: scale(1.1); 
+}
+
+
+#color-input::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+#color-input::-webkit-color-swatch {
+    border: 5px solid white;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
