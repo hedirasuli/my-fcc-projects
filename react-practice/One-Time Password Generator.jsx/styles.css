@@ -1,0 +1,46 @@
+body {
+  background-color: #40E0D0; /* Turquoise */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  background-color: #f0fff0;/* Light Green */
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 350px;
+}
+
+#otp-display {
+  font-size: 1.5rem;
+  color: #2e8b57; /* Sea Green */
+  margin: 20px 0;
+  min-height: 40px;
+}
+
+#otp-timer {
+  height: 40px;
+  color: #ff69b4; /* Hot Pink for alerts */
+  font-weight: bold;
+}
+
+button {
+  background-color: #90ee90; /* Light Green Button */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+button:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+}
