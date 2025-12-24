@@ -1,0 +1,127 @@
+/* Modern UI Reset & Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); /* Vibrant heroic gradient */
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.form-wrap {
+  background-color: rgba(255, 255, 255, 0.98);
+  width: 100%;
+  max-width: 480px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+/* Typography */
+h2 {
+  color: #2d3436;
+  text-align: center;
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+p {
+  color: #636e72;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Form Layout */
+.section {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.column {
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2d3436;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 2px solid #dfe6e9;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #74b9ff;
+  box-shadow: 0 0 10px rgba(116, 185, 255, 0.2);
+}
+
+/* Checkbox Modern Look */
+.checkbox-group {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.checkbox-item {
+  flex-direction: row !important;
+  align-items: center;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.checkbox-item input {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+/* Button with Vibrant Gradient */
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(to right, #00b09b, #96c93d);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 176, 155, 0.4);
+}
+
+.submit-btn:disabled {
+  background: #dcdde1;
+  color: #7f8c8d;
+  cursor: not-allowed;
+}
