@@ -1,0 +1,70 @@
+/* Styling with Light Pink and Light Green Theme
+  Includes flexbox layout and modern typography.
+*/
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* Light Pink Background */
+  background-color: #ff00ff; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#search-container {
+  /* Light Green Container Background */
+  background: #7CFC00; 
+  width: 90%;
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#search-input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  border: 2px solid #dcdcdc;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#search-input:focus {
+  /* Highlighting the border with a darker green when typing */
+  border-color: #90ee90;
+}
+
+#results {
+  margin-top: 25px;
+  text-align: left;
+  max-height: 250px;
+  overflow-y: auto; /* Adds scrollbar if list is long */
+  border-top: 1px solid #e0e0e0;
+}
+
+.result-item {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+}
+
+.result-item:hover {
+  background-color: #e8f5e9;
+  cursor: pointer;
+}
+
+.no-results {
+  color: #888;
+  margin-top: 20px;
+  font-style: italic;
+}
