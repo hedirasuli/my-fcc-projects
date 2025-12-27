@@ -1,0 +1,67 @@
+/* Lettuce green background for the body */
+body {
+  background-color: #E2F3E1;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main container styling */
+.converter-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+}
+
+.converter-title {
+  color: #2d3436;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #636e72;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+input[type="number"], select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #f1f3f5;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Crucial for width alignment */
+  transition: border-color 0.3s ease;
+}
+
+/* Hover and Focus effect with contrast */
+input:focus, select:hover {
+  outline: none;
+  border-color: #8ac98a; /* Slightly darker lettuce green */
+}
+
+/* Result display area */
+.result-display {
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #2d3436;
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
