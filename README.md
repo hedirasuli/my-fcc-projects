@@ -34,7 +34,7 @@ I am an aspiring **Full-Stack Developer** currently immersed in the **FreeCodeCa
 ---
 
 ### 📫 Connect with me
-- **LinkedIn:** Hedi Rasuli](https://www.linkedin.com/in/hedi-rasuli-13105a3a8)
+- **LinkedIn:** [Hedi Rasuli](https://www.linkedin.com/in/hedi-rasuli-13105a3a8)
 - **Learning Journey:** Following the [FreeCodeCamp v9 Path](https://www.freecodecamp.org/learn/full-stack-developer-v9/)
 
 ---
