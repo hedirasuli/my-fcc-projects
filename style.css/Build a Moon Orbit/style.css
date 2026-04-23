@@ -1,65 +1,86 @@
-html{
+html {
     height: 100%;
 }
-body{
+
+body {
     width: 100vw;
     height: 100vh;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* Dark night sky background */
+    background: radial-gradient(circle at center, #1b2735 0%, #090a0f 100%);
+    overflow: hidden;
 }
-.space{
-    width: 200px;
-    height: 200px;
-    
+
+/* Creating stars using box-shadow */
+body::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    /* Creating multiple stars at random positions */
+    box-shadow:
+        10vw 20vh #fff, 25vw 50vh #fff, 35vw 10vh #fff,
+        50vw 80vh #fff, 65vw 30vh #fff, 80vw 60vh #fff,
+        90vw 15vh #fff, 15vw 85vh #fff, 75vw 5vh #fff,
+        40vw 45vh #ffffff88, 60vw 20vh #ffffffaa, 10vw 10vh #fff;
     border-radius: 50%;
+}
+
+.space {
+    width: 400px;
+    height: 400px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.earth{
+.earth {
     width: 100px;
     height: 100px;
-    background: blue;
+    /* Earth colors with a slight gradient */
+    background: radial-gradient(circle at 30% 30%, #2b82c9, #000033);
     border-radius: 50%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 20px rgba(0, 0, 255, 0.7);
+    z-index: 2;
+    box-shadow: 0 0 30px rgba(65, 105, 225, 0.4);
 }
 
-.orbit{
-    width: 200px;
-    height: 200px;
-    border: 2px dashed gray;
+.orbit {
+    width: 250px;
+    height: 250px;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: orbit 5s linear infinite;
+    /* Center the orbit container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: orbit-animation 8s linear infinite;
 }
 
-.moon{
+.moon {
     width: 30px;
     height: 30px;
-    background: lightgray;
+    background: radial-gradient(circle at 30% 30%, #d3d3d3, #707070);
     border-radius: 50%;
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0 0 10px rgba(200, 200, 200, 0.7);
+    /* Place the moon on the edge of the orbit */
+    top: -15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
-@keyframes orbit {
-    0% {
-        transform: rotate(0deg) translate(-50%, -50%);
+
+/* Keyframes for smooth orbital rotation */
+@keyframes orbit-animation {
+    from {
+        transform: rotate(0deg);
     }
-    100% {
-        transform: rotate(360deg) translate(-50%, -50%);
+
+    to {
+        transform: rotate(360deg);
     }
 }
