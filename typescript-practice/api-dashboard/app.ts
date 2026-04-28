@@ -1,4 +1,6 @@
-// Reuse our Interface
+// app.ts
+import { ApiClient } from './api-client.js'; // MUST have .js extension for browser
+
 interface Post {
     userId: number;
     id: number;
@@ -6,38 +8,28 @@ interface Post {
     body: string;
 }
 
-// Generic Fetcher (same as before)
-class ApiClient {
-    constructor(private baseUrl: string) {}
-
-    async fetchData<T>(path: string): Promise<T[]> {
-        const response = await fetch(`${this.baseUrl}${path}`);
-        return await response.json();
-    }
-}
-
-// New Class to handle UI Rendering
-class UIHandler {
-    static renderPosts(posts: Post[]) {
+class UI {
+    static display(posts: Post[]) {
         const container = document.getElementById('posts-container');
         if (!container) return;
 
-        container.innerHTML = posts.map(post => `
+        container.innerHTML = posts.map(p => `
             <div class="card">
-                <span class="user-tag">User #${post.userId}</span>
-                <h3>${post.title.slice(0, 30)}...</h3>
-                <p>${post.body.slice(0, 100)}...</p>
+                <span class="user-id">User #${p.userId}</span>
+                <h3>${p.title.slice(0, 30)}...</h3>
+                <p>${p.body.slice(0, 100)}...</p>
             </div>
         `).join('');
     }
 }
 
-// Execution
-const api = new ApiClient("https://jsonplaceholder.typicode.com");
+// Create the client for Posts
+const api = new ApiClient<Post>("https://jsonplaceholder.typicode.com");
 
-async function init() {
-    const data = await api.fetchData<Post>("/posts?_limit=12");
-    UIHandler.renderPosts(data);
+// Fetch and Render
+async function startApp() {
+    const data = await api.fetchData("/posts?_limit=12");
+    UI.display(data);
 }
 
-init();
+startApp();
