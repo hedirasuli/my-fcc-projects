@@ -1,0 +1,12 @@
+# Node modules
+node_modules/
+
+# TypeScript output
+dist/
+*.js
+*.map
+*.d.ts
+
+# OS specific files
+.DS_Store
+Thumbs.db
