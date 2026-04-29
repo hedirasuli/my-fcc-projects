@@ -10,3 +10,12 @@
    
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+
+.card p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #666;
+}
