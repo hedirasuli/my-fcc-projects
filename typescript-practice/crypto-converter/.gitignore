@@ -1,0 +1,6 @@
+# Ignore compiled javascript files
+dist/
+*.js
+
+# Ignore node modules
+node_modules/
