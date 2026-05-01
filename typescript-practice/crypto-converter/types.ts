@@ -4,8 +4,9 @@
 export interface ExchangeRateResponse {
     result: string;
     base_code: string;
-    conversion_rates: {
+    rates: {
         [key: string]: number; // Dynamic keys for currency symbols (e.g., USD, IRR)
+                              // Changed from conversion_rates to rates
     };
 }
 
