@@ -20,7 +20,8 @@ A real-time currency converter built with **TypeScript**, focusing on clean code
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/hedirasuli/crypto-converter.git
-````
+
+  ````
    ## 📦 Installation & Setup
 
 2. **Install dependencies**:
@@ -28,13 +29,14 @@ Ensure TypeScript is installed globally:
 
 ````Bash
 npm install -g typescript
-````
+
+    ````
 3. **Compile TypeScript**:
 Run the compiler to generate JavaScript files:
 
 ````Bash
 tsc
-````
+    ````
 4. **Run the project**:
 Open index.html using a local server (like Live Server in VS Code).
 
