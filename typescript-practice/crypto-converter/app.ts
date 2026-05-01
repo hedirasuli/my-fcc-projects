@@ -1,6 +1,6 @@
 // app.ts
 import {ApiClient} from './api-client.js';
-import {ExchangeRateResponse, CurrencyCode} from './types.js';
+import type {ExchangeRateResponse, CurrencyCode} from './types.js';
 
 // Elements from the DOM
 const amountInput = document.getElementById('amount') as HTMLInputElement;
@@ -26,7 +26,7 @@ async function convert() {
     const data = await api.getLatestRates("USD");
 
     if (data && data.conversion_rates) {
-        const rate = data.conversion_rates[targetCurrency];
+        const rate = data.conversion_rates[targetCurrency] ?? 0;
         let result = amount * rate;
 
         // Custom Logic: Adjusting for IRR (Market rate vs Official rate)
