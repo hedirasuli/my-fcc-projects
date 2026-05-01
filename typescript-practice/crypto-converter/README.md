@@ -30,13 +30,14 @@ Ensure TypeScript is installed globally:
 ````Bash
 npm install -g typescript
 
-    ````
+````
 3. **Compile TypeScript**:
 Run the compiler to generate JavaScript files:
 
 ````Bash
 tsc
-    ````
+````
+
 4. **Run the project**:
 Open index.html using a local server (like Live Server in VS Code).
 
