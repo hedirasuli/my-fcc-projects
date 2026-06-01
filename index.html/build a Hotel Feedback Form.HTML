@@ -30,10 +30,12 @@ type="email"
 name="email"
 size="20"
 />
+<!-- The age field is optional, but if filled out, it must be between 3 and 100 -->
 <label for="age">Age (optional):</label>
 <input type="number" name="age" id="age" min="3" max="100" />
 </fieldset>
 <fieldset>
+<!-- This fieldset is for the question about whether it was the customer's first time at the hotel -->
 <legend>Was this your first time at our hotel?</legend>
 <input id="yes-option" type="radio" name="hotel-stay" />
 <label for="yes-option">Yes</label>
