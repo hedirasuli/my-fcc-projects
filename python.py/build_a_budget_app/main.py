@@ -75,6 +75,7 @@ def create_spend_chart(categories):
     max_len = max(len(name) for name in names)
     names_padded = [name.ljust(max_len) for name in names]
     
+    # Add the category names vertically below the chart
     for i in range(max_len):
         chart += "     "
         for name in names_padded:
