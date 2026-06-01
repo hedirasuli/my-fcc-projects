@@ -1,3 +1,4 @@
+# Pin Extractor Implementation
 def pin_extractor(poems):
     secret_codes = []
     
