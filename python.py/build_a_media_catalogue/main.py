@@ -1,3 +1,4 @@
+# Media Catalogue Implementation
 class MediaError(Exception):
     """Custom exception for media-related errors, storing the problematic object."""
 
@@ -5,6 +6,7 @@ class MediaError(Exception):
         super().__init__(message)
         self.obj = obj
 
+# The MediaCatalogue class manages a collection of Movie and TVSeries instances, allowing for organized storage and retrieval.
 class Movie:
     """Represents a movie with validation for title, year, director, and duration."""
     
@@ -23,11 +25,12 @@ class Movie:
         self.year = year
         self.director = director
         self.duration = duration
-
+# The __str__ method provides a human-readable representation of the movie, including its title, year, duration, and director.
     def __str__(self):
         """Returns a formatted string representation of the movie."""
         return f'{self.title} ({self.year}) - {self.duration} min, {self.director}'
 
+# The TVSeries class extends Movie, adding attributes for seasons and total episodes, with additional validation.
 class TVSeries(Movie):
     """Represents a TV series, inheriting basic info from Movie and adding series-specific data."""
 
@@ -43,11 +46,12 @@ class TVSeries(Movie):
         
         self.seasons = seasons
         self.total_episodes = total_episodes
-
+    # The __str__ method provides a detailed representation of the TV series, including seasons and episodes, while still showing the basic movie information.
     def __str__(self):
         """Returns a detailed string representation including seasons and episodes."""
         return f'{self.title} ({self.year}) - {self.seasons} seasons, {self.total_episodes} episodes, {self.duration} min avg, {self.director}'
 
+# The MediaCatalogue class manages a collection of Movie and TVSeries instances, allowing for organized storage and retrieval.
 class MediaCatalogue:
     """Manages a collection of Movie and TVSeries instances with filtering capabilities."""
 
