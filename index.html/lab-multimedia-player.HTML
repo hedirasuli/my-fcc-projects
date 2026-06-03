@@ -1,34 +1,31 @@
-** start of index.html **
-
+<!-- This is a simple HTML page that serves as a multimedia player. It includes an audio player for the song "Sailing Away" and a video player that explains the map method in JavaScript. The page also contains a transcript section that provides a written explanation of the map method for users who may prefer reading over watching or listening. The structure is organized using semantic HTML elements to enhance accessibility and user experience. -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multimedia Player</title>
-</head>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Multimedia Player</title>
+    </head>
 
-<body>
-<h1>Multimedia Player</h1>
-<section><h2>Now Playing: Sailing Away</h2>
-<audio controls aria-label="audio for sailing away">
-  <source src="https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3" type="audio/mpeg">
-</audio>
-</section>
-<section><h2>What is a map method and how does it work?</h2>
-<video controls width="600" aria-label="What is a map method and how does it work?">
-  <source src="https://cdn.freecodecamp.org/curriculum/labs/What is the map method and how does it work.mp4" type="video/mp4">
-  <!-- Remaining code goes here -->  
-  <track src="fgsubtitles_en.vtt" kind="subtitles" srclang="en" label="English">
-</video>
-</section>
-<section> 
-  <h2>Transcript</h2>
-  <p>What is a map method and how does it work? The map method is a powerful and widely used function in JavaScript that operates on arrays. It's designed to create a new array by applying a given function to each element of the original array. This method does not modify the original array, but instead returns the new array containing the results of the function applied to each element.</p>
-</section>
-</body>
-
+          <body>
+              <!-- This is a multimedia player page that includes an audio player for the song "Sailing Away" and a video player that explains the map method in JavaScript. The page also contains a transcript section that provides a written explanation of the map method for users who may prefer reading over watching or listening. The structure is organized using semantic HTML elements to enhance accessibility and user experience. -->
+            <h1>Multimedia Player</h1>
+            <section><h2>Now Playing: Sailing Away</h2>
+                  <audio controls aria-label="audio for sailing away">
+                     <source src="https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3" type="audio/mpeg">
+                  </audio>
+              </section>
+              <section>
+                    <!-- The video player section includes an embedded video that explains the map method in JavaScript. The video is accompanied by a transcript section that provides a written explanation of the map method for users who may prefer reading over watching or listening. -->
+                    <h2>What is a map method and how does it work?</h2>
+                  <video controls width="600" aria-label="What is a map method and how does it work?">
+                      <source src="https://cdn.freecodecamp.org/curriculum/labs/What is the map method and how does it work.mp4" type="video/mp4">  
+                      <track src="fgsubtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+                  </video>
+              </section>
+            <section> 
+              <h2>Transcript</h2>
+              <p>What is a map method and how does it work? The map method is a powerful and widely used function in JavaScript that operates on arrays. It's designed to create a new array by applying a given function to each element of the original array. This method does not modify the original array, but instead returns the new array containing the results of the function applied to each element.</p>
+            </section>
+          </body>
 </html>
-
-** end of index.html **
-
