@@ -1,3 +1,4 @@
+<!-- This is the main HTML file for a personal portfolio website. It includes a navigation bar with links to different sections of the page, such as "Welcome", "Projects", and "Contact". The "My GitHub" link in the navigation bar opens the user's GitHub profile in a new tab. The page also contains sections for welcoming visitors, showcasing projects, and providing contact information. Each section is structured with appropriate headings and content to create a professional and organized portfolio. -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -17,42 +18,39 @@
         </li>
         </ul>
     </nav>
+    <!-- The "navbar" id is used to style the navigation bar at the top of the page. The links in the navigation bar use anchor tags to navigate to different sections of the page, such as "Welcome", "Projects", and "Contact". The "My GitHub" link opens the user's GitHub profile in a new tab using the target="_blank" attribute. -->
+    <section id="welcome-section">
+        <h1>Welcome to My Portfolio</h1>
+    </section>
 
-<section id="welcome-section">
-<h1>Welcome to My Portfolio</h1>
-</section>
+    <section id="project-section">
+        <h2>My Projects</h2>
+        <div class="project-tile">
+        <a href="#">project 1 link</a>
+        </div>
+    </section>
 
-<section id="project-section">
+      <section id="contact">
+          <h2>Get in Touch</h2>
+            <p>I'm always looking for new opportunities!</p>
 
-<h2>My Projects</h2>
-<div class="project-tile">
+            <div class="contact-links">
+              <!-- The "contact-links" class is used to style the container that holds the contact information, such as the GitHub profile link and the email link. The GitHub profile link opens the user's GitHub profile in a new tab, while the email link allows visitors to send an email directly to the user. -->
+              <a 
+                href="https://github.com/hedirasuli" 
+                target="_blank" 
+                id="profile-link" 
+                class="contact-details"
+              >
+                My GitHub Profile
+              </a>
 
-<a href="#">project 1 link</a>
-</div>
-</section>
-
-<section id="contact">
-<h2>Get in Touch</h2>
-  <p>I'm always looking for new opportunities!</p>
-
-  <div class="contact-links">
-    
-    <a 
-      href="https://github.com/hedirasuli" 
-      target="_blank" 
-      id="profile-link" 
-      class="contact-details"
-    >
-      My GitHub Profile
-    </a>
-
-    <a href="mailto:your.email@example.com" class="contact-details">
-      Send an Email
-    </a>
-    
-  </div>
-
-</section>
+              <a href="mailto:your.email@example.com" class="contact-details">
+                Send an Email
+              </a>
+              
+            </div>
+      </section>
 
   </body>
 </html>
