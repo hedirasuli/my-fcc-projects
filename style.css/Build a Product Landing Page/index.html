@@ -1,4 +1,4 @@
-
+<!-- This is the main HTML file for a product landing page. It includes a header with a logo and navigation bar, a main section with a form for email submission, features of the product, a video section, and pricing plans. The footer contains copyright information. The page is structured using semantic HTML elements such as header, main, section, and footer to create a well-organized layout. Each section is styled using CSS classes to enhance the visual appeal and user experience of the landing page. -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,7 +6,7 @@
         <title>Product Landing Page</title>
         <link rel="stylesheet" href="styles.css" />
     </head>
-
+<!-- The "header" id is used to style the header section of the page, which includes the logo and navigation bar. The "nav-bar" id is used to style the navigation bar, which contains links to different sections of the page such as "Features", "Video", and "Pricing". The "form-section" id is used to style the section that contains the email submission form, while the "features", "video-section", and "pricing" ids are used to style their respective sections. The "footer" class is used to style the footer of the page, which contains copyright information. -->
     <body>
         
         <header id="header">
@@ -17,7 +17,7 @@
                 <a class="nav-link" href="#pricing">Pricing</a>
             </nav>
         </header>
-
+<!-- The "header-img" id is used to style the logo image in the header section. The "nav-link" class is used to style the links in the navigation bar, which allows users to navigate to different sections of the page when clicked. Each link corresponds to a specific section of the page, such as "Features", "Video", and "Pricing". -->
         <main>
 
             <section id="form-section">
@@ -34,7 +34,7 @@
                     <input type="submit" id="submit" value="Sign Up" class="button" />
                 </form>
             </section>
-            
+            <!-- The "form" id is used to style the email submission form, which includes an input field for the user's email address and a submit button. The form uses the POST method to send the data to the specified action URL when the user submits their email. The "input-field" class is used to style the email input field, while the "button" class is used to style the submit button, making it visually appealing and easy to interact with. -->
             <section id="features">
                 <div class="feature-item">
                     <i class="icon-material">🔥</i>
@@ -43,7 +43,7 @@
                         <p>Our product uses the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
                     </div>
                 </div>
-
+                <!-- The "feature-item" class is used to style each feature of the product, which includes an icon and a text content section. The "icon-material" class is used to style the icon for the "Premium Materials" feature, while the "text-content" class is used to style the container that holds the heading and description of the feature. This structure allows for a clear and visually appealing presentation of the product's features. -->
                 <div class="feature-item">
                     <i class="icon-shipping">🚚</i>
                     <div class="text-content">
@@ -51,7 +51,7 @@
                         <p>We make sure you receive your product as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
                     </div>
                 </div>
-
+                <!-- The "icon-shipping" class is used to style the icon for the "Fast Shipping" feature, while the "text-content" class is reused to style the container that holds the heading and description of this feature. This consistent use of classes helps maintain a cohesive design throughout the features section. -->
                 <div class="feature-item">
                     <i class="icon-quality">✔️</i>
                     <div class="text-content">
@@ -60,7 +60,7 @@
                     </div>
                 </div>
             </section>
-
+            <!-- The "icon-quality" class is used to style the icon for the "Quality Assurance" feature, while the "text-content" class is again reused to style the container that holds the heading and description of this feature. This section highlights the commitment to quality that the product offers, providing customers with confidence in their purchase. -->
             <section id="video-section">
                 <h2>Our Product Video</h2>
                 <iframe
@@ -74,7 +74,7 @@
                     allowfullscreen
                     ></iframe>
             </section>
-            
+            <!-- The "video" id is used to style the embedded YouTube video in the video section. The iframe element is used to embed the video player, allowing users to watch the product video directly on the landing page. The attributes of the iframe ensure that the video is displayed correctly and provides a good user experience, with options for autoplay, fullscreen, and other features. -->
             <section id="pricing">
                 <h2>Pricing Plans</h2>
                 <div class="pricing-container">
@@ -93,7 +93,7 @@
                     <div class="product-card">
                         <h3>BASS TROMBONE</h3>
 
-
+<!-- The "product-card" class is used to style each pricing option for the products, which includes a heading for the product name, a price, a list of features, and a select button. The "price" class is used to style the price of each product, making it stand out to potential customers. This section allows users to compare different products and choose the one that best fits their needs and budget. -->
 <p class="price">$900</p>
                         <ul>
                             <li>Sound quality is unmatched</li>
@@ -102,7 +102,7 @@
                         </ul>
                         <button class="button">SELECT</button>
                     </div>
-                    
+                    <!-- The "button" class is used to style the select buttons for each product, making them visually appealing and easy to interact with. This encourages users to take action and select the product they are interested in, ultimately leading to a better user experience on the landing page. -->
                     <div class="product-card">
                         <h3>VALVE TROMBONE</h3>
                         <p class="price">$1200</p>
