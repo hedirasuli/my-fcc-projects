@@ -1,102 +1,102 @@
 <!-- start of hotel feedback form -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>Hotel Feedback Form</title>
-</head>
+        <head>
+            <meta charset="UTF-8" />
+            <title>Hotel Feedback Form</title>
+        </head>
 <body>
-<header>
-<!-- This is the header of the hotel feedback form -->
-<h1>Hotel Feedback Form</h1>
-<p>
-Thank you for staying with us. Please provide feedback on your recent
-stay.
-</p>
-</header>
-<main>
-<!-- This is the main content of the hotel feedback form -->
-<form method="POST" action="https://hotel-feedback.freecodecamp.org">
-<fieldset>
-<legend>Personal Information</legend>
-<label for="full-name">Name (required):</label>
-<input type="text" id="full-name" name="name" placeholder="Ex. John Doe" required size="20">
-<label for="email">Email address (required):</label>
-<input
-placeholder="example@email.com"
-required
-id="email"
-type="email"
-name="email"
-size="20"
-/>
-<!-- The age field is optional, but if filled out, it must be between 3 and 100 -->
-<label for="age">Age (optional):</label>
-<input type="number" name="age" id="age" min="3" max="100" />
-</fieldset>
-<fieldset>
-<!-- This fieldset is for the question about whether it was the customer's first time at the hotel -->
-<legend>Was this your first time at our hotel?</legend>
-<input id="yes-option" type="radio" name="hotel-stay" />
-<label for="yes-option">Yes</label>
-<input id="no-option" type="radio" name="hotel-stay" />
-<label for="no-option">No</label>
-</fieldset>
-<fieldset>
-<legend>
-Why did you choose to stay at our hotel? (Check all that apply)
-</legend>
-<!-- The customer can check multiple reasons for choosing the hotel, but they are not required to check any -->
-<input type="checkbox" id="ads" name="ads" value="ads" />
-<label for="ads">Social Media Ads</label>
-<input
-type="checkbox"
-id="recommendation"
-name="recommendation"
-value="recommendation"
-/>
-<!-- The recommendation checkbox is pre-checked, but the customer can uncheck it if they want -->
-<label for="recommendation">Personal Recommendation</label>
-<input type="checkbox" id="location" name="location" value="location" />
-<label for="location">Location</label>
-<input
-checked
-type="checkbox"
-id="reputation"
-name="reputation"
-value="reputation"
-/>
-<!-- The reputation checkbox is pre-checked, but the customer can uncheck it if they want -->
-<label for="reputation">Reputation</label>
-<input type="checkbox" id="price" name="price" value="price" />
-<label for="price">Price</label>
-</fieldset>
-<fieldset>
-<legend>Ratings</legend>
-<!-- The customer can select a rating for the service and food, and both fields are pre-filled with "Excellent" -->
-<label for="service">How was the service?</label>
-<select name="service" id="service">
-<option value="poor">Poor</option>
-<option value="satisfactory">Satisfactory</option>
-<option value="good">Good</option>
-<option value="very-good">Very Good</option>
-<option selected value="excellent">Excellent</option>
-</select>
-<!-- The customer can select a rating for the service and food, and both fields are pre-filled with "Excellent" -->
-<label for="food">How was the food?</label>
-<select name="food" id="food">
-<option value="poor">Poor</option>
-<option value="satisfactory">Satisfactory</option>
-<option value="good">Good</option>
-<option value="very-good">Very Good</option>
-<option selected value="excellent">Excellent</option>
-</select>
-</fieldset>
-<!-- This is the last part of the hotel feedback form, where the customer can provide additional comments -->
-<label for="comments">Other Comments?</label>
-<textarea cols="30" rows="10" name="comments" id="comments"></textarea>
-<button type="submit">Submit</button>
-</form>
-</main>
-</body>
+        <header>
+            <!-- This is the header of the hotel feedback form -->
+            <h1>Hotel Feedback Form</h1>
+            <p>
+            Thank you for staying with us. Please provide feedback on your recent
+            stay.
+            </p>
+        </header>
+                <main>
+                        <!-- This is the main content of the hotel feedback form -->
+                        <form method="POST" action="https://hotel-feedback.freecodecamp.org">
+                                <fieldset>
+                                <legend>Personal Information</legend>
+                                        <label for="full-name">Name (required):</label>
+                                        <input type="text" id="full-name" name="name" placeholder="Ex. John Doe" required size="20">
+                                        <label for="email">Email address (required):</label>
+                                            <input
+                                                placeholder="example@email.com"
+                                                required
+                                                id="email"
+                                                type="email"
+                                                name="email"
+                                                size="20"
+                                            />
+                                                <!-- The age field is optional, but if filled out, it must be between 3 and 100 -->
+                                                <label for="age">Age (optional):</label>
+                                                <input type="number" name="age" id="age" min="3" max="100" />
+                                </fieldset>
+                                <fieldset>
+                                        <!-- This fieldset is for the question about whether it was the customer's first time at the hotel -->
+                                        <legend>Was this your first time at our hotel?</legend>
+                                        <input id="yes-option" type="radio" name="hotel-stay" />
+                                        <label for="yes-option">Yes</label>
+                                        <input id="no-option" type="radio" name="hotel-stay" />
+                                        <label for="no-option">No</label>
+                                </fieldset>
+                                        <fieldset>
+                                        <legend>
+                                        Why did you choose to stay at our hotel? (Check all that apply)
+                                        </legend>
+                                        <!-- The customer can check multiple reasons for choosing the hotel, but they are not required to check any -->
+                                        <input type="checkbox" id="ads" name="ads" value="ads" />
+                                        <label for="ads">Social Media Ads</label>
+                                        <input
+                                        type="checkbox"
+                                        id="recommendation"
+                                        name="recommendation"
+                                        value="recommendation"
+                                        />
+                                        <!-- The recommendation checkbox is pre-checked, but the customer can uncheck it if they want -->
+                                        <label for="recommendation">Personal Recommendation</label>
+                                        <input type="checkbox" id="location" name="location" value="location" />
+                                        <label for="location">Location</label>
+                                        <input
+                                        checked
+                                        type="checkbox"
+                                        id="reputation"
+                                        name="reputation"
+                                        value="reputation"
+                                        />
+                                        <!-- The reputation checkbox is pre-checked, but the customer can uncheck it if they want -->
+                                        <label for="reputation">Reputation</label>
+                                        <input type="checkbox" id="price" name="price" value="price" />
+                                        <label for="price">Price</label>
+                                </fieldset>
+                                        <fieldset>
+                                                <legend>Ratings</legend>
+                                                <!-- The customer can select a rating for the service and food, and both fields are pre-filled with "Excellent" -->
+                                                <label for="service">How was the service?</label>
+                                                <select name="service" id="service">
+                                                <option value="poor">Poor</option>
+                                                <option value="satisfactory">Satisfactory</option>
+                                                <option value="good">Good</option>
+                                                <option value="very-good">Very Good</option>
+                                                <option selected value="excellent">Excellent</option>
+                                                </select>
+                                                <!-- The customer can select a rating for the service and food, and both fields are pre-filled with "Excellent" -->
+                                                <label for="food">How was the food?</label>
+                                                <select name="food" id="food">
+                                                <option value="poor">Poor</option>
+                                                <option value="satisfactory">Satisfactory</option>
+                                                <option value="good">Good</option>
+                                                <option value="very-good">Very Good</option>
+                                                <option selected value="excellent">Excellent</option>
+                                                </select>
+                                       </fieldset>
+                                <!-- This is the last part of the hotel feedback form, where the customer can provide additional comments -->
+                                <label for="comments">Other Comments?</label>
+                                <textarea cols="30" rows="10" name="comments" id="comments"></textarea>
+                                <button type="submit">Submit</button>
+                        </form>
+                </main>
+        </body>
 </html>
