@@ -1,44 +1,59 @@
+/* Outer circle of the Ferris Wheel */
 .wheel {
   border: 2px solid black;
   border-radius: 50%;
+  /* Makes the container a perfect circle */
   margin-left: 50px;
   position: absolute;
   height: 55vw;
+  /* Responsive size based on viewport width */
   width: 55vw;
   max-width: 500px;
   max-height: 500px;
+  /* Wheel rotation animation configuration */
   animation-name: wheel;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  /* Constant speed rotation */
 }
 
+/* Base style for all spokes (lines) inside the wheel */
 .line {
   background-color: black;
   width: 50%;
+  /* Extends from center to the outer edge */
   height: 2px;
   position: absolute;
   top: 50%;
+  /* Positions the starting point at the center of the wheel */
   left: 50%;
   transform-origin: 0% 0%;
+  /* Sets the pivot point at the top-left (center of the wheel) */
 }
 
+/* Distributing spokes evenly by rotating them at 60-degree increments */
 .line:nth-of-type(2) {
   transform: rotate(60deg);
 }
+
 .line:nth-of-type(3) {
   transform: rotate(120deg);
 }
+
 .line:nth-of-type(4) {
   transform: rotate(180deg);
 }
+
 .line:nth-of-type(5) {
   transform: rotate(240deg);
 }
+
 .line:nth-of-type(6) {
   transform: rotate(300deg);
 }
 
+/* Base style for the passenger cabins */
 .cabin {
   background-color: red;
   width: 20%;
@@ -46,59 +61,73 @@
   position: absolute;
   border: 2px solid;
   transform-origin: 50% 0%;
+  /* Pivot point at top-center so it hangs like a real cabin */
   animation: cabins 10s ease-in-out infinite;
+  /* Counter-rotation animation */
 }
 
+/* Positioning each cabin at specific coordinates along the wheel circumference */
 .cabin:nth-of-type(1) {
   right: -8.5%;
   top: 50%;
 }
+
 .cabin:nth-of-type(2) {
   right: 17%;
   top: 93.5%;
 }
+
 .cabin:nth-of-type(3) {
   right: 67%;
   top: 93.5%;
 }
+
 .cabin:nth-of-type(4) {
   left: -8.5%;
   top: 50%;
 }
+
 .cabin:nth-of-type(5) {
   left: 17%;
   top: 7%;
 }
+
 .cabin:nth-of-type(6) {
   right: 17%;
   top: 7%;
 }
 
+/* Animation to rotate the entire wheel 360 degrees clockwise */
 @keyframes wheel {
-   0% {
-     transform: rotate(0deg);
-   }
-   100% {
-     transform: rotate(360deg);
-   }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
+/* Counter-animation for cabins to stay upright and change colors midway */
 @keyframes cabins {
   0% {
     transform: rotate(0deg);
   }
+
   25% {
     background-color: yellow;
   }
+
   50% {
     background-color: purple;
   }
 
   75% {
-  background-color: yellow;
-
+    background-color: yellow;
   }
+
   100% {
     transform: rotate(-360deg);
+    /* Counter-rotates to offset the wheel's movement */
   }
 }
