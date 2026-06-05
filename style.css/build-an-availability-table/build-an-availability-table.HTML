@@ -1,22 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- Metadata for character encoding and mobile responsiveness -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Availability Table</title>
+    <!-- Connection to the main CSS file -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-<h1 class="text-3xl font-bold text-center mb-6 text-gray-800">Team Availability Heatmap</h1>
+    <!-- Main page heading with Tailwind CSS utility classes -->
+    <h1 class="text-3xl font-bold text-center mb-6 text-gray-800">Team Availability Heatmap</h1>
+
+    <!-- Wrapper container for handling table scrolling and layout -->
     <div class="table-wrapper">
         <table>
-       
-         <thead>
+            <!-- Table Header: Displays the days of the week -->
+            <thead>
                 <tr>
-                    <th></th>
+                    <th></th> <!-- Empty corner cell to align with the time column -->
                     <th>Monday</th>
                     <th>Tuesday</th>
                     <th>Wednesday</th>
@@ -24,19 +28,21 @@
                     <th>Friday</th>
                 </tr>
             </thead>
+
+            <!-- Table Body: Contains time slots and availability heat levels -->
             <tbody>
-                
+                <!-- 9:00 AM Time Row -->
                 <tr class="sharp">
-                    
                     <th class="time">9:00 AM</th>
-                    
+                    <!-- Availability classes (0-5) representing intensity/heat levels -->
                     <td class="available-4"></td>
                     <td class="available-2"></td>
                     <td class="available-5"></td>
                     <td class="available-3"></td>
                     <td class="available-1"></td>
                 </tr>
-                
+
+                <!-- 10:00 AM Time Row -->
                 <tr class="half">
                     <th class="time">10:00 AM</th>
                     <td class="available-3"></td>
@@ -45,7 +51,8 @@
                     <td class="available-5"></td>
                     <td class="available-0"></td>
                 </tr>
-                
+
+                <!-- 11:00 AM Time Row -->
                 <tr class="sharp">
                     <th class="time">11:00 AM</th>
                     <td class="available-5"></td>
@@ -54,7 +61,8 @@
                     <td class="available-4"></td>
                     <td class="available-2"></td>
                 </tr>
-                
+
+                <!-- 12:00 PM Time Row -->
                 <tr class="half">
                     <th class="time">12:00 PM</th>
                     <td class="available-2"></td>
@@ -63,7 +71,8 @@
                     <td class="available-1"></td>
                     <td class="available-5"></td>
                 </tr>
-                
+
+                <!-- 1:00 PM Time Row -->
                 <tr class="sharp">
                     <th class="time">1:00 PM</th>
                     <td class="available-0"></td>
@@ -76,16 +85,12 @@
         </table>
     </div>
 
-
-    
+    <!-- Legend section explaining the heatmap color gradient -->
     <div id="legend">
-       
         <span>Availability</span>
-        
+        <!-- Container that will hold the visual color gradient via CSS -->
         <div id="legend-gradient"></div>
-    </div>  
+    </div>
 </body>
 
 </html>
-
-
