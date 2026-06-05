@@ -1,3 +1,4 @@
+/* Visually hides content but keeps it accessible for screen readers */
 span[class~="sr-only"] {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
@@ -11,41 +12,49 @@ span[class~="sr-only"] {
   margin: -1px !important;
 }
 
+/* Apply border-box sizing model to all elements for predictable layout */
 html {
   box-sizing: border-box;
 }
 
+/* Base styles for body text and color */
 body {
   font-family: sans-serif;
   color: #0a0a23;
 }
 
+/* Main heading styles: centered with max width and padding */
 h1 {
   max-width: 37.25rem;
   margin: 0 auto;
   padding: 1.5rem 1.25rem;
 }
 
+/* Flex container inside h1: column-reverse creates stacked layout with gap */
 h1 .flex {
   display: flex;
   flex-direction: column-reverse;
   gap: 1rem;
 }
 
+/* Style for the first span inside .flex (company name) - smaller font */
 h1 .flex span:first-of-type {
   font-size: 0.7em;
 }
 
+/* Style for the last span inside .flex (title) - larger font */
 h1 .flex span:last-of-type {
   font-size: 1.2em;
 }
 
+/* Section container: centered with border and max width */
 section {
   max-width: 40rem;
   margin: 0 auto;
   border: 2px solid #d0d0d5;
 }
 
+/* Years bar: sticky header with flex alignment, dark background */
 #years {
   display: flex;
   justify-content: flex-end;
@@ -58,16 +67,19 @@ section {
   margin: 0 -2px;
 }
 
+/* Year spans inside #years: bold, fixed width, right-aligned */
 #years span[class] {
   font-weight: bold;
   width: 4.5rem;
   text-align: right;
 }
 
+/* Wrapper for tables to control padding */
 .table-wrap {
   padding: 0 0.75rem 1.5rem 0.75rem;
 }
 
+/* Table styling: collapsed borders, full width, relative positioning */
 table {
   border-collapse: collapse;
   border: 0;
@@ -76,6 +88,7 @@ table {
   margin-top: 3rem;
 }
 
+/* Table caption: absolute positioned above the table */
 table caption {
   color: #356eaf;
   font-size: 1.3em;
@@ -85,53 +98,64 @@ table caption {
   left: 0.5rem;
 }
 
+/* Table data cells: width constraints for responsive design */
 tbody td {
   width: 100vw;
   min-width: 4rem;
   max-width: 4rem;
 }
 
+/* Table header cells in body: flexible width accounting for remaining space */
 tbody th {
   width: calc(100% - 12rem);
 }
 
+/* Total row: double bottom border and bold text */
 tr[class="total"] {
   border-bottom: 4px double #0a0a23;
   font-weight: bold;
 }
 
+/* Total row header: left-aligned with specific padding */
 tr[class="total"] th {
   text-align: left;
   padding: 0.5rem 0 0.25rem 0.5rem;
 }
 
+/* Total row data cells: right-aligned with padding */
 tr.total td {
   text-align: right;
   padding: 0 0.25rem;
 }
 
+/* Third data cell in total row: extra right padding */
 tr.total td:nth-of-type(3) {
   padding-right: 0.5rem;
 }
 
+/* Hover effect for total rows */
 tr.total:hover {
   background-color: #99c9ff;
 }
 
+/* Current year data cells: italic style */
 td.current {
   font-style: italic;
 }
 
+/* Data rows: gradient background creating a subtle horizontal rule effect */
 tr.data {
   background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
 }
 
+/* Data row headers: left-aligned with top padding and left indent */
 tr.data th {
   text-align: left;
   padding-top: 0.3rem;
   padding-left: 0.5rem;
 }
 
+/* Description spans inside data row headers: block display, italic, specific spacing */
 tr.data th .description {
   display: block;
   font-weight: normal;
@@ -140,12 +164,14 @@ tr.data th .description {
   margin-right: -13.5rem;
 }
 
+/* Data row cells: top-aligned vertically, right-aligned text, with padding */
 tr.data td {
   vertical-align: top;
   padding: 0.3rem 0.25rem 0;
   text-align: right;
 }
 
-tr.data td:last-of-type{
-padding-right: 0.5rem;
+/* Last data cell in each data row: extra right padding */
+tr.data td:last-of-type {
+  padding-right: 0.5rem;
 }
