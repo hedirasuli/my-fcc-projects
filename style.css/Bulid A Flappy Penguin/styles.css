@@ -1,9 +1,10 @@
+/* CSS Custom Properties (variables) for consistent theming */
 :root {
   --penguin-face: white;
   --penguin-picorna: orange;
   --penguin-skin: gray;
 }
-
+/* Body styling: gradient background that fills the viewport */
 body {
   background: linear-gradient(45deg, rgb(118, 201, 255), rgb(247, 255, 222));
   margin: 0;
@@ -12,7 +13,7 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-
+/* Left mountain: triangular shape using skew transformation */
 .left-mountain {
   width: 300px;
   height: 300px;
@@ -22,7 +23,7 @@ body {
   z-index: 2;
   margin-top: 100px;
 }
-
+/* Back mountain: rotated square placed behind the left mountain */
 .back-mountain {
   width: 300px;
   height: 300px;
@@ -33,7 +34,7 @@ body {
   left: 110px;
   top: 225px;
 }
-
+/* Sun: circular yellow element positioned in top-right corner */
 .sun {
   width: 200px;
   height: 200px;
