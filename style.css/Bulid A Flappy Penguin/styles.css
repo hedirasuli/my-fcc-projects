@@ -143,7 +143,7 @@ body {
 .blush.right {
   right: 15%;
 }
-
+/* Beak: orange, split into top and bottom parts */
 .beak {
   height: 10%;
   background-color: var(--penguin-picorna);
@@ -161,7 +161,7 @@ body {
   top: 65%;
   left: 42%;
 }
-
+/* Shirt / chest text decoration (heart and "I CSS") */
 .shirt {
   font: bold 25px Helvetica, sans-serif;
   top: 165px;
@@ -169,13 +169,13 @@ body {
   z-index: 1;
   color: #6a6969;
 }
-
+/* Inner div inside shirt (heart emoji) positioning */
 .shirt div {
   font-weight:  initial;
   top: 22.5px;
   left: 12px;
 }
-
+/* Penguin body: larger lower section with gradient */
 .penguin-body {
   width: 53%;
   height: 45%;
@@ -189,7 +189,7 @@ body {
   top: 40%;
   left: 23.5%;
 }
-
+/* Pseudo-element creating a belly highlight or shadow */
 .penguin-body::before {
   content: "";
   position: absolute;
@@ -201,7 +201,7 @@ body {
   border-radius: 0% 0% 100% 100%;
   opacity: 70%;
 }
-
+/* Flippers / arms */
 .arm {
   width: 30%;
   height: 60%;
@@ -227,7 +227,7 @@ body {
   right: -5%;
   transform: rotate(-45deg);
 }
-
+/* Keyframes for waving animation on left arm */
 @keyframes wave {
   10% {
     transform: rotate(110deg) scaleX(-1);
