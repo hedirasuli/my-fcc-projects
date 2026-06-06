@@ -170,35 +170,35 @@ body {
   left: 52px;
   transform: rotate(10deg);
 }
-
+/* Middle left whisker: almost horizontal */
 .cat-whisker-left-middle {
   position: absolute;
   top: 127px;
   left: 52px;
   transform: rotate(3deg);
 }
-
+/* Bottom left whisker: rotated downward */
 .cat-whisker-left-bottom {
   position: absolute;
   top: 134px;
   left: 52px;
   transform: rotate(-3deg);
 }
-
+/* Top right whisker: rotated upward (mirrored) */
 .cat-whisker-right-top {
   position: absolute;
   top: 120px;
   left: 109px;
   transform: rotate(-10deg);
 }
-
+/* Middle right whisker: almost horizontal */
 .cat-whisker-right-middle {
   position: absolute;
   top: 127px;
   left: 109px;
   transform: rotate(-3deg);
 }
-
+/* Bottom right whisker: rotated downward */
 .cat-whisker-right-bottom {
   position: absolute;
   top: 134px;
