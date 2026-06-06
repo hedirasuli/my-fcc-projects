@@ -242,7 +242,7 @@ body {
     transform: rotate(130deg) scaleX(-1);
   }
 }
-
+/* Feet: orange, positioned at the bottom */
 .foot {
   width:  15%;
   height: 30%;
@@ -261,7 +261,7 @@ body {
   right: 25%;
   transform: rotate(-80deg);
 }
-
+/* Ground: fills remaining viewport below the penguin */
 .ground {
   width: 100vw;
   height: calc(100vh - 300px);
