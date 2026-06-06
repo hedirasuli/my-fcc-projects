@@ -58,12 +58,12 @@ body {
 .penguin * {
   position: absolute;
 }
-
+/* Scale up penguin when clicked/active, with not-allowed cursor */
 .penguin:active {
   transform: scale(1.5);
   cursor: not-allowed;
 }
-
+/* Penguin head: oval shape with gradient background */
 .penguin-head {
   width: 50%;
   height: 45%;
@@ -77,7 +77,7 @@ body {
   left: 25%;
   z-index: 1;
 }
-
+/* Face patches (white areas on sides of the head) */
 .face {
   width: 60%;
   height: 70%;
@@ -93,7 +93,7 @@ body {
 .face.right {
   right: 5%;
 }
-
+/* Chin / lower face area (white) */
 .chin {
   width: 90%;
   height: 70%;
