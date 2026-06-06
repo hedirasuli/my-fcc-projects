@@ -20,7 +20,7 @@ body {
   background: linear-gradient(rgb(203, 241, 228), rgb(80, 183, 255));
   position: absolute;
   transform: skew(0deg, 44deg);
-  z-index: 2;
+  z-index: 2;               /* Layering above back mountain */
   margin-top: 100px;
 }
 /* Back mountain: rotated square placed behind the left mountain */
@@ -29,7 +29,7 @@ body {
   height: 300px;
   background: linear-gradient(rgb(203, 241, 228), rgb(47, 170, 255));
   position: absolute;
-  z-index: 1;
+  z-index: 1;                       /* Behind left mountain */
   transform: rotate(45deg);
   left: 110px;
   top: 225px;
@@ -44,17 +44,17 @@ body {
   top: -75px;
   right: -75px;
 }
-
+/* Main penguin container: centered, with hover/active scaling effect */
 .penguin {
   width: 300px;
   height: 300px;
   margin: auto;
   margin-top: 75px;
-  z-index: 4;
+  z-index: 4;               /* Above mountain and sun */
   position: relative;
   transition: transform 1s ease-in-out 0ms;
 }
-
+/* All direct children of .penguin use absolute positioning */
 .penguin * {
   position: absolute;
 }
