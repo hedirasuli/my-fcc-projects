@@ -52,7 +52,7 @@ hr {
   grid-template-columns: repeat(2, 1fr);
   row-gap: 1.5rem;
 }
-
+/* Text content: middle column, larger font, justified alignment, multi-column layout */
 .text {
   grid-column: 2 / 3;
   font-size: 1.8rem;
@@ -60,37 +60,37 @@ hr {
   column-width: 25rem;
   text-align: justify;
 }
-
+/* Hero section spans full width of heading grid (both columns) */
 .hero {
   grid-column: 1 / -1;
   position: relative;
 }
-
+/* Large orange title centered */
 .hero-title {
   text-align: center;
   color: orangered;
   font-size: 8rem;
 }
-
+/* Subtitle below hero */
 .hero-subtitle {
   font-size: 2.4rem;
   color: orangered;
   text-align: center;
 }
-
+/* Author styling */
 .author {
   font-size: 2rem;
   font-family: "Raleway", sans-serif;
 }
-
+/* Hover effect for author name link */
 .author-name a:hover {
   background-color: #306203;
 }
-
+/* Publication date with semi-transparent white */
 .publish-date {
   color: rgba(255, 255, 255, 0.5);
 }
-
+/* Social icons: 5-column grid, auto flow column, centered items */
 .social-icons {
   display: grid;
   font-size: 3rem;
@@ -99,45 +99,45 @@ hr {
   grid-auto-columns: 1fr;
   align-items: center;
 }
-
+/* First paragraph: drop cap effect on first letter */
 .first-paragraph::first-letter {
   font-size: 6rem;
   color: orangered;
   float: left;
   margin-right: 1rem;
 }
-
+/* Blockquote quote styling (cyan color, centered) */
 .quote {
   color: #00beef;
   font-size: 2.4rem;
   text-align: center;
   font-family: "Raleway", sans-serif;
 }
-
+/* Add opening double quote before the quote text */
 .quote::before {
   content: '" ';
 }
-
+/* Add closing double quote after the quote text */
 .quote::after {
   content: ' "';
 }
-
+/* Section that combines text with images: 2-column grid */
 .text-with-images {
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 3rem;
   margin-bottom: 3rem;
 }
-
+/* Unordered list with no bullets and top margin */
 .lists {
   list-style-type: none;
   margin-top: 2rem;
 }
-
+/* Spacing between list items */
 .lists li {
   margin-bottom: 1.5rem;
 }
-
+/* Titles and subtitles in the list share cyan color */
 .list-title, .list-subtitle {
   color: #00beef;
 }
