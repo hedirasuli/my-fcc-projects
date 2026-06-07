@@ -141,7 +141,7 @@ hr {
 .list-title, .list-subtitle {
   color: #00beef;
 }
-
+/* Image wrapper: complex grid for gallery layout */
 .image-wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -149,23 +149,23 @@ hr {
   gap: 2rem;
   place-items: center;
 }
-
+/* First and third images span full width of the wrapper */
 .image-1, .image-3 {
   grid-column: 1 / -1;
 }
-
+/* Responsive: on narrow screens (max-width 720px), image wrapper becomes single column */
 @media only screen and (max-width: 720px) {
   .image-wrapper {
     grid-template-columns: 1fr;
   }
 }
-
+/* Responsive: on max-width 600px, text-with-images becomes single column */
 @media only screen and (max-width: 600px) {
   .text-with-images {
     grid-template-columns: 1fr;
   }
 }
-
+/* Responsive: reduce font sizes on smaller screens (max-width 550px) */
 @media only screen and (max-width: 550px) {
   .hero-title {
     font-size: 6rem;
@@ -186,7 +186,7 @@ hr {
     font-size: 1.6rem;
   } 
 }
-
+/* Responsive: further reduce hero title on very small screens (max-width 420px) */
 @media only screen and (max-width: 420px){
   .hero-title{
     font-size: 4.5rem;
