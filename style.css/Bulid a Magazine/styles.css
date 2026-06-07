@@ -1,3 +1,4 @@
+/* Universal selector including pseudo-elements: reset padding, margin, and apply border-box */
 *,
 ::before,
 ::after {
@@ -5,46 +6,46 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+/* Set base font size to 62.5% (1rem = 10px) for easier rem calculations */
 html {
   font-size: 62.5%;
 }
-
+/* Body styling: serif font, light text color, dark blue-gray background */
 body {
   font-family: 'Baskervville', serif;
   color: linen;
   background-color: rgb(20, 30, 40);
 }
-
+/* Main heading uses Anton (sans-serif) for bold impact */
 h1 {
   font-family: 'Anton', sans-serif;
 }
-
+/* Subheadings use Raleway (sans-serif) for contrast */
 h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
 }
-
+/* Links: no underline, same color as body text */
 a {
   text-decoration: none;
   color: linen;
 }
-
+/* Main container: 3-column grid (gutters, content, gutters) with row gap */
 main {
   display: grid;
   grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
   row-gap: 3rem;
 }
-
+/* Images fill their container width, maintain aspect ratio with cover */
 img {
   width: 100%;
   object-fit: cover;
 }
-
+/* Horizontal rule styling: vertical margin and semi-transparent border */
 hr {
   margin: 1.5rem 0;
   border: 1px solid rgba(120, 120, 120, 0.6);
 }
-
+/* Text content: middle column, larger font, justified alignment, multi-column layout */
 .heading {
   grid-column: 2 / 3;
   display: grid;
