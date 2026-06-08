@@ -113,25 +113,30 @@ h2 {
   padding: 0px 15px;
 }
 
+/* Input fields: base font size */
 input {
   font-size: 1rem;
 }
 
+/* Labels and inputs inside .info display inline-block */
 .info label, .info input {
   display: inline-block;
 }
 
+/* Inputs inside .info take 50% width, left-aligned text */
 .info input {
   width: 50%;
   text-align: left;
 }
 
+/* Labels inside .info take 10% width, minimum 55px, right-aligned text */
 .info label {
   width: 10%;
   min-width: 55px;
   text-align: right;
 }
 
+/* Question block: left-aligned, full width, top margin, top padding */
 .question-block {
   text-align: left;
   display: block;
@@ -140,26 +145,31 @@ input {
   padding-top: 5px;
 }
 
+/* H3 inside question blocks: top margin, left padding, large rem font */
 h3 {
   margin-top: 5px;
   padding-left: 15px;
   font-size: 1.375rem;
 }
 
+/* Pseudo-element to prepend "Question #" before each h3 */
 h3::before {
   content: "Question #";
 }
 
+/* Fieldset with class "question": no border, no bottom padding */
 .question {
   border: none;
   padding-bottom: 0;
 }
 
+/* Answer list: remove bullets, remove default padding */
 .answers-list {
   list-style: none;
   padding: 0;
 }
 
+/* Submit button: block display, centered with auto margins, width 40%, padding, larger font */
 button {
   display: block;
   margin: 40px auto;
@@ -170,22 +180,26 @@ button {
   border: 3px solid #3b3b4f;
 }
 
+/* Footer: dark background, flex to center content */
 footer {
   background-color: #2a2a40;
   display: flex;
   justify-content: center;
 }
 
+/* Footer and footer links share light text color */
 footer,
 footer a {
   color: #dfdfe2;
 }
 
+/* Address: centered text, small padding */
 address {
   text-align: center;
   padding: 0.3em;
 }
 
+/* Visually hidden class for screen readers (accessible hiding) */
 .sr-only {
   position: absolute;
   width: 1px;
