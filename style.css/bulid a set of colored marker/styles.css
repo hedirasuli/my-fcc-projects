@@ -1,23 +1,28 @@
+/* Center the main heading horizontally */
 h1 {
   text-align: center;
 }
 
+/* Container background white, vertical padding for spacing */
 .container {
   background-color: rgb(255, 255, 255);
   padding: 10px 0;
 }
 
+/* Each marker has fixed width/height, centered with auto margins */
 .marker {
   width: 200px;
   height: 25px;
   margin: 10px auto;
 }
 
+/* Cap of the marker: fixed width/height */
 .cap {
   width: 60px;
   height: 25px;
 }
 
+/* Sleeve (body) of the marker: fixed width/height, semi-transparent white background, left border double black */
 .sleeve {
   width: 110px;
   height: 25px;
@@ -25,20 +30,24 @@ h1 {
   border-left: 10px double rgba(0, 0, 0, 0.75);
 }
 
+/* Both cap and sleeve display inline-block to sit side by side */
 .cap, .sleeve {
   display: inline-block;
 }
 
+/* Red marker: linear gradient from dark brown to pink to dark red, with a red shadow */
 .red {
   background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
   box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
 }
 
+/* Green marker: linear gradient from dark green to light green to forest green, with green shadow (hex with alpha) */
 .green {
   background: linear-gradient(#55680D, #71F53E, #116C31);
   box-shadow: 0 0 20px 0 #3B7E20CC;
 }
 
+/* Blue marker: linear gradient using HSL values, with blue shadow using HSLA */
 .blue {
   background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
   box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
