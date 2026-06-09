@@ -70,30 +70,34 @@ h1, h2 {
   font-size: 18px;
 }
 
+/* Flavor and dessert names: left-aligned, take 75% width */
 .flavor, .dessert {
   text-align: left;
   width: 75%;
 }
 
+/* Price: right-aligned, take 25% width */
 .price {
   text-align: right;
   width: 25%;
 }
 
-/* FOOTER */
-
+/* Footer text size */
 footer {
   font-size: 14px;
 }
 
+/* Address: normal font style (not italic) */
 address {
   font-style: normal;
 }
 
+/* Address paragraph: small bottom margin */
 .address {
   margin-bottom: 5px;
 }
 
+/* Link colors: black normally, brown on hover/active */
 a {
   color: black;
 }
