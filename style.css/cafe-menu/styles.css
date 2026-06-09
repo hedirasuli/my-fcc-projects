@@ -1,23 +1,28 @@
+/* Body styling: background image (coffee beans), sans-serif font, inner padding */
 body {
   background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
   font-family: sans-serif;
   padding: 20px;
 }
 
+/* Main heading: large font, remove top margin, small bottom margin */
 h1 {
   font-size: 40px;
   margin-top: 0;
   margin-bottom: 15px;
 }
 
+/* Subheading: slightly smaller than h1 */
 h2 {
   font-size: 30px;
 }
 
+/* Establishment year text: italic style */
 .established {
   font-style: italic;
 }
 
+/* Center-align all headings and paragraphs */
 h1, h2, p {
   text-align: center;
 }
