@@ -27,6 +27,7 @@ h1, h2, p {
   text-align: center;
 }
 
+/* Menu container: 80% width on small screens, max-width 500px, centered, padding, background */
 .menu {
   width: 80%;
   background-color: burlywood;
@@ -36,6 +37,7 @@ h1, h2, p {
   max-width: 500px;
 }
 
+/* Images: block-level, centered horizontally, negative top margin to pull upward */
 img {
   display: block;
   margin-left: auto;
@@ -43,20 +45,24 @@ img {
   margin-top:-25px;
 }
 
+/* Horizontal rule: 2px tall, brown background and border */
 hr {
   height: 2px;
   background-color: brown;
   border-color: brown;
 }
 
+/* Bottom line: extra top margin to separate from content above */
 .bottom-line {
   margin-top: 25px;
 }
 
+/* Headings use Impact (fallback serif) */
 h1, h2 {
   font-family: Impact, serif;
 }
 
+/* Each menu item's paragraphs sit side by side with consistent spacing */
 .item p {
   display: inline-block;
   margin-top: 5px;
