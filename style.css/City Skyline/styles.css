@@ -64,6 +64,7 @@ body {
   height: 70%;
 }
 
+/* BACKGROUND BUILDINGS - "bb" stands for "background building" */
 .bb1a {
   width: 70%;
 }
@@ -98,12 +99,14 @@ body {
   height: 50%;
 }
 
+/* Creates a triangular roof using borders */
 .bb2a {
   border-bottom: 5vh solid var(--building-color2);
   border-left: 5vw solid transparent;
   border-right: 5vw solid transparent;
 }
 
+/* Repeating linear gradient for building body with windows */
 .bb2b {
   width: 100%;
   height: 100%;
@@ -115,6 +118,7 @@ body {
     );
 }
 
+/* Building 3: vertical gradient with window stripes (90deg = horizontal stripes) */
 .bb3 {
   width: 10%;
   height: 55%;
@@ -126,6 +130,7 @@ body {
     );
 }
 
+/* Individual window inside BB4 */
 .bb4 {
   width: 11%;
   height: 58%;
@@ -149,6 +154,7 @@ body {
   background-color: var(--building-color4);
 }
 
+/* Individual window inside BB4 */
 .bb4-window {
   width: 18%;
   height: 90%;
@@ -161,6 +167,7 @@ body {
   height: 60%;
 }
 
+/* Triangular roof for FB1 */
 .fb1a {
   border-bottom: 7vh solid var(--building-color4);
   border-left: 2vw solid transparent;
@@ -173,6 +180,7 @@ body {
   background-color: var(--building-color4);
 }
   
+/* FB1c: two repeating gradients layered (stripes and window pattern) */
 .fb1c {
   width: 100%;
   height: 80%;
@@ -196,6 +204,7 @@ body {
   height: 40%;
 }
 
+/* Triangular top for FB2 */
 .fb2a {
   width: 100%;
   border-bottom: 10vh solid var(--building-color3);
@@ -245,6 +254,7 @@ body {
   left: 10%;
 }
 
+/* Creates a slanted top using border on the left side */
 .fb4a {
   border-top: 5vh solid transparent;
   border-left: 8vw solid var(--building-color1);
