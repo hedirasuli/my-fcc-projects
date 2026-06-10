@@ -268,6 +268,7 @@ body {
   flex-wrap: wrap;
 }
 
+/* Circular windows (border-radius: 50%) for FB4 */
 .fb4-window {
   width: 30%;
   height: 10%;
@@ -314,6 +315,7 @@ body {
     );
 }
 
+/* Media query for screens narrower than 1000px: make buildings grayscale for better contrast */
 @media (max-width: 1000px) {
   :root {
     --building-color1: #000;
