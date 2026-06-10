@@ -1,3 +1,4 @@
+/* CSS Custom Properties (variables) for building and window colors */
 :root {
   --building-color1: #aa80ff;
   --building-color2: #66cc99;
@@ -9,16 +10,19 @@
   --window-color4: #8cb3d9;
 }
 
+/* Universal selector: border-box ensures consistent sizing */
 * {
   box-sizing: border-box;
 }
 
+/* Body takes full viewport height, no margin, hides overflow */
 body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
 }
 
+/* Both background and foreground buildings take full width/height, flex layout, absolute positioning */
 .background-buildings, .foreground-buildings {
   width: 100%;
   height: 100%;
@@ -29,18 +33,21 @@ body {
   top: 0;
 }
 
+/* Wrapper for buildings that stack children vertically and center them */
 .building-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Wrapper for windows: flex row, centered, evenly spaced */
 .window-wrap {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
+/* Sky background: radial gradient with yellow center and blue edges */
 .sky {
   background: radial-gradient(
       closest-corner circle at 15% 15%,
