@@ -1,3 +1,4 @@
+/* Global body styles: centered text, padding, brown background, Arial font */
 body {
   font-family: Arial, sans-serif;
   padding: 40px;
@@ -5,6 +6,7 @@ body {
   background-color: brown;
 }
 
+/* Main card container: white background, max width 400px, centered, rounded corners, subtle shadow, smooth transitions */
 .card {
   background-color: white;
   max-width: 400px;
@@ -15,11 +17,13 @@ body {
   transition: transform 0.3s, background-color 0.3s ease
 }
 
+/* Hover effect on card: changes background to khaki and slightly scales up */
 .card:hover {
   background-color: khaki;
   transform: scale(1.1);
 }
 
+/* Decorative emoji before the H1 heading (party horn) */
 h1::before {
   content: "🥳 ";
 }
@@ -81,5 +85,4 @@ section:hover{
 }
 section:target{
 display: block;
-
 }
