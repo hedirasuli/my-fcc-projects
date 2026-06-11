@@ -28,22 +28,26 @@ h1::before {
   content: "🥳 ";
 }
 
+/* Decorative emoji after the H1 heading (party horn) */
 h1::after {
   content: " 🥳";
 }
 
+/* Message paragraph styling: larger font, gray text, bottom margin */
 .message {
   font-size: 1.2em;
   color: gray;
   margin-bottom: 20px;
 }
 
+/* Container for action links: flex layout with even spacing, top margin */
 .card-links {
   margin-top: 20px;
   display: flex;
   justify-content: space-around;
 }
 
+/* Link buttons styling: remove underline, padding, rounded corners, white text, midnight blue background, smooth transition */
 .card-links a {
   text-decoration: none;
   font-size: 1em;
@@ -54,23 +58,27 @@ h1::after {
   transition: background-color 0.3s ease;
 }
 
+/* Hover effect for links: orange-red background */
 .card-links a:hover {
   background-color: orangered;
 }
 
+/* Active state (when clicking): midnight blue background */
 .card-links a:active {
   background-color: midnightblue;
 }
 
+/* Focus state (keyboard navigation): yellow outline for accessibility */
 .card-links a:focus {
   outline: 2px solid yellow;
 }
 
+/* Visited links: crimson text color */
 .card-links a:visited {
   color: crimson;
 }
 
-
+/* Hidden sections (sent messages) that become visible when targeted */
 section {
   margin: 20px auto;
   max-width: 600px;
@@ -80,9 +88,12 @@ section {
   display: none;
 }
 
+/* Hover effect on visible sections: skew transformation */
 section:hover{
   transform: skewX(10deg);
 }
+
+/* When a section is targeted via URL fragment (e.g., #send or #share), display it as block */
 section:target{
 display: block;
 }
