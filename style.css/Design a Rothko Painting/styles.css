@@ -26,6 +26,7 @@
   transform: rotate(-0.6deg);
 }
 
+/* Second rectangular block (middle): wider (475px), taller (200px), dark red background, centered with bottom margin, shadow, rotated */
 .two {
   width: 475px;
   height: 200px;
@@ -36,10 +37,13 @@
   transform: rotate(0.4deg);
 }
 
+/* Both first and second blocks share a blur of 1px */
 .one, .two {
   filter: blur(1px);
 }
 
+/* Third block (bottom): width 91% of canvas, height 28%, deep red background,
+ centered, blur 2px, shadow, complex border-radius, slight negative rotation */
 .three {
   width: 91%;
   height: 28%;
