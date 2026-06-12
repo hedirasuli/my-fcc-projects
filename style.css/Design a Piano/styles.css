@@ -28,6 +28,7 @@ html {
   overflow: hidden;
 }
 
+/* Individual white key: white background, relative positioning, fixed dimensions, margin, floating layout, bottom rounded corners */
 .key {
   background-color: #ffffff;
   position: relative;
@@ -38,6 +39,7 @@ html {
   border-radius: 0 0 3px 3px;
 }
 
+/* Black key pseudo-element: creates a smaller black rectangle overlapping the left side of a white key */
 .key.black--key::after {
   background-color: #1d1e22;
   content: "";
@@ -48,12 +50,14 @@ html {
   border-radius: 0 0 3px 3px;
 }
 
+/* Logo image: absolute positioned, fixed width, top offset */
 .logo {
   width: 200px;
   position: absolute;
   top: 23px;
 }
 
+/* Responsive: for screens up to 768px, resize piano and keys, shrink logo */
 @media (max-width: 768px) {
   #piano {
     width: 358px;
@@ -68,6 +72,7 @@ html {
   }
 }
 
+/* Responsive: for screens between 769px and 1199px, intermediate piano and key widths */
 @media (max-width: 1199px) and (min-width: 769px) {
 #piano{
 width: 675px;
