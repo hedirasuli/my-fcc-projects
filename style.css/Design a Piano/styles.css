@@ -1,11 +1,14 @@
+/* Apply border-box to the root html element */
 html {
   box-sizing: border-box;
 }
 
+/* Inherit border-box for all elements and pseudo-elements */
 *, *::before, *::after {
   box-sizing: inherit;
 }
 
+/* Main piano container: dark green background, fixed dimensions, centered, rounded corners */
 #piano {
   background-color: #00471b;
   width: 992px;
@@ -16,6 +19,7 @@ html {
   border-radius: 10px;
 }
 
+/* Container for the keys: black background, fixed width, hidden overflow for scroll, left padding */
 .keys {
   background-color: #040404;
   width: 949px;
