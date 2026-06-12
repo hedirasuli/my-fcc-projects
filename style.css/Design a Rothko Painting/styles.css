@@ -1,3 +1,4 @@
+/* Canvas container: fixed dimensions, dark reddish-brown background, hides overflow, applies blur filter */
 .canvas {
   width: 500px;
   height: 600px;
@@ -6,6 +7,7 @@
   filter: blur(2px);
 }
 
+/* Outer frame: thick black border, same width as canvas, padding, centered with auto margins */
 .frame {
   border: 50px solid black;
   width: 500px;
@@ -13,6 +15,7 @@
   margin: 20px auto;
 }
 
+/* First rectangular block (top): width 425px, height 150px, beige background, centered, with shadow, rounded corners, slight rotation */
 .one {
   width: 425px;
   height: 150px;
