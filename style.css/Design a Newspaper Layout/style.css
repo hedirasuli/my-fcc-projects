@@ -1,3 +1,4 @@
+/* Newspaper layout container: CSS Grid with gaps, rows, columns, and named grid areas */
 .newspaper-layout{
     display: grid;
     gap: 10px;
@@ -10,24 +11,33 @@
     "feature-article  feature-article  cover-image"
     "secondary-article  secondary-article  cover-image"
     "small-article1 small-article2 small-article3";
-     
 }
+
+/* Global body styles: Vazirmatn font stack, remove default margin and padding */
 body{
     font-family: 'Vazirmatn', Tahoma, sans-serif;
     margin: 0;
     padding: 0;
 }
+
+/* Title section: assigned to 'title' grid area, centered text */
 .title{
     grid-area: title;
     text-align: center;
 }
+
+/* Note: selector '.figure-article' may be a typo (intended for cover image?) */
  .figure-article{
     grid-area: cover-image;
     
 }
+
+/* Cover image container: assigned to 'cover-image' grid area */
 .cover-image{
     grid-area: cover-image;
 }
+
+/* small-article (missing dot before class – likely a typo) */
 small-article{
     grid-area: small;
 }
@@ -67,7 +77,7 @@ small-article{
     text-align: justify;
 }
 @media (max-width: 600px) {
-    .newspaperlayout{
+    .newspaper-layout{
         grid-template-rows: auto auto auto auto auto auto;
         grid-template-columns:1fr; 
         grid-template-areas: 
