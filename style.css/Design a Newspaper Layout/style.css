@@ -41,41 +41,61 @@ body{
 small-article{
     grid-area: small;
 }
+
+/* Cover image: responsive, max-width 100%, height auto */
 .cover-image img{
     max-width: 100%;
     height: auto;
 }
+
+/* Small article 1: assigned to 'small-article1' area, aqua background */
 .small-article1{
     grid-area: small-article1;
     background-color: aqua;
 }
+
+/* Small article 2: assigned to 'small-article2' area, aqua background */
 .small-article2{
     grid-area: small-article2;
     background-color: aqua;
 }
+
+/* Small article 3: assigned to 'small-article3' area, aqua background */
 .small-article3{
     grid-area: small-article3;
     background-color: aqua;
 }
+
+/* Feature article: assigned to 'feature-article' area, beige background */
 .feature-article{
     grid-area: feature-article;
     background-color: beige;
+}
 
-}.secondary-article{
+/* Secondary article: assigned to 'secondary-article' area, beige background */
+.secondary-article{
     grid-area: secondary-article;
     background-color: beige;
 }
 
+
+/* Shared styling for all article containers: padding, solid black border */
 .feature-article, .secondary-article, .small-article1, .small-article2, .small-article3{
     padding: 10px;
     border: 1px solid #000;
 }
+
+/* Remove top margin from headings inside articles */
 .feature-article h2, .secondary-article h2, .small-article1 h2, .small-article2 h2, .small-article3 h2{
     margin-top: 0;
 }
+
+/* Justify text alignment for paragraphs inside articles */
 .feature-article p, .secondary-article p, .small-article1 p, .small-article2 p, .small-article3 p{
     text-align: justify;
 }
+
+/* Responsive layout for screens up to 600px wide: changes grid to single column */
 @media (max-width: 600px) {
     .newspaper-layout{
         grid-template-rows: auto auto auto auto auto auto;
