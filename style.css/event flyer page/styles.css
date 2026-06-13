@@ -1,3 +1,4 @@
+/* Body styling: purple background, top/bottom padding, auto margins, 90% viewport width, minimum height adjusted for padding */
 body{
 background-color:purple;
 padding-top:50px;
@@ -7,9 +8,12 @@ width:90vw;
 min-height:calc(100vh - 100px);
 }
 
+/* Horizontal rule: width set to 80% of parent container */
 hr{
   width: 80%;
 }
 
+/* Section elements: each takes up 49% width (likely for two-column layout) */
 section{
   width:49%;
+}
