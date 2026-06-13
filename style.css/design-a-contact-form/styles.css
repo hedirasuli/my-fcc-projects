@@ -1,3 +1,4 @@
+/* Body styling: diagonal gradient background, full viewport height, flex centering, Arial font */
 body{
 background: linear-gradient(45deg, #33ccff, #99ffcc);
 height: 100vh;
@@ -7,7 +8,7 @@ align-items: center;
 font-family: Arial, sens-serif;
 }
 
-
+/* Form container: white background, rounded corners, padding, fixed width, centered text */
 .form-container{
 background-color: white ;
 border-radius: 10px;
@@ -16,11 +17,14 @@ width: 300px;
 text-align: center;
 }
 
+/* Labels: dark gray, block display, vertical margins */
 label{
 color: #555;
 display: block;
 margin: 10px 0 5px;
 }
+
+/* Input and textarea: full width, padding, border-box sizing, bottom margin, light border, vertical resizing allowed */
 input, textarea{
 width: 100%; 
 padding: 10px;
@@ -29,6 +33,8 @@ margin-bottom: 10px;
 border: 1px solid #ddd;
 resize: vertical;
 }
+
+/* Submit button: green background, white text, larger font, padding, pointer cursor, rounded corners, no border */
 button{
 Background: #4caf50;
 color: white; 
@@ -38,8 +44,8 @@ cursor: pointer;
 border-radius: 5px;
 border: none;
 }
+
+/* Hover effect for button: darker green */
 button:hover{
 background-color: #45a049;
 }
-
-
