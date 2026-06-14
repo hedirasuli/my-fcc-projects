@@ -16,10 +16,10 @@
                 <!-- Application form (no action/method specified → submits to same page) -->
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="fullName" required>
-
+                <!-- Email address field -->
                 <label for="email">Email Address:</label>
                 <input type="email" id="email" name="emailAddress" required>
-
+                <!-- Dropdown for position selection -->
                 <label for="position">Select Your Position:</label>
                 <select id="position" name="position" required>
                     <option value="">-- Choose Position --</option>
@@ -28,19 +28,20 @@
                     <option value="manager">Project Manager</option>
                 </select>
 
+                <!-- Fieldset grouping availability radio buttons -->
                 <fieldset class="radio-group">
                     <legend>Availability:</legend>
 
                     <input type="radio" id="fulltime" name="availability" value="fulltime" required>
                     <label for="fulltime">Full-Time</label>
-
+                    <!-- Part-time radio option -->
                     <input type="radio" id="parttime" name="availability" value="parttime" required>
                     <label for="parttime">Part-Time</label>
                 </fieldset>
-
+                <!-- Message textarea -->
                 <label for="message">Enter Your Message:</label>
                 <textarea id="message" name="message" rows="5" placeholder="Type your message here..."></textarea>
-
+                <!-- Submit button -->
                 <button type="submit">Submit Application</button>
             </form>
         </div>
