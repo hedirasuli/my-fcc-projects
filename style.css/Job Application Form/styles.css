@@ -1,4 +1,4 @@
-
+/* Note: missing '.' before 'container' – selector matches <container> element (unlikely). Preserved as-is. */
 container {
     max-width: 600px;
     margin: 50px auto;
@@ -7,11 +7,13 @@ container {
     border-radius: 8px;
 }
 
+/* All direct children of the form have bottom margin and block display */
 form > * {
     margin-bottom: 15px;
     display: block;
 }
 
+/* Styling for text inputs, email inputs, select dropdowns, and textareas: full width, padding, light border, border-box, rounded corners */
 input[type="text"],
 input[type="email"],
 select,
@@ -23,12 +25,13 @@ textarea {
     border-radius: 4px;
 }
 
+/* Focus state: midnight blue border, remove default outline */
 input:focus, textarea:focus {
     border-color: midnightblue;
     outline: none;
 }
 
-
+/* Invalid inputs (e.g., missing required, wrong format): red border */
 input:invalid, select:invalid, textarea:invalid {
     border-color: red;
 }
