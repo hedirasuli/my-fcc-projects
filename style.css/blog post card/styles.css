@@ -1,5 +1,5 @@
+/* Body styling: flex container centers content vertically and horizontally, full viewport height, no margin, sans-serif font */
 body{
-
 display: flex;
 justify-content: center;
 align-items: center;
@@ -8,7 +8,7 @@ margin: 0%;
 font-family: sans-serif;
 }
 
-
+/* Blog post card container: white background, rounded corners, fixed width, centered text, hides overflow, subtle shadow */
 .blog-post-card {
     background-color: white;
     border-radius: 10px;
@@ -17,6 +17,8 @@ font-family: sans-serif;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Post image: full width, fixed height, cover to maintain aspect ratio, black bottom border */
 .post-img {
     width: 100%;
 height:180px;
@@ -25,20 +27,24 @@ object-fit:cover;
 
 }
 
+/* Content area inside card: inner padding */
 .post-content {
     padding: 10px; 
 }
 
+/* Post title: dark gray, top/bottom margin 8px */
 .post-title {
     color: #444;
     margin: 8px 0;
 }
 
+/* Post excerpt: lighter gray, margins: 5px 0 10px 0 */
 .post-excerpt {
     color: #777;
     margin: 5px 0 10px 0; 
 }
 
+/* Read more link: white text, dark gray background, no underline, margin, padding, rounded corners, inline-block */
 .read-more {
     color: white;
     background-color: #555;
@@ -49,6 +55,7 @@ object-fit:cover;
     display: inline-block;
 }
 
+/* Hover effect for read more link: darker gray background */
 .read-more:hover {
     background-color: #333;
 }
