@@ -1,7 +1,9 @@
+/* Ensure HTML takes full height for context */
 html {
     height: 100%;
 }
 
+/* Body: full viewport width/height, flex centering, night sky gradient, hide overflow */
 body {
     width: 100vw;
     height: 100vh;
@@ -30,6 +32,7 @@ body::before {
     border-radius: 50%;
 }
 
+/* Space container: fixed size, relative positioning, flex centering its children */
 .space {
     width: 400px;
     height: 400px;
@@ -39,6 +42,7 @@ body::before {
     align-items: center;
 }
 
+/* Earth: size 100px, circular, gradient background, absolute positioning, subtle glow */
 .earth {
     width: 100px;
     height: 100px;
@@ -50,6 +54,7 @@ body::before {
     box-shadow: 0 0 30px rgba(65, 105, 225, 0.4);
 }
 
+/* Orbit path: circular dashed border, centered, rotating animation */
 .orbit {
     width: 250px;
     height: 250px;
@@ -63,6 +68,7 @@ body::before {
     animation: orbit-animation 8s linear infinite;
 }
 
+/* Moon: gray circular object placed at top edge of orbit (offset by half its height) */
 .moon {
     width: 30px;
     height: 30px;
