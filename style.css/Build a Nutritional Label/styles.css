@@ -35,28 +35,34 @@ p {
   justify-content: space-between;
 }
 
+/* Divider line: light gray bottom border, small vertical margin */
 .divider {
   border-bottom: 1px solid #888989;
   margin: 2px 0;
 }
 
+/* Bold text class: heavy font weight */
 .bold {
   font-weight: 800;
 }
 
+/* Large divider: 10px height (background black, no border) */
 .large {
   height: 10px;
 }
 
+/* Both large and medium dividers have black background and no border */
 .large, .medium {
   background-color: black;
   border: 0;
 }
 
+/* Medium divider: 5px height */
 .medium {
   height: 5px;
 }
 
+/* Small text: 0.85rem (relative to base 16px → ~13.6px) */
 .small-text {
   font-size: 0.85rem;
 }
