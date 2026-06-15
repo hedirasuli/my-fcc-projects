@@ -1,15 +1,19 @@
+/* Universal selector: apply border-box sizing to all elements */
 *{
   box-sizing: border-box;
 }
 
+/* Base font size for rem calculations (1rem = 16px) */
 html {
   font-size: 16px;
 }
 
+/* Body font: Open Sans (fallback sans-serif) */
 body {
   font-family: 'Open Sans', sans-serif;
 }
 
+/* Nutrition label container: black border, fixed width, centered, inner horizontal padding */
 .label {
   border: 2px solid black;
   width: 270px;
@@ -17,12 +21,14 @@ body {
   padding: 0 7px;
 }
 
+/* Header heading: centered text, negative top margin to pull up, slight letter spacing */
 header h1 {
   text-align: center;
   margin: -4px 0;
   letter-spacing: 0.15px
 }
 
+/* Paragraphs: no default margin, flex layout to space between children (used for nutrient rows) */
 p {
   margin: 0;
   display: flex;
