@@ -67,45 +67,53 @@ p {
   font-size: 0.85rem;
 }
 
-
+/* Calories info row: flex with space-between, align items at bottom */
 .calories-info {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 
+/* Remove default margin on the h2 inside .calories-info */
 .calories-info h2 {
   margin: 0;
 }
 
+/* Left container paragraph: negative margins, large font (2em), bold */
 .left-container p {
   margin: -5px -2px;
   font-size: 2em;
   font-weight: 700;
 }
 
+/* Calories span: negative margins, extra large font (2.4em), bold */
 .calories-info span {
   margin: -7px -2px;
   font-size: 2.4em;
   font-weight: 700;
 }
 
+/* Utility to push content to the right (flex-end) */
 .right {
   justify-content: flex-end;
 }
 
+/* Indent text by 1em */
 .indent {
   margin-left: 1em;
 }
 
+/* Double indent by 2em */
 .double-indent {
   margin-left: 2em;
 }
 
+/* Any paragraph inside .daily-value that does NOT have class 'no-divider' gets bottom border */
 .daily-value p:not(.no-divider) {
   border-bottom: 1px solid #888989;
 }
 
+/* Small note styling: smaller font, top/bottom margin, horizontal padding, negative text indent */
 .note {
   font-size: 0.6rem;
   margin: 5px 0;
