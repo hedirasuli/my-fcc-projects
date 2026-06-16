@@ -54,21 +54,31 @@ h1 {
     color: var(--primary-color);
     margin-bottom: calc(var(--spacing-unit) * 2);
 }
+
+/* Heading 2: medium size, secondary color */
 h2 {
     font-size: 1.5rem;
     color: var(--secondary-color);
 }
+
+/* Paragraphs: base size, bottom margin using spacing unit */
 p {
     font-size: 1rem;
     margin-bottom: calc(var(--spacing-unit) * 2);
 }
+
+/* Links: primary color, no underline */
 a {
     color: var(--primary-color);
     text-decoration: none;
 }
+
+/* Hover effect for links: underline */
 a:hover {
     text-decoration: underline;
 }
+
+/* Images: responsive max-width, auto height, rounded corners */
 img {
     max-width: 100%;
     height: auto;
@@ -83,6 +93,8 @@ button {
     cursor: pointer;
     font-size: 1rem;
 }
+
+/* Button styling: primary color background, white text, no border, padding using spacing unit, rounded corners, pointer cursor */
 button:hover {
     background-color: darken(var(--primary-color), 10%);
 }
