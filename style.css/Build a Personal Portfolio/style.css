@@ -1,3 +1,4 @@
+/* CSS Custom Properties (variables) for theming and maintainability */
 :root{
     --primary-color: #3498db;
     --secondary-color: #2ecc71;
@@ -6,11 +7,15 @@
     --line-height-base: 1.5;
     --spacing-unit: 8px;  
 }
+
+/* Universal reset: remove default margins/paddings, use border-box sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Body styling: uses custom properties for typography, text color, light background, padding based on spacing unit */
 body {
     font-family: var(--font-family);
     font-size: var(--font-size-base);
@@ -19,6 +24,8 @@ body {
     background-color: #f9f9f9;
     padding: calc(var(--spacing-unit) * 2);
 }
+
+/* Welcome section: flex column, centered vertically and horizontally, full viewport height, centered text */
 #welcome-section{
     display: flex;
     flex-direction: column;
@@ -27,6 +34,8 @@ body {
     height: 100vh;
     text-align: center;
 }
+
+/* Navigation bar: flex with space between items, padding using spacing unit, white background, subtle shadow, fixed position at top */
 #navbar {
     display: flex;
     justify-content: space-between;
@@ -38,6 +47,8 @@ body {
     top: 0;
     z-index: 100;
 }
+
+/* Heading 1: large size, primary color, bottom margin using spacing unit */
 h1 {
     font-size: 2.5rem;
     color: var(--primary-color);
