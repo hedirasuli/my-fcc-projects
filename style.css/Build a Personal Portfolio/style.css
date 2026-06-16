@@ -98,26 +98,38 @@ button {
 button:hover {
     background-color: darken(var(--primary-color), 10%);
 }
+
+/* Container: max width 1200px, centered with auto margins, padding using spacing unit */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: calc(var(--spacing-unit) * 2);
 }
+
+/* Utility class: flex centering for items */
 .flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* Grid container: gap using spacing unit */
 .grid {
     display: grid;
     gap: calc(var(--spacing-unit) * 2);
 }
+
+/* 3-column grid */
 .grid-3 {
     grid-template-columns: repeat(3, 1fr);
 }
+
+/* 2-column grid */
 .grid-2 {
     grid-template-columns: repeat(2, 1fr);
 }
+
+/* Responsive for screens up to 600px */
 @media (max-width: 600px) {
     .grid-3 {
         grid-template-columns: repeat(2, 1fr);
