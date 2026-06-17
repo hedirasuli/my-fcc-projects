@@ -186,7 +186,7 @@ a:hover{
     margin-bottom: 30px;
 }
 
-
+/* Pricing container: 3-column grid with gap, max width, centered */
 .pricing-container { 
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
@@ -195,7 +195,7 @@ a:hover{
     margin: 0 auto;
 }
 
-
+/* Product card: border, rounded corners, padding, white background, subtle shadow */
 .product-card { 
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -204,7 +204,7 @@ a:hover{
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
 }
 
-
+/* Product card heading: light background, padding, uppercase text */
 .product-card h3 {
     background-color: #f4f4f4; 
     padding: 10px 0;
@@ -212,23 +212,26 @@ a:hover{
     text-transform: uppercase;
 }
 
+/* Product price: large bold font, bottom margin */
 .product-card .price {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 25px;
 }
 
+/* Product list: no bullets, no padding, bottom margin */
 .product-card ul {
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
 }
 
+/* Product list items: vertical padding */
 .product-card ul li {
     padding: 5px 0;
 }
 
-
+/* Responsive Design - For screens up to 800px */
 @media (max-width: 800px) {
     
     
