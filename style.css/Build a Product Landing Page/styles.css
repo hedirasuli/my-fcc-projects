@@ -1,10 +1,11 @@
-/* Global Styles */
+/* Global Styles - Reset margins, padding, and apply border-box sizing */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styling: Arial font, light background, dark text, line height, top padding for fixed header */
 body{
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -15,23 +16,29 @@ body{
     
     padding-top: 100px; 
 }
-/* Typography */
+/* Typography - Headings: bottom margin, dark gray color */
 h1, h2, h3{
     margin-bottom: 15px;
     color: #444;
 }
+
+/* Paragraphs: bottom margin */
 p{
     margin-bottom: 10px;
 }
+
+/* Links: blue color, no underline */
 a{
     color: #3498db;
     text-decoration: none;
 }
+
+/* Hover effect for links: underline */
 a:hover{
     text-decoration: underline;
 }
 
-/* Layout */
+/* Layout - Container: max width, centered auto margins, padding, white background, subtle shadow */
 .container{
     max-width: 1200px;
     margin: auto;
@@ -40,6 +47,7 @@ a:hover{
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* Button: inline-block, padding, blue background, white text, no border, rounded corners, pointer cursor */
 .button{
     display: inline-block;
     padding: 10px 20px;
