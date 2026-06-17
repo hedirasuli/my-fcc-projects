@@ -234,17 +234,18 @@ a:hover{
 /* Responsive Design - For screens up to 800px */
 @media (max-width: 800px) {
     
-    
+    /* Increase body top padding to accommodate taller header */
     body{ 
         padding-top: 200px;
     }
     
-    
+        /* Stack header vertically */
     #header{
         flex-direction: column;
         padding: 10px 20px;
     }
     
+        /* Stack navigation vertically with smaller font */
     #nav-bar{
         font-size: 14px;
         flex-direction: column;
@@ -252,24 +253,28 @@ a:hover{
         margin-top: 10px;
     }
     
+        /* Navigation links: vertical padding */
     #nav-bar a{
         padding: 10px 0;
     }
 
-    
+        /* Feature items: column layout, centered text */
     .feature-item{
         flex-direction: column;
         text-align: center;
     }
+        /* Feature icon: remove right margin, add bottom margin */
     .feature-item i{
         margin-right: 0;
         margin-bottom: 15px;
     }
     
-    
+        /* Pricing container: single column */
     .pricing-container {
         grid-template-columns: 1fr; 
     }
+
+        /* Product cards: bottom margin */
     .product-card {
         margin-bottom: 20px;
     }
