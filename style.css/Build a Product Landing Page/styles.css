@@ -132,7 +132,7 @@ a:hover{
     text-decoration: underline;
 }
 
-
+/* Footer: centered text, dark background, white text, top margin */
 .footer{
     text-align: center;
     padding: 20px 0;
@@ -140,15 +140,18 @@ a:hover{
     color: #fff;
     margin-top: 20px;
 }
+
+/* Footer paragraphs: remove default margin */
 .footer p{
     margin: 0;
 }
 
-
+/* Features section: vertical padding */
 #features{
     padding: 50px 20px;
 }
 
+/* Individual feature item: flex layout, bottom margin, max width */
 .feature-item{
     
     display: flex;
@@ -157,24 +160,28 @@ a:hover{
     width: 100%;
 }
 
+/* Feature icon: large size, primary color, right margin, vertically centered */
 .feature-item i{
     font-size: 40px;
     color: #3498db;
     margin-right: 30px;
     align-self: center;
 }
+
+/* Feature heading: bottom margin, dark color, no top margin */
 .feature-item h3{
     margin-bottom: 10px;
     color: #333;
     margin-top: 0;
 }
 
-
+/* Pricing section: vertical padding, centered text */
 #pricing {
     padding: 60px 20px;
     text-align: center;
 }
 
+/* Pricing heading: bottom margin */
 #pricing h2 {
     margin-bottom: 30px;
 }
