@@ -58,10 +58,13 @@ a:hover{
     cursor: pointer;
     text-align: center;
 }
+
+/* Button hover: darker blue background */
 .button:hover{
     background-color: #2980b9;
 }
 
+/* Input field: full width, padding, margins, light border, rounded corners */
 .input-field{
     width: 100%;
     padding: 10px;
@@ -69,6 +72,8 @@ a:hover{
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+/* Input focus: blue border, remove default outline */
 .input-field:focus{
     border-color: #3498db;
     outline: none;
@@ -90,6 +95,7 @@ a:hover{
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 
+/* Header logo image: fixed width, auto height */
 #header-img{
     
     width: 150px; 
@@ -114,12 +120,14 @@ a:hover{
     align-items: center;
 }
 
+/* Header heading: bottom margin, large font */
 #nav-bar a{
     color: #3498db;
     text-decoration: none;
     padding: 10px 5px;
 }
 
+/* Navigation Bar - Flex container with gap */
 #nav-bar a:hover{
     text-decoration: underline;
 }
