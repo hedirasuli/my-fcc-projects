@@ -5,11 +5,13 @@
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
+    background-color: #F8F8FF;
 }
 
 /* All direct children of the form have bottom margin and block display */
 form > * {
     margin-bottom: 15px;
+    background-color: #FFFAF0;
     display: block;
 }
 
