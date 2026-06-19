@@ -1,4 +1,4 @@
-/* Note: missing '.' before 'container' – selector matches <container> element (unlikely). Preserved as-is. */
+/* Main form wrapper: handles width, spacing, and horizontal centering */
 .container {
     max-width: 600px;
     margin: 50px auto;
