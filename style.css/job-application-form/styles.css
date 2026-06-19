@@ -1,5 +1,5 @@
 /* Note: missing '.' before 'container' – selector matches <container> element (unlikely). Preserved as-is. */
-container {
+.container {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
