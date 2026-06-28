@@ -18,5 +18,7 @@ function truthCheck(collection, pre) {
   });
 }
 
+// Test case: Check if all objects have a truthy "isBot" property
+// Expected output: false (because first object has isBot: false)
 truthCheck([{name: "Quincy", role: "Founder", isBot: false},
  {name: "Naomi", role: "", isBot: false}, {name: "Camperbot", role: "Bot", isBot: true}], "isBot");
