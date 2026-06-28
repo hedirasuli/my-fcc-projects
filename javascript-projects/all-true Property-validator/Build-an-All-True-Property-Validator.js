@@ -9,6 +9,8 @@
  * by the provided function. Here, each object's 'pre' property is evaluated for truthiness.
  */
 function truthCheck(collection, pre) {
+ // Iterate over each object in the collection using the every() method.
+ // Return true only if every object has a truthy value for the given property.
   
   return collection.every(function(obj) {
     
