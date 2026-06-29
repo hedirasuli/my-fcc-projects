@@ -1,3 +1,4 @@
+/* Body styling: Segoe UI font, flex centering, top padding, light background */
 body { 
   font-family: 'Segoe UI', sans-serif; 
   display: flex; 
@@ -6,6 +7,7 @@ body {
   background-color: #eef2f3; 
 }
 
+/* Bank card container: white background, padding, rounded corners, subtle shadow, fixed width */
 .bank-card { 
   background: white; 
   padding: 30px; 
@@ -14,6 +16,7 @@ body {
   width: 350px; 
 }
 
+/* Balance box: light green background, border, padding, rounded corners, centered text, bottom margin */
 .balance-box { 
   background: #f0fff4; 
   border: 1px solid #c6f6d5; 
@@ -23,6 +26,7 @@ body {
   margin-bottom: 20px; 
 }
 
+/* Balance display: large font, bold, dark green, no margin */
 #balance-display { 
   font-size: 24px; 
   font-weight: bold; 
