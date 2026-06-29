@@ -57,6 +57,21 @@ button {
   font-weight: bold; 
 }
 
-.btn-deposit { background: #4299e1; color: white; }
-.btn-withdraw { background: #ed8936; color: white; }
-.history { margin-top: 20px; font-size: 14px; color: #666; }
+/* Deposit button: blue background, white text */
+.btn-deposit { 
+  background: #4299e1;
+  color: white;
+}
+
+/* Withdraw button: orange background, white text */
+.btn-withdraw {
+  background: #ed8936;
+  color: white;
+}
+
+/* History section: top margin, smaller font, gray text */
+.history {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
