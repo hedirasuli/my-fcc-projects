@@ -34,6 +34,7 @@ body {
   margin: 0; 
 }
 
+/* Input field: full width, padding, bottom margin, light border, rounded corners, border-box sizing */
 input { 
   width: 100%; 
   padding: 12px; 
@@ -43,8 +44,10 @@ input {
   box-sizing: border-box; 
 }
 
+/* Button group: flex layout with gap between buttons */
 .btn-group { display: flex; gap: 10px; }
 
+/* Button styling: flex grow to fill space, padding, no border, rounded corners, pointer cursor, bold text */
 button { 
   flex: 1; 
   padding: 12px; 
