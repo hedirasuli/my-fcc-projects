@@ -19,7 +19,6 @@ const books = [
   }
 ];
 
-
 /**
  * sortByYear - Comparison function for sorting books by release year.
  * 
@@ -31,13 +30,20 @@ const books = [
  */
 
 function sortByYear(bookA, bookB) {
+  // If bookA was released before bookB, return -1 (bookA comes first)
     if (bookA.releaseYear < bookB.releaseYear)
          { return-1; }
+    // If bookA was released after bookB, return 1 (bookB comes first)
     if (bookA.releaseYear > bookB.releaseYear)
          {return 1};
+    // If both books have the same release year, return 0 (keep original order)
          return 0;
 }
 
+/**
+ * Filter books to include only those released on or before 1950.
+ * This creates a new array containing only books from 1950 or earlier.
+ */
 const filteredBooks = books.filter(
 
     (book) => book.releaseYear <=1950
