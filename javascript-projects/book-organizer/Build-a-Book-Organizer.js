@@ -1,7 +1,10 @@
+/**
+ * Array of book objects containing title, author name, and release year.
+ */
 const books = [
   {
     title: "lord of the rings",
-    authorName: "tolkin",
+    authorName: "Tolkien",
     releaseYear: 1954 
   },
   {
