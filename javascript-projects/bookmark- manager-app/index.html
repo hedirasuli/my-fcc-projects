@@ -28,16 +28,19 @@
                             <option value="miscellaneous">Miscellaneous</option>
                         </select>
                     </div>
+                    <!-- Action buttons -->
                     <div id="buttons">
                         <button type="button" id="view-category-button">View Category</button>
                         <button type="button" id="add-bookmark-button">Add Bookmark</button>
                     </div>
                 </section>
-
+                <!-- Form section: Hidden by default (class="hidden"), used for adding new bookmarks -->
                 <section id="form-section" class="hidden">
                     <form>
+                        <!-- Category name heading (dynamically updated) -->
                         <h2 class="category-name"></h2>
                         <div>
+                            <!-- Name input field -->
                             <label for="name">Name:</label>
                             <input type="text" id="name">
                         </div>
