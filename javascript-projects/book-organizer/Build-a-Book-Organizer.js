@@ -19,6 +19,17 @@ const books = [
   }
 ];
 
+
+/**
+ * sortByYear - Comparison function for sorting books by release year.
+ * 
+ * @param {Object} bookA - First book object to compare.
+ * @param {Object} bookB - Second book object to compare.
+ * @returns {number} - Returns -1 if bookA is earlier, 1 if bookB is earlier, 0 if equal.
+ * 
+ * This function is used as a callback for Array.sort() to sort books chronologically.
+ */
+
 function sortByYear(bookA, bookB) {
     if (bookA.releaseYear < bookB.releaseYear)
          { return-1; }
