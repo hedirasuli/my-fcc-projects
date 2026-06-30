@@ -29,22 +29,22 @@ console.log(topic.length);
 console.log(`Here is an example of accessing the first letter in the word ${subject}.`);
 // Log the first character of "subject" (index 0 → 'J')
 console.log(subject[0]);
-
+// Log the second character of "subject" (index 1 → 'a')
 console.log(`Here is an example of accessing the second letter in the word ${subject}.`);
 console.log(subject[1]);
-
+// Introduction to accessing the last character using .length - 1
 console.log(`Here is an example of accessing the last letter in the word ${subject}.`);
-
+// Calculate the last character index (length - 1) and store it
 const lastCharacter = subject[subject.length - 1];
-console.log(lastCharacter);
-
+console.log(lastCharacter);// Logs 't' (last letter of "JavaScript")
+// Declare a sentence string for indexOf() examples
 const learningIsFunSentence = "Learning is fun.";
-
 console.log("Here are examples of finding the positions of substrings in the sentence.");
-
+// Find the starting index of "Learning" (case-sensitive) → 0
 console.log(learningIsFunSentence.indexOf("Learning"));
-
+// Find the starting index of "fun" → 11 (space before "fun" counted)
 console.log(learningIsFunSentence.indexOf("fun"));
+// Find the starting index of "learning" (lowercase) → -1 (not found, case-sensitive)
 console.log(learningIsFunSentence.indexOf("learning"));
-
+// Closing message
 console.log("I hope you enjoyed learning today.");
