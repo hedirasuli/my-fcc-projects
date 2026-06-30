@@ -1,7 +1,14 @@
+/**
+ * Lesson: JavaScript Strings - Template Literals, Length Property,
+ * Index Access, and indexOf() Method
+ */
+
+// Display a welcome message to the console
 console.log("Hi there!");
 
+// Declare a constant variable for the bot's name
 const botName = "teacherBot";
-
+// Use a template literal to create a greeting string
 const greeting = `My name is ${botName}.`;
 console.log(greeting);
 
