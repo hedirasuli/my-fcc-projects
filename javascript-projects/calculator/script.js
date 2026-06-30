@@ -1,12 +1,48 @@
-// --- Your original logic functions ---
+/**
+ * calculateSum - Adds two numbers together.
+ * @param {number} num1 - First number.
+ * @param {number} num2 - Second number.
+ * @returns {number} - The sum of num1 and num2.
+ */
 
 function calculateSum(num1, num2) { return num1 + num2; }
+/**
+ * calculateDifference - Subtracts num2 from num1.
+ * @param {number} num1 - First number.
+ * @param {number} num2 - Second number.
+ * @returns {number} - The difference of num1 minus num2.
+ */
+
 function calculateDifference(num1, num2) { return num1 - num2; }
+/**
+ * calculateProduct - Multiplies two numbers.
+ * @param {number} num1 - First number.
+ * @param {number} num2 - Second number.
+ * @returns {number} - The product of num1 and num2.
+ */
+
 function calculateProduct(num1, num2) { return num1 * num2; }
+/**
+ * calculateQuotient - Divides num1 by num2.
+ * @param {number} num1 - Numerator.
+ * @param {number} num2 - Denominator.
+ * @returns {number|string} - The quotient, or "Error" if denominator is 0.
+ */
 function calculateQuotient(num1, num2) { 
     return num2 === 0 ? "Error" : num1 / num2; 
 }
+/**
+ * calculateSquare - Squares a number.
+ * @param {number} num - The number to square.
+ * @returns {number} - The squared value.
+ */
+
 function calculateSquare(num) { return num ** 2; }
+/**
+ * calculateSquareRoot - Returns the square root of a number.
+ * @param {number} num - The number to find the square root of.
+ * @returns {number} - The square root of num.
+ */
 function calculateSquareRoot(num) { return Math.sqrt(num); }
 
 // --- UI Logic ---
@@ -58,9 +94,10 @@ function calculate() {
         } else {
             result = input; // No operation found
         }
-        
+        // Update the display with the calculated result
         display.value = result;
     } catch (e) {
+        // If any error occurs (e.g., malformed input), show "Error"
         display.value = "Error";
     }
 }
