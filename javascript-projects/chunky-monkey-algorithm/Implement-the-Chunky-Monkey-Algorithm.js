@@ -9,11 +9,15 @@
  * Example: chunkArrayInGroups([1, 2, 3, 4, 5], 2) → [[1, 2], [3, 4], [5]]
  */
 function chunkArrayInGroups(arr, size) {
-
+   // Initialize an empty array to store the resulting chunks
    const chunkArray = [];
+
+   // Loop through the array, incrementing by the chunk size each iteration
    for (let i = 0; i < arr.length; i +=size) {
+      // Use slice() to extract a chunk starting at i and ending at i + size
+      // If i + size exceeds the array length, slice() will go to the end
     chunkArray.push(arr.slice(i, i + size));
    }
-
+   // Return the array containing all chunks
 return chunkArray;
 }
