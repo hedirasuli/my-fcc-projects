@@ -58,41 +58,42 @@
                     <input type="checkbox" id="nonconforming-product" name="complaint" value="nonconforming-product">
                     <label for="nonconforming-product">Nonconforming Product</label>
                 </div>
-
+                <!-- Delayed Dispatch checkbox -->
                 <div>
                     <input type="checkbox" id="delayed-dispatch" name="complaint" value="delayed-dispatch">
                     <label for="delayed-dispatch">Delayed Dispatch</label>
                 </div>
-
+                <!-- Other complaint checkbox -->
                 <div>
                     <input type="checkbox" id="other-complaint" name="complaint" value="other">
                     <label for="other-complaint">Other</label>
                 </div>
             </fieldset>
-
+            <!-- Complaint Description Textarea -->
             <fieldset id="complaint-description-container">
                 <legend>Description of Complaint Reason</legend>
                 <textarea placeholder="Describe the reason of your complaint in at least 20 characters"
                     name="complaint-textarea" id="complaint-description"></textarea>
             </fieldset>
-
+            <!-- Desired Solution Section (radio buttons) -->
             <fieldset id="solutions-group">
                 <legend>Desired Solution</legend>
                 <input type="radio" name="solutions" id="refund" value="refund">
                 <label for="refund">Refund</label>
-
+                <!-- Exchange radio -->
                 <input type="radio" name="solutions" id="exchange" value="exchange">
                 <label for="exchange">Exchange</label>
-
+                <!-- Other solution radio -->
                 <input type="radio" name="solutions" id="other-solution" value="other">
                 <label for="other-solution">Other</label>
             </fieldset>
-
+            <!-- Solution Description Textarea -->
             <fieldset id="solution-description-container">
                 <legend>Description of Desired Solution</legend>
                 <textarea placeholder="Describe the desired solution to your issue in at least 20 characters"
                     name="solution-textarea" id="solution-description"></textarea>
             </fieldset>
+            <!-- Submit button and message display area -->
             <div id="btn-container">
                 <button type="submit" id="submit-btn">Submit</button>
                 <span id="message-box" aria-live="polite"></span>
