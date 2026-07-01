@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+<!-- Document type declaration: HTML5 -->
 <html lang="en">
-
+<!-- Root element with language set to English -->
         <head>
+            <!-- Meta information and document settings -->
             <title>Customer Complaint Form</title>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,20 +11,27 @@
         </head>
 
     <body>
+        <!-- Visible content of the page -->
+
+        <!-- Main heading -->
         <h1>Complaint Form</h1>
+        <!-- Main complaint form -->
         <form id="form">
+            <!-- Personal Information Section -->
             <fieldset id="personal-info">
                 <div>
                     <label for="full-name">Full Name:</label>
                     <input type="text" id="full-name" name="full-name" placeholder="John Doe">
                 </div>
-
+                <!-- Email input -->
                 <div>
                     <label for="email">Email Address:</label>
                     <input type="email" id="email" name="email" placeholder="example@domain.com">
                 </div>
             </fieldset>
+            <!-- Horizontal rule separator -->
             <hr>
+            <!-- Product Information Section -->
             <fieldset id="product-info">
                 <div>
                     <label for="order-no">Order No:</label>
@@ -37,14 +46,14 @@
                     <input type="number" id="quantity" name="quantity" min="1">
                 </div>
             </fieldset>
-
+            <!-- Complaint Reason Section (checkboxes) -->
             <fieldset id="complaints-group">
                 <legend>Complaint Reason:</legend>
                 <div>
                     <input type="checkbox" id="damaged-product" name="complaint" value="damaged-product">
                     <label for="damaged-product">Damaged Product</label>
                 </div>
-
+                <!-- Delayed Dispatch checkbox -->
                 <div>
                     <input type="checkbox" id="nonconforming-product" name="complaint" value="nonconforming-product">
                     <label for="nonconforming-product">Nonconforming Product</label>
