@@ -1,14 +1,22 @@
 /**
  * Project: Decimal to Binary Converter
  * Feature: Visual Call Stack Animation for input '5'
+ * 
+ * This script converts decimal numbers to binary with a special
+ * visual animation showing the call stack when the input is 5.
  */
 
+// DOM element references
 const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 // Ensure this ID matches your HTML (it might be 'show-animation' or 'animation-container')
 const animationContainer = document.getElementById("show-animation") || document.getElementById("animation-container");
 
+/**
+ * Animation data for the call stack visualization
+ * Each object represents a step in the recursive decimalToBinary(5) process
+ */
 const animationData = [
   {
     inputVal: 5,
