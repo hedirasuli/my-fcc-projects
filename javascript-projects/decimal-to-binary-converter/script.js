@@ -41,6 +41,15 @@ const animationData = [
   }
 ];
 
+/**
+ * decimalToBinary - Recursively converts a decimal number to binary.
+ * 
+ * @param {number} input - The decimal number to convert.
+ * @returns {string} - The binary representation as a string.
+ * 
+ * Base case: 0 or 1 returns itself as a string.
+ * Recursive case: floor(input/2) + (input % 2)
+ */
 const decimalToBinary = (input) => {
   if (input === 0 || input === 1) {
     return String(input);
@@ -49,6 +58,10 @@ const decimalToBinary = (input) => {
   }
 };
 
+/**
+ * showAnimation - Displays a visual call stack animation for input value 5.
+ * Uses setTimeout to add, update, and remove DOM elements sequentially.
+ */
 const showAnimation = () => {
   result.innerText = "Call Stack Animation In Progress...";
 
@@ -81,25 +94,33 @@ const showAnimation = () => {
   }, 20000);
 };
 
+/**
+ * checkUserInput - Validates user input and triggers conversion or animation.
+ * 
+ * - If input is invalid (empty, NaN, or negative): shows alert.
+ * - If input is 5: triggers the call stack animation.
+ * - Otherwise: performs normal conversion and displays result.
+ * - Finally, clears the input field.
+ */
 const checkUserInput = () => {
   const inputInt = parseInt(numberInput.value);
-
+  // Validate input
   if (!numberInput.value || isNaN(inputInt) || inputInt < 0) {
     alert("Please provide a decimal number greater than or equal to 0");
     return;
   }
-
+  // Special case: trigger animation for input 5
   if (inputInt === 5) {
     showAnimation();
   } else {
     result.textContent = decimalToBinary(inputInt);
   }
-  
+  // Clear the input field after processing
   numberInput.value = "";
 };
-
+// Event listener for the Convert button
 convertBtn.addEventListener("click", checkUserInput);
-
+// Event listener for Enter key on the input field
 numberInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     checkUserInput();
