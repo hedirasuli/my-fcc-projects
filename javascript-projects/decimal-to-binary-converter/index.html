@@ -11,12 +11,17 @@
       <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
+      <!-- Visible content of the page -->
+      
+      <!-- Main heading -->
       <h1>
         Decimal to Binary <br />
         Converter
       </h1>
+      <!-- Input section: where user enters a decimal number -->
       <section class="input-container">
         <label for="number-input">Enter a decimal number:</label>
+        <!-- Number input field (initial value empty) -->
         <input
           value=""
           type="number"
@@ -24,13 +29,17 @@
           id="number-input"
           class="number-input"
         />
+        <!-- Convert button that triggers the conversion -->
         <button class="convert-btn" id="convert-btn">Convert</button>
       </section>
+      <!-- Output section: displays the conversion result and call stack animation -->
       <section class="output-container">
         <output id="result" for="number-input"></output>
         <h2>Call stack</h2>
+        <!-- Container for the call stack animation (used in the recursive conversion process) -->
         <div id="animation-container"></div>
       </section>
+      <!-- External JavaScript file containing the conversion logic -->
       <script src="script.js"></script>
     </body>
 </html>
