@@ -1,24 +1,27 @@
 <!DOCTYPE html>
+<!-- Document type declaration: HTML5 -->
 <html lang="en">
+<!-- Root element with language set to English -->
+    <head>
+        <!-- Meta information and document settings -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Debug a random background color changer</title>
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Debug a random background color changer</title>
-    <link rel="stylesheet" href="./styles.css" />
-</head>
+    <body>
+        <!-- Visible content of the page -->
+        <h1>Random Background Color changer</h1>
 
-<body>
-    <h1>Random Background Color changer</h1>
-
-    <main>
-        <section class="bg-information-container">
-            <p>Hex Code: <span id="bg-hex-code">#110815</span></p>
-        </section>
-
-        <button class="btn" id="btn">Change Background Color</button>
-    </main>
-    <script src="./script.js"></script>
-</body>
-
+        <main>
+            <!-- Information container displaying the current hex color code -->
+            <section class="bg-information-container">
+                <p>Hex Code: <span id="bg-hex-code">#110815</span></p>
+            </section>
+            <!-- Button that triggers the background color change -->
+            <button class="btn" id="btn">Change Background Color</button>
+        </main>
+        <script src="./script.js"></script>
+    </body>
 </html>
