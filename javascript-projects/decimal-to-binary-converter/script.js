@@ -30,14 +30,14 @@ const animationData = [
     addElDelay: 1500,  // Added 1.5s after start
     msg: 'decimalToBinary(2) returns "1" + 0 (2 % 2) and gives that value to the stack below. Then it pops off the stack.',
     showMsgDelay: 10000, // 10s after being added
-    removeElDelay: 15000,// 10s after being added
+    removeElDelay: 15000, // 15s after being added
   },
   {
     inputVal: 1,
-    addElDelay: 2000,
+    addElDelay: 2000, // Added 2s after start
     msg: "decimalToBinary(1) returns '1' (base case) and gives that value to the stack below. Then it pops off the stack.",
-    showMsgDelay: 5000,
-    removeElDelay: 10000,
+    showMsgDelay: 5000,  // 5s after being added
+    removeElDelay: 10000, // 10s after being added
   }
 ];
 
