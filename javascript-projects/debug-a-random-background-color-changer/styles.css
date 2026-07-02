@@ -1,3 +1,4 @@
+/* Universal selector including pseudo-elements: reset margins, padding, and apply border-box sizing */
 *,
 *::before,
 *::after {
@@ -5,25 +6,25 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* CSS Custom Properties (variables) for consistent theming */
 :root {
     --yellow: #f1be32;
     --golden-yellow: #feac32;
     --dark-purple: #110815;
     --light-grey: #efefef;
 }
-
+/* Body styling: dark purple background, light grey text, centered text alignment */
 body {
     background-color: var(--dark-purple);
     color: var(--light-grey);
     text-align: center;
 }
-
+/* Background information container: vertical margins, larger font size */
 .bg-information-container {
     margin: 15px 0 25px;
     font-size: 1.2rem;
 }
-
+/* Button styling: pointer cursor, padding, margins, dark purple text, golden-yellow background with gradient, colored border */
 .btn {
     cursor: pointer;
     padding: 10px;
@@ -34,7 +35,7 @@ body {
     border-color: var(--golden-yellow);
     border-width: 3px;
 }
-
+/* Hover effect for buttons: lighter gradient for visual feedback */
 .btn:hover {
     background-image: linear-gradient(#ffcc4c, #f89808);
 }
