@@ -20,17 +20,17 @@ const animationContainer = document.getElementById("show-animation") || document
 const animationData = [
   {
     inputVal: 5,
-    addElDelay: 1000,
+    addElDelay: 1000,  // Delay before adding to DOM (1s)
     msg: 'decimalToBinary(5) returns "10" + 1 (5 % 2). Then it pops off the stack.',
-    showMsgDelay: 15000,
-    removeElDelay: 20000,
+    showMsgDelay: 15000, // Delay before updating with message (15s)
+    removeElDelay: 20000, // Delay before removing from DOM (20s)
   },
   {
     inputVal: 2,
-    addElDelay: 1500,
+    addElDelay: 1500,  // Added 1.5s after start
     msg: 'decimalToBinary(2) returns "1" + 0 (2 % 2) and gives that value to the stack below. Then it pops off the stack.',
-    showMsgDelay: 10000,
-    removeElDelay: 15000,
+    showMsgDelay: 10000, // 10s after being added
+    removeElDelay: 15000,// 10s after being added
   },
   {
     inputVal: 1,
