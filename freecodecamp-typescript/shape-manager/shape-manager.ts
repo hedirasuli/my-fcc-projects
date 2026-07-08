@@ -89,3 +89,50 @@ const clearInputFields = () => {
     input.value = "";
   });
 };
+
+// ==========================================
+// 4. Core Business Logic & Calculations
+// ==========================================
+
+// Pure function to calculate area using pattern matching (switch true)
+const calculateArea = (shape: Shapes): string => {
+  switch (shape.type) {
+    case "circle":
+      return `Area of Circle: ${(Math.PI * shape.radius ** 2).toFixed(2)}`;
+    case "rectangle":
+      return `Area of Rectangle: ${shape.width * shape.height}`;
+    case "triangle":
+      return `Area of Triangle: ${0.5 * shape.base * shape.height}`;
+    default:
+      // Exhaustiveness check using 'never' type
+      const _nonExistent: never = shape;
+      return _nonExistent;
+  }
+};
+
+// Read current inputs, call calculator, and render the output text
+function updateResult() {
+  const shape = shapeTypeSelect.value;
+  let result: string = "";
+
+  if (shape === "circle") {
+    result = calculateArea({
+      type: "circle",
+      radius: Number(propertyInputs.radius.value),
+    });
+  } else if (shape === "rectangle") {
+    result = calculateArea({
+      type: "rectangle",
+      width: Number(propertyInputs.width.value),
+      height: Number(propertyInputs.height.value),
+    });
+  } else if (shape === "triangle") {
+    result = calculateArea({
+      type: "triangle",
+      base: Number(propertyInputs.base.value),
+      height: Number(propertyInputs.triangleHeight.value),
+    });
+  }
+
+  resultText.textContent = result;
+}
