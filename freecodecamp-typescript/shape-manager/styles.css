@@ -1,0 +1,45 @@
+/* Reset: remove default margins/padding and apply border-box sizing to all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling: modern font stack, gradient background, dark text, full viewport height, inner padding */
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(to bottom right, #f8fafc, #f1f5f9);
+    color: #334155;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+/* Main container: max width, centered with auto margins, vertical padding */
+.container {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Utility class: center text horizontally */
+.text-center {
+    text-align: center;
+}
+
+/* Utility class: bottom margin of 2rem (8 * 0.25rem) */
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+/* Heading 1: large, bold, dark color, bottom margin */
+h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+/* Subtitle: slightly lighter text color */
+.subtitle {
+    color: #475569;
+}
