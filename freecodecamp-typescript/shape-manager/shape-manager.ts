@@ -136,3 +136,77 @@ function updateResult() {
 
   resultText.textContent = result;
 }
+
+// ==========================================
+// 5. Event Handlers
+// ==========================================
+
+// Handle dropdown change event for shape selection
+const handleShapeSelect = (e: Event) => {
+  e.preventDefault();
+  clearInputFields();
+
+  const val = e.currentTarget as HTMLSelectElement;
+  if (!val) {
+    return "target value not found";
+  }
+
+  const hasSelection = Boolean(val.value);
+  toggleResultCard(hasSelection);
+
+  chooseShape(val.value);
+  updateResult();
+};
+
+// Handle real-time user input and validate negative entries
+const handleInput = (e: Event) => {
+  const value = Number((e.target as HTMLInputElement).value);
+
+  if (value < 0) {
+    alert("Negative values are not allowed.");
+    clearInputFields();
+  }
+
+  updateResult();
+};
+
+// ==========================================
+// 6. Initialization
+// ==========================================
+
+// Setup the app state and attach event listeners on DOM load
+const initializeApp = () => {
+  // Bind top level selector
+  shapeTypeSelect = getElement("shape-type") as HTMLSelectElement;
+
+  // Bind shape wrappers
+  propertyGroups = {
+    circle: getElement("circle-props") as HTMLElement,
+    rectangle: getElement("rectangle-props") as HTMLElement,
+    triangle: getElement("triangle-props") as HTMLElement,
+  };
+
+  // Bind all individual inputs
+  propertyInputs = {
+    radius: getElement("radius") as HTMLInputElement,
+    width: getElement("width") as HTMLInputElement,
+    height: getElement("height") as HTMLInputElement,
+    base: getElement("base") as HTMLInputElement,
+    triangleHeight: getElement("triangle-height") as HTMLInputElement,
+  };
+
+  // Bind output components
+  resultText = getElement("result-text") as HTMLElement;
+  resultCard = getElement("result-card") as HTMLElement;
+
+  // Attach listener to dropdown selector
+  shapeTypeSelect.oninput = handleShapeSelect;
+
+  // Dynamically attach live calculation tracking to all input elements
+  for (const [, input] of Object.entries(propertyInputs)) {
+    input.oninput = handleInput;
+  }
+};
+
+// Entry point trigger
+document.addEventListener("DOMContentLoaded", initializeApp);
