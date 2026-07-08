@@ -58,3 +58,34 @@ let propertyInputs: {
 
 let resultText: HTMLElement;
 let resultCard: HTMLElement;
+
+// ==========================================
+// 3. UI Control Functions
+// ==========================================
+
+// Toggle visibility of input fields based on selected shape
+const chooseShape = (shapeType: string) => {
+  Object.entries(propertyGroups).forEach(([name, group]) => {
+    if (name === shapeType) {
+      group.classList.remove("hidden");
+    } else {
+      group.classList.add("hidden");
+    }
+  });
+};
+
+// Show or hide the result card component
+const toggleResultCard = (show: boolean) => {
+  if (show) {
+    resultCard.classList.add("visible");
+  } else {
+    resultCard.classList.remove("visible");
+  }
+};
+
+// Reset all input fields to empty strings
+const clearInputFields = () => {
+  document.querySelectorAll("input").forEach((input) => {
+    input.value = "";
+  });
+};
