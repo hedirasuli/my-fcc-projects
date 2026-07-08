@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- Document type declaration: HTML5 -->
+<html lang="en">
+<!-- Root element with language set to English -->
+
+    <head>
+        <!-- Meta information and document settings -->
+        <meta charset="UTF-8" />
+        <!-- Character encoding: UTF-8 for full Unicode support -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Viewport settings for responsive design on mobile devices -->
+        <link rel="stylesheet" href="styles.css" />
+        <!-- Link to external stylesheet for shape manager styling -->
+        <title>Shape Manager</title>
+        <!-- Page title shown in browser tab -->
+    </head>
+
+    <body>
+        <!-- Visible content of the page -->
+
+        <!-- Main container -->
+        <div class="container">
+
+            <!-- Header section -->
+            <div class="text-center mb-8">
+                <h1>Shape Manager</h1>
+                <p class="subtitle">Calculate areas of geometric shapes</p>
+            </div>
+
+            <!-- Shape Calculator Card -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Shape Calculator</h2>
+                </div>
+                <div class="card-content">
+
+                    <!-- Shape Type Selection Dropdown -->
+                    <div class="form-group">
+                        <label for="shape-type" class="label">Shape Type</label>
+                        <select id="shape-type" class="select">
+                            <option value="">Select shape type</option>
+                            <option value="circle">Circle</option>
+                            <option value="rectangle">Rectangle</option>
+                            <option value="triangle">Triangle</option>
+                        </select>
+                    </div>
+
+                    <!-- Dynamic Property Inputs Container -->
+                    <div id="property-inputs">
+
+                        <!-- Circle Properties (hidden by default) -->
+                        <div id="circle-props" class="form-group hidden">
+                            <label for="radius" class="label">Radius</label>
+                            <input type="number" min="0" id="radius" placeholder="Enter radius" class="input" />
+                        </div>
+
+                        <!-- Rectangle Properties (hidden by default) - Grid layout for width & height -->
+                        <div id="rectangle-props" class="form-grid hidden">
+                            <div class="form-group">
+                                <label for="width" class="label">Width</label>
+                                <input type="number" min="0" id="width" placeholder="Width" class="input" />
+                            </div>
+                            <div class="form-group">
+                                <label for="height" class="label">Height</label>
+                                <input type="number" min="0" id="height" placeholder="Height" class="input" />
+                            </div>
+                        </div>
+
+                        <!-- Triangle Properties (hidden by default) - Grid layout for base & height -->
+                        <div id="triangle-props" class="form-grid hidden">
+                            <div class="form-group">
+                                <label for="base" class="label">Base</label>
+                                <input type="number" min="0" id="base" placeholder="Base" class="input" />
+                            </div>
+                            <div class="form-group">
+                                <label for="triangle-height" class="label">Height</label>
+                                <input type="number" min="0" id="triangle-height" placeholder="Height"
+                                    class="input triangle-height" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of property inputs -->
+                </div>
+            </div>
+
+            <!-- Result Card - Displays the calculated area -->
+            <div id="result-card" class="card">
+                <div class="card-content result-card-content">
+                    <div id="result-text"></div>
+                    <!-- Dynamic result text will be inserted here -->
+                    <div class="result-area"></div>
+                    <!-- Additional result display area -->
+                </div>
+            </div>
+        </div>
+        <!-- End of container -->
+
+        <!-- External TypeScript file containing shape calculation logic -->
+        <script src="index.ts"></script>
+    </body>
+
+</html>
