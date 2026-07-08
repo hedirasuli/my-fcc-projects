@@ -124,3 +124,55 @@ h1 {
     align-items: center;
     gap: 1rem;
 }
+
+/* Icon container: fixed size, rounded corners, flex centering */
+.result-icon-container {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Result icon: small size, fully rounded (circle) */
+.result-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 9999px;
+}
+
+/* Result text container: flex-grow to take remaining space */
+#result-text {
+    flex-grow: 1;
+}
+
+/* Result heading: medium size, bold */
+#result-text h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* Result paragraph: subdued color, capitalize text */
+#result-text p {
+    color: #475569;
+    text-transform: capitalize;
+}
+
+/* Utility class: hide elements */
+.hidden {
+    display: none;
+}
+
+/* Result card: hidden by default with fade transition */
+#result-card {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out;
+}
+
+/* When visible class is added: show with full opacity */
+#result-card.visible {
+    display: block;
+    opacity: 1;
+}
