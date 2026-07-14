@@ -100,3 +100,100 @@ body {
 .to-red-500 {
     --tw-gradient-to: #ef4444;
 }
+/* Colors */
+.bg-gray-900 {
+    background-color: #111827;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-gray-400 {
+    color: #9ca3af;
+}
+
+.text-orange-500 {
+    color: #f97316;
+    stroke: #f97316;
+}
+
+/* Flexbox utilities */
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.gap-3 {
+    gap: 0.75rem;
+}
+
+/* Grid utilities */
+.grid {
+    display: grid;
+}
+
+.gap-6 {
+    gap: 1.5rem;
+}
+
+/* Typography */
+.text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.opacity-90 {
+    opacity: 0.9;
+}
+
+.max-w-2xl {
+    max-width: 42rem;
+}
+
+/* Spacing utilities */
+.w-8 {
+    width: 2rem;
+}
+
+.h-8 {
+    height: 2rem;
+}
+
+.h-2 {
+    height: 0.5rem;
+}
+
+.w-full {
+    width: 100%;
+}
+
+/* Border utilities */
+.border {
+    border-width: 1px;
+}
+
+.border-t {
+    border-top-width: 1px;
+}
