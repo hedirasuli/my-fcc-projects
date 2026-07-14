@@ -65,3 +65,90 @@ function renderMotorcycleCard(motorcycle: Motorcycle): string {
     </div>
   `;
 }
+
+// 5. Main Gallery App Class
+class MotorcycleGalleryApp {
+  private allMotorcycles: Motorcycle[] = [];
+
+  constructor() {
+    this.init();
+  }
+
+  private async init(): Promise<void> {
+    const loadingContainer = document.getElementById('loading-container');
+    if (loadingContainer) {
+      loadingContainer.style.display = 'flex';
+    }
+
+    try {
+      this.allMotorcycles = await fetchMotorcycles();
+      this.renderMotorcycles(this.allMotorcycles);
+      this.setupEventListeners();
+    } catch (error) {
+      console.error('An error occurred during initialization:', error);
+    } finally {
+      if (loadingContainer) {
+        loadingContainer.style.display = 'none';
+      }
+    }
+  }
+  // Render function to display motorcycles in the grid container
+  public renderMotorcycles(motorcycles: Motorcycle[] = this.allMotorcycles): void {
+    // Early return: If the array is not provided, is undefined, or has no elements, stop execution.
+    if (!motorcycles || motorcycles.length === 0) {
+      return;
+    }
+
+    const grid = document.getElementById('motorcycle-grid');
+    const resultsNumber = document.getElementById('results-number');
+    const noResults = document.getElementById('no-results');
+
+    if (grid) {
+      grid.innerHTML = motorcycles.map(moto => renderMotorcycleCard(moto)).join('');
+    }
+
+    if (resultsNumber) {
+      resultsNumber.textContent = motorcycles.length.toString();
+    }
+
+    if (noResults) {
+      noResults.style.display = 'none';
+    }
+  }
+
+  // Setup input listener for filtering the list
+  private setupEventListeners(): void {
+    const filterInput = document.getElementById('name-filter-input') as HTMLInputElement | null;
+    if (filterInput) {
+      filterInput.addEventListener('input', (event) => {
+        const target = event.target as HTMLInputElement;
+        const searchTerm = target.value.toLowerCase().trim();
+
+        const filtered = this.allMotorcycles.filter(moto =>
+          moto.name.toLowerCase().includes(searchTerm) ||
+          moto.manufacturer.toLowerCase().includes(searchTerm)
+        );
+
+        // Update the view with filtered results
+        const noResults = document.getElementById('no-results');
+        if (filtered.length === 0) {
+          const grid = document.getElementById('motorcycle-grid');
+          const resultsNumber = document.getElementById('results-number');
+          if (grid) grid.innerHTML = '';
+          if (resultsNumber) resultsNumber.textContent = '0';
+          if (noResults) noResults.style.display = 'block';
+        } else {
+          this.renderMotorcycles(filtered);
+        }
+      });
+    }
+  }
+}
+
+(window as any).fetchMotorcycles = fetchMotorcycles;
+(window as any).renderMotorcycleCard = renderMotorcycleCard;
+(window as any).MotorcycleGalleryApp = MotorcycleGalleryApp;
+
+// Instantiation
+const appInstance = new MotorcycleGalleryApp();
+(window as any).appInstance = appInstance;
