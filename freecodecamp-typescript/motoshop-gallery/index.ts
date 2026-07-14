@@ -39,3 +39,29 @@ function fetchMotorcycles(): Promise<Motorcycle[]> {
       }));
     });
 }
+
+// 4. Render a single motorcycle card returning a formatted HTML string
+function renderMotorcycleCard(motorcycle: Motorcycle): string {
+  return `
+    <div class="motorcycle-card">
+      <div class="motorcycle-card-image-container">
+        <img class="motorcycle-card-image" src="${motorcycle.image_url}" alt="${motorcycle.name}" />
+      </div>
+      <span class="motorcycle-card-year-badge">${motorcycle.year}</span>
+      <div class="motorcycle-card-content">
+        <div class="motorcycle-card-header">
+          <div>
+            <h3 class="motorcycle-card-title">${motorcycle.name}</h3>
+            <p class="motorcycle-card-manufacturer">${motorcycle.manufacturer}</p>
+          </div>
+          <span class="motorcycle-card-category">${motorcycle.category}</span>
+        </div>
+        <p class="motorcycle-card-description">${motorcycle.description}</p>
+        <div class="motorcycle-card-footer">
+          <span class="motorcycle-card-price">$${motorcycle.price}</span>
+          <span class="motorcycle-card-engine">${motorcycle.engine}</span>
+        </div>
+      </div>
+    </div>
+  `;
+}
