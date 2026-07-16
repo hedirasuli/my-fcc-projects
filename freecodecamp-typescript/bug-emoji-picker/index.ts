@@ -67,3 +67,13 @@ class Spider extends Bug<string> {
     this.emojiElement.innerText = this.emoji;
   }
 }
+
+/**
+ * Type guard to check if an EventTarget is indeed an HTMLSelectElement.
+ * Helps TypeScript understand the specific type within block scopes.
+ * @param element - The event target to validate
+ * @returns Boolean indicating if the element is an HTMLSelectElement
+ */
+function isSelect(element: EventTarget | null): element is HTMLSelectElement {
+  return element instanceof HTMLSelectElement;
+}
