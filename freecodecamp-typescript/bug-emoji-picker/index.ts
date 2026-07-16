@@ -77,3 +77,9 @@ class Spider extends Bug<string> {
 function isSelect(element: EventTarget | null): element is HTMLSelectElement {
   return element instanceof HTMLSelectElement;
 }
+
+// Target DOM element to display the selected bug's emoji
+const bugEmojiElement = document.querySelector<HTMLParagraphElement>("#bug-emoji")!;
+
+// Target select dropdown element to switch between bug species
+const selectElement = document.querySelector<HTMLSelectElement>("#species")!;
