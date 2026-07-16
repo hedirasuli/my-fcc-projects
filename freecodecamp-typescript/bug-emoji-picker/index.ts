@@ -83,3 +83,9 @@ const bugEmojiElement = document.querySelector<HTMLParagraphElement>("#bug-emoji
 
 // Target select dropdown element to switch between bug species
 const selectElement = document.querySelector<HTMLSelectElement>("#species")!;
+
+// Dictionary mapping bug keys to their respective class instances
+const bugMap: Record<string, Bug<string>> = {
+  "bee": new Bee(bugEmojiElement),
+  "spider": new Spider(bugEmojiElement)
+};
