@@ -89,3 +89,11 @@ const bugMap: Record<string, Bug<string>> = {
   "bee": new Bee(bugEmojiElement),
   "spider": new Spider(bugEmojiElement)
 };
+
+// Event listener to trigger emoji rendering whenever a new species is selected
+selectElement.addEventListener("change", (e) => {
+  if (isSelect(e.target)) {
+    // Look up the selected bug and render its emoji
+    bugMap[e.target.value].render();
+  }
+});
