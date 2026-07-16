@@ -23,3 +23,25 @@ abstract class Bug<T> {
    */
   abstract render(): void;
 }
+
+/**
+ * Subclass representing a Bee.
+ * Extends Bug with the generic type parameter set to string.
+ */
+class Bee extends Bug<string> {
+  /**
+   * Initializes the Bee and sets its specific emoji.
+   * @param emojiElement - The HTML paragraph element for display
+   */
+  constructor(emojiElement: HTMLParagraphElement) {
+    super(emojiElement);
+    this.emoji = "🐝";
+  }
+
+  /**
+   * Renders the bee emoji by updating the inner text of the target DOM element.
+   */
+  override render() {
+    this.emojiElement.innerText = this.emoji;
+  }
+}
