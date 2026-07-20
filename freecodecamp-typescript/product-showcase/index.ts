@@ -49,3 +49,37 @@ class Collection<T> {
     return this.items.filter(callback);
   }
 }
+
+// Function to convert a Product into an HTML string
+function renderProduct(product: Product): string {
+  let info = "";
+
+  // Use type narrowing to determine the specific properties
+  switch (product.type) {
+    case "book":
+      info = `Book: ${product.title} by ${product.author}`;
+      break;
+    case "electronics":
+      info = `Electronics: ${product.item} - ${product.model}`;
+      if (product.warranty !== undefined) {
+        info += ` - Warranty: ${product.warranty} year(s)`;
+      }
+      break;
+    case "clothing":
+      info = `Clothing: ${product.item} by ${product.brand}`;
+      if (product.size !== undefined) {
+        info += ` - Size ${product.size}`;
+      }
+      break;
+    default:
+      // Fallback for an invalid product type
+      throw new Error(`Unknown product type: ${JSON.stringify(product)}`);
+  }
+
+  return `
+    <div class="item" id="${product.id}">
+      <p class="price">${product.price}</p>
+      <p class="info">${info}</p>
+    </div>
+  `;
+}
