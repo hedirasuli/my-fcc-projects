@@ -83,3 +83,37 @@ function renderProduct(product: Product): string {
     </div>
   `;
 }
+
+// Instantiate the Collection with at least one item of each type
+const products = new Collection<Product>([
+  {
+    type: "book",
+    id: "b1",
+    price: 19.99,
+    title: "Clean Code",
+    author: "Robert C. Martin",
+  },
+  {
+    type: "electronics",
+    id: "e1",
+    price: 899.99,
+    item: "Laptop",
+    model: "XPS 13",
+    warranty: 2,
+  },
+  {
+    type: "clothing",
+    id: "c1",
+    price: 29.99,
+    item: "T-Shirt",
+    brand: "Nike",
+    size: "M",
+  },
+  {
+    type: "clothing",
+    id: "c2",
+    price: 45.0,
+    item: "Jeans",
+    brand: "Levi's",
+  } // No size provided to test the optional property
+]);
