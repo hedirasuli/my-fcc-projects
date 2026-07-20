@@ -47,4 +47,57 @@ button.active {
     background: #ff9800;
     color: #1a1a1a;
     box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
-    font-weight: 600; }
+    font-weight: 600;
+ }
+
+
+#output {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+    
+.item {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+ }
+    
+.item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+ }
+
+ 
+.item strong {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #0f4c75;
+    font-weight: 700;
+}
+
+
+.item>div:not(.price) {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+.price {
+    margin-top: auto;
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f4c75;
+    padding-top: 12px;
+    border-top: 2px solid #f0f0f0;
+}
+
