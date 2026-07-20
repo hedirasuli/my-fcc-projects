@@ -117,3 +117,28 @@ const products = new Collection<Product>([
     brand: "Levi's",
   } // No size provided to test the optional property
 ]);
+
+// Function to render products to the DOM, filtered by type if provided
+function showProducts(type?: string): void {
+  const outputDiv = document.getElementById("output");
+  
+  if (!outputDiv) return;
+
+  const filteredItems = type
+    ? products.filter((p) => p.type === type)
+    : products.getAll();
+
+  outputDiv.innerHTML = filteredItems.map(renderProduct).join("");
+}
+
+// Set up event listeners once the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", () => {
+  // Show all products by default
+  showProducts();
+
+  // Attach click events to the category buttons
+  document.getElementById("all")?.addEventListener("click", () => showProducts());
+  document.getElementById("books")?.addEventListener("click", () => showProducts("book"));
+  document.getElementById("electronics")?.addEventListener("click", () => showProducts("electronics"));
+  document.getElementById("clothing")?.addEventListener("click", () => showProducts("clothing"));
+});
