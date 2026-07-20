@@ -27,3 +27,25 @@ interface Clothing extends Item {
   brand: string;
   size?: "S" | "M" | "L";
 }
+
+// Create a union type of all product interfaces
+type Product = Book | Electronics | Clothing;
+
+// Generic Collection class to handle items of type T
+class Collection<T> {
+  items: T[];
+
+  constructor(items: T[]) {
+    this.items = items;
+  }
+
+  // Returns all items in the collection
+  getAll(): T[] {
+    return this.items;
+  }
+
+  // Filters items based on a callback condition
+  filter(callback: (item: T) => boolean): T[] {
+    return this.items.filter(callback);
+  }
+}
