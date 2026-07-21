@@ -102,3 +102,50 @@ h5 {
         rgba(15, 23, 42, 0.9),
         rgba(30, 41, 59, 0.9));
 }
+
+.description_wrapper {
+    background-color: rgba(88, 28, 135, 0.2);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    color: var(--accent-secondary);
+    padding: 2rem;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.btn {
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1.125rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 0.3em;
+    outline: none;
+    border: none;
+}
+
+.btn_singleCard {
+    background-image: linear-gradient(to right,
+            var(--gradient-cosmic-from),
+            var(--gradient-cosmic-to));
+}
+
+.btn_threeCard {
+    color: var(--accent-light-gold);
+    background-image: linear-gradient(to right,
+            var(--gradient-cosmic-to),
+            var(--gradient-cosmic-from));
+}
