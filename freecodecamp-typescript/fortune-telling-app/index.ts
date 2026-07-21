@@ -89,3 +89,183 @@ const renderCard = (drawingType: string, isReversed: boolean, shortName: string,
     </figure>
   </div>
 `;
+// Enum representing the three time horizons for a multi-card reading
+enum DrawingType {
+  Past = "past",
+  Present = "present",
+  Future = "future",
+}
+
+// Main application class managing game state and DOM interactions
+class Game {
+  cards: Card[] = [];
+
+  // Cached object holding references to all required DOM elements
+  private elements: {
+    singleCardBtn: HTMLElement;
+    singleCard: HTMLElement;
+    multipleCardsBtn: HTMLElement;
+    multipleCard: HTMLElement;
+    title: HTMLElement;
+    newReadingBtn: HTMLElement;
+    fortuneContainer: HTMLElement;
+    fortuneDescription: HTMLElement;
+    headerTitle: HTMLElement;
+    subTitle: HTMLElement;
+    cardTitle: HTMLElement;
+    description: HTMLElement;
+    text: HTMLElement;
+  };
+
+  constructor() {
+    // Cache DOM element references during instantiation
+    this.elements = {
+      singleCardBtn: getElement("#btn-single-card"),
+      singleCard: getElement(".single_card"),
+      multipleCardsBtn: getElement("#btn-multiple-cards"),
+      multipleCard: getElement(".multiple_card"),
+      title: getElement(".title"),
+      newReadingBtn: getElement(".btn_reveal"),
+      fortuneContainer: getElement(".fortune_container"),
+      fortuneDescription: getElement(".fortune_description"),
+      headerTitle: getElement(".header_title"),
+      subTitle: getElement(".sub_title"),
+      cardTitle: getElement(".desc_title"),
+      description: getElement(".description"),
+      text: getElement(".text"),
+    };
+
+    // Initialize application data and event listeners
+    this.fetchCardsData();
+    this.initializeEventListeners();
+  }
+
+  /**
+   * Fetches tarot card data from the remote CDN JSON file.
+   */
+  private async fetchCardsData() {
+    try {
+      const response = await fetch(`${CDN_URL}/card_data.json`);
+      const data: Deck = await response.json();
+      this.cards = data.cards;
+    } catch (error) {
+      console.error("Error fetching cards:", error);
+    }
+  }
+
+  /**
+   * Registers DOM event listeners for user interactions.
+   */
+  private initializeEventListeners(): void {
+    this.elements.singleCardBtn.addEventListener("click", () =>
+      this.singleCardSelected(),
+    );
+    this.elements.multipleCardsBtn.addEventListener("click", () =>
+      this.multipleCardSelected(),
+    );
+    this.elements.newReadingBtn.addEventListener("click", () =>
+      this.newReading(),
+    );
+
+    document.addEventListener("click", (e: Event) => this.showFortune(e));
+  }
+
+  /**
+   * Handles the single card reading mode.
+   */
+  singleCardSelected() {
+    hideElements(
+      this.elements.singleCardBtn,
+      this.elements.multipleCardsBtn,
+      this.elements.multipleCard,
+      this.elements.text,
+      this.elements.headerTitle,
+    );
+
+    const isReversed = Math.random() < 0.5;
+    const chosenCard = getRandomItem(this.cards);
+    this.elements.singleCard.innerHTML = renderCard(
+      "Click the card and reveal the fortune",
+      isReversed,
+      chosenCard.name_short,
+      chosenCard.img,
+    );
+    this.elements.multipleCard.innerHTML = "";
+    showElements(this.elements.singleCard, this.elements.fortuneContainer);
+  }
+
+  /**
+   * Handles the three-card reading mode (Past, Present, Future).
+   */
+  multipleCardSelected() {
+    hideElements(
+      this.elements.singleCard,
+      this.elements.singleCardBtn,
+      this.elements.multipleCardsBtn,
+      this.elements.headerTitle,
+    );
+
+    showElements(
+      this.elements.multipleCard,
+      this.elements.fortuneContainer,
+      this.elements.text,
+    );
+
+    this.elements.multipleCard.innerHTML = Object.values(DrawingType)
+      .map((type) => {
+        const isReversed = Math.random() < 0.5;
+        const card = getRandomItem(this.cards);
+        return renderCard(type, isReversed, card.name_short, card.img);
+      })
+      .join("");
+  }
+
+  /**
+   * Event handler triggered when a user clicks on a card to reveal its fortune.
+   * @param e - The click Event object
+   */
+  showFortune(e: Event) {
+    const target = e.target;
+    if (!(target instanceof HTMLElement)) {
+      return;
+    }
+
+    const cardElement = target?.closest(".card_container");
+
+    if (!cardElement) {
+      return;
+    }
+
+    const cardId = cardElement.getAttribute("data-id");
+    const foundCard = this.cards.find((card) => card.name_short === cardId);
+
+    if (foundCard) {
+      this.elements.cardTitle.textContent = foundCard.name;
+      this.elements.description.textContent = foundCard.desc;
+      this.elements.subTitle.textContent = foundCard.meaning_up;
+      this.elements.title.textContent = foundCard.name;
+      showElements(this.elements.fortuneDescription);
+    }
+  }
+
+  /**
+   * Resets the UI layout to allow starting a new reading.
+   */
+  newReading() {
+    showElements(
+      this.elements.singleCardBtn,
+      this.elements.multipleCardsBtn,
+      this.elements.headerTitle,
+    );
+
+    hideElements(
+      this.elements.singleCard,
+      this.elements.multipleCard,
+      this.elements.fortuneContainer,
+      this.elements.fortuneDescription,
+    );
+  }
+}
+
+// Instantiate the game instance to start the application
+const game = new Game();
