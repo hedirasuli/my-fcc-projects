@@ -1,0 +1,53 @@
+:root {
+    /* Background Colors */
+    --bg-main: #0b0f1a;
+    --bg-card: #131622;
+    --bg-secondary: #232633;
+
+    /* Text Colors */
+    --text-primary: #f7e580;
+    --text-muted: #b8a880;
+    --text-dark: #0b0f1a;
+
+    /* Border Colors */
+    --border-main: #2a2d3a;
+    --border-input: #232633;
+
+    /* Accent Colors */
+    --accent-primary: #8080ff;
+    --accent-secondary: #b8a866;
+    --accent-mystic: #bf80ff;
+    --accent-light-cosmic: #b3b3ff;
+    --accent-light-gold: #f2d966;
+
+    /* Interactive Colors */
+    --focus-ring: #8080ff;
+    --destructive: #e53e3e;
+
+    /* Gradient Colors */
+    --gradient-cosmic-from: #8080ff;
+    --gradient-cosmic-to: #bf80ff;
+    --gradient-gold-from: #b8a866;
+    --gradient-gold-to: #f2d966;
+    --gradient-card-from: #131622;
+    --gradient-card-to: #1a1e2e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--text-primary);
+    text-align: center;
+    min-height: 100vh;
+    background-size: 100% 100%;
+    /* forces stretch */
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom, #1e1b4b, #3b0764, #0f172a);
+    font-family:
+        ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
+}
