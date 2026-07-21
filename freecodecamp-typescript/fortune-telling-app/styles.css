@@ -149,3 +149,54 @@ h5 {
             var(--gradient-cosmic-to),
             var(--gradient-cosmic-from));
 }
+
+.btn:hover {
+    background-image: linear-gradient(to right, var(--gradient-cosmic-to));
+}
+
+.btn_reveal {
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: var(--gradient-gold-to);
+    border-radius: 0.3rem;
+    margin: 1rem;
+}
+
+.btn_reveal:hover {
+    background-color: var(--gradient-gold-from);
+}
+
+.hidden {
+    display: none;
+}
+
+.card_container {
+    position: relative;
+    width: 10rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: 2px solid var(--accent-light-gold);
+    box-shadow: 0 0 7px var(--accent-light-gold);
+
+    img {
+        width: 100%;
+    }
+}
