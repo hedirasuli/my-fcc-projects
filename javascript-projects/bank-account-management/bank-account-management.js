@@ -62,8 +62,15 @@ class BankAccount {
     }
 }
 
+// ==========================================
+// Create a new bank account instance
+// ==========================================
 const myAccount = new BankAccount();
 
+/**
+ * updateUI - Updates all DOM elements with current account state.
+ * @param {string} msg - Message to display in the message log.
+ */
 function updateUI(msg) {
     document.getElementById('balance-display').innerText = `Current balance: $${myAccount.balance}`;
     document.getElementById('message-log').innerText = msg;
