@@ -11,7 +11,8 @@
     // Step 2: Find the largest number in the array
     // Math.max() returns the highest value of the two numbers
     const max = Math.max(arr[0], arr[1]);
-
+    // Step 3: Initialize a variable to store the cumulative sum
+   // Starting from 0 ensures we don't have any leftover value
     let totalSum = 0;
 
     
