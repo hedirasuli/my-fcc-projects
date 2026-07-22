@@ -8,6 +8,8 @@
     // Step 1: Find the smallest number in the array
     // Math.min() returns the lowest value of the two numbers
     const min = Math.min(arr[0], arr[1]);
+    // Step 2: Find the largest number in the array
+    // Math.max() returns the highest value of the two numbers
     const max = Math.max(arr[0], arr[1]);
 
     let totalSum = 0;
