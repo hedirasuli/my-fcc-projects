@@ -5,8 +5,8 @@
  * @returns {number} The sum of all numbers in the range.
  */
  function sumAll(arr) {
-  
-
+    // Step 1: Find the smallest number in the array
+    // Math.min() returns the lowest value of the two numbers
     const min = Math.min(arr[0], arr[1]);
     const max = Math.max(arr[0], arr[1]);
 
