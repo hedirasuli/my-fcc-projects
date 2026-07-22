@@ -1,3 +1,11 @@
+/**
+ * BankAccount Class - Manages a bank account with deposit/withdraw functionality
+ * and transaction history tracking.
+ * 
+ * @property {number} balance - The current account balance.
+ * @property {Array<{type: string, amount: number}>} transactions - History of all transactions.
+ */
+
 class BankAccount {
     constructor() {
         this.balance = 0;
