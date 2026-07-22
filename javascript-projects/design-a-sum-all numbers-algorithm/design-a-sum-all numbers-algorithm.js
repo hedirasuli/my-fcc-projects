@@ -14,13 +14,13 @@
     // Step 3: Initialize a variable to store the cumulative sum
    // Starting from 0 ensures we don't have any leftover value
     let totalSum = 0;
-
-    
-    
+     // Step 4: Loop through all numbers from min to max (inclusive)
+    // For each iteration, add the current number to totalSum
+    // Example: if min=1 and max=4, loop runs for i=1,2,3,4
     for (let i = min; i <= max; i++) {
-      
-      
-        totalSum += i;
+    // Add the current number to the running total
+    // totalSum = totalSum + i (shortened to totalSum += i)
+    totalSum += i;
     }
 
    
