@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <!-- Document type declaration: HTML5 -->
 <html>
-<head>
-    <!-- Meta information and document settings -->
-    <title>Bank App</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Link to external stylesheet for bank app styling -->
-</head>
-<body>
+    <head>
+        <!-- Meta information and document settings -->
+        <title>Bank App</title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- Link to external stylesheet for bank app styling -->
+    </head>
+    <body>
 
-    <div class="bank-card">
-        <!-- Main bank card container -->
-        <h2>My Bank</h2>
-        <div class="balance-box">
-            <p id="balance-display">Current balance: $0</p>
+        <div class="bank-card">
+            <!-- Main bank card container -->
+            <h2>My Bank</h2>
+            <div class="balance-box">
+                <p id="balance-display">Current balance: $0</p>
+            </div>
+            <p id="message-log" class="msg">Welcome! Enter an amount.</p>
+            <input type="number" id="amount-input" placeholder="Amount...">
+            <div class="btn-group">
+                <button class="btn-deposit" onclick="handleDeposit()">Deposit</button>
+                <button class="btn-withdraw" onclick="handleWithdraw()">Withdraw</button>
+            </div>
+            <div class="history">
+                <p id="deposit-list">Deposits: </p>
+                <p id="withdraw-list">Withdrawals: </p>
+            </div>
         </div>
-        <p id="message-log" class="msg">Welcome! Enter an amount.</p>
-        <input type="number" id="amount-input" placeholder="Amount...">
-        <div class="btn-group">
-            <button class="btn-deposit" onclick="handleDeposit()">Deposit</button>
-            <button class="btn-withdraw" onclick="handleWithdraw()">Withdraw</button>
-        </div>
-        <div class="history">
-            <p id="deposit-list">Deposits: </p>
-            <p id="withdraw-list">Withdrawals: </p>
-        </div>
-    </div>
-    <!-- External JavaScript file for bank app logic -->
-    <script src="bank-account-management.js"></script>
-</body>
+        <!-- External JavaScript file for bank app logic -->
+        <script src="bank-account-management.js"></script>
+    </body>
 </html>
