@@ -7,11 +7,19 @@
  */
 
 class BankAccount {
+    /**
+     * Constructor initializes the account with zero balance and empty transaction list.
+     * Note: In JavaScript, properties should be declared in the constructor.
+     */
     constructor() {
         this.balance = 0;
         this.transactions = [];
     }
-
+    /**
+     * deposit - Adds a positive amount to the account balance.
+     * @param {number} amount - The amount to deposit (must be > 0).
+     * @returns {string} - Success or error message.
+     */
     deposit(amount) {
         if (amount > 0) {
             this.balance += amount;
@@ -21,6 +29,11 @@ class BankAccount {
         return "Deposit amount must be greater than zero.";
     }
 
+    /**
+     * withdraw - Subtracts a positive amount from the account balance if sufficient funds exist.
+     * @param {number} amount - The amount to withdraw (must be > 0 and <= balance).
+     * @returns {string} - Success or error message.
+     */
     withdraw(amount) {
         if (amount > 0 && amount <= this.balance) {
             this.balance -= amount;
