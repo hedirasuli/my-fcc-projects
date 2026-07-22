@@ -72,6 +72,7 @@ const myAccount = new BankAccount();
  * @param {string} msg - Message to display in the message log.
  */
 function updateUI(msg) {
+    // Update balance display
     document.getElementById('balance-display').innerText = `Current balance: $${myAccount.balance}`;
     document.getElementById('message-log').innerText = msg;
     document.getElementById('deposit-list').innerText = myAccount.listAllDeposits();
@@ -79,12 +80,18 @@ function updateUI(msg) {
     document.getElementById('amount-input').value = "";
 }
 
+/**
+ * handleDeposit - Reads the input value and processes a deposit.
+ */
 function handleDeposit() {
     const val = parseFloat(document.getElementById('amount-input').value);
     const res = myAccount.deposit(val);
     updateUI(res);
 }
 
+/**
+ * handleWithdraw - Reads the input value and processes a withdrawal.
+ */
 function handleWithdraw() {
     const val = parseFloat(document.getElementById('amount-input').value);
     const res = myAccount.withdraw(val);
