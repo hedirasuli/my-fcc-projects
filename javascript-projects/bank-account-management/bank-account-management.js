@@ -43,13 +43,21 @@ class BankAccount {
         return "Insufficient balance or invalid amount.";
     }
 
+    /**
+     * listAllDeposits - Returns a comma-separated string of all deposit amounts.
+     * @returns {string} - Formatted list of deposits.
+     */
     listAllDeposits() {
-        const d = this.transactions.filter(t => t.type === 'deposit').map(t => t.amount);
+        const deposits = this.transactions.filter(t => t.type === 'deposit').map(t => t.amount);
         return `Deposits: ${d.join(', ')}`;
     }
 
+    /**
+     * listAllWithdrawals - Returns a comma-separated string of all withdrawal amounts.
+     * @returns {string} - Formatted list of withdrawals.
+     */
     listAllWithdrawals() {
-        const w = this.transactions.filter(t => t.type === 'withdraw').map(t => t.amount);
+        const withdrawals = this.transactions.filter(t => t.type === 'withdraw').map(t => t.amount);
         return `Withdrawals: ${w.join(', ')}`;
     }
 }
