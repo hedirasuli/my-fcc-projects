@@ -23,6 +23,7 @@
     totalSum += i;
     }
 
-   
+    // Step 5: Return the final sum of all numbers in the range
+    // After the loop completes, totalSum contains the answer
     return totalSum;
 }
