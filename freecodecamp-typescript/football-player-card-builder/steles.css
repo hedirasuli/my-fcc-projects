@@ -102,3 +102,98 @@ body {
     letter-spacing: 0.05em;
     color: #6b7280;
 }
+
+.input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.input:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.25);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.preview-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+@media (min-width: 1024px) {
+    .preview-panel {
+        position: sticky;
+        top: 32px;
+    }
+}
+
+.tier-elite {
+    --accent: #dbb8ff;
+}
+
+.tier-gold {
+    --accent: #f1be32;
+}
+
+.tier-silver {
+    --accent: #99c9ff;
+}
+
+.tier-bronze {
+    --accent: #acd157;
+}
+
+.preview-box {
+    width: 100%;
+    background-color: #1b1b32;
+    border-radius: 12px;
+    border: 2px solid var(--accent);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.preview-label {
+    font-size: 13px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #dfdfe2;
+}
+
+.preview-hint {
+    font-size: 11px;
+    color: #99c9ff;
+    margin-top: 2px;
+}
+
+.card-wrapper {
+    clip-path: polygon(8% 0%, 92% 0%, 100% 5%, 100% 91%, 98% 96%, 93% 99%, 87% 100%, 13% 100%, 7% 99%, 2% 96%, 0% 91%, 0% 5%);
+    background-color: var(--accent);
+    padding: 3px;
+    display: inline-block;
+}
+
+.card {
+    clip-path: polygon(8% 0%, 92% 0%, 100% 5%, 100% 91%, 98% 96%, 93% 99%, 87% 100%, 13% 100%, 7% 99%, 2% 96%, 0% 91%, 0% 5%);
+    width: 260px;
+    background-color: #0a0a23;
+    font-family: "Lato", sans-serif;
+    overflow: hidden;
+}
+
