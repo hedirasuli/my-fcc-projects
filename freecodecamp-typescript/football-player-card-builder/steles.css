@@ -297,3 +297,17 @@ body {
     align-items: center;
     gap: 6px;
 }
+
+.stat-value {
+    font-size: 15px;
+    font-weight: 900;
+    color: #0a0a23;
+    min-width: 24px;
+    text-align: right;
+}
+
+.stat-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #1b1b32;
+    letter-spacing: 0.08em; }
