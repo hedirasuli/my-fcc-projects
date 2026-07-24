@@ -46,7 +46,13 @@ function pairElement(str) {
         }
     };
 
-   
+    /**
+     * Process the DNA string:
+     * 1. split("") - Convert the string into an array of individual characters
+     * 2. map(getPair) - Apply getPair() to each character to get paired arrays
+     * 
+     * Example: "ATC" -> ["A", "T", "C"] -> [["A","T"], ["T","A"], ["C","G"]]
+     */
     const pairedDNA = str
         .split("")
         .map(getPair);
