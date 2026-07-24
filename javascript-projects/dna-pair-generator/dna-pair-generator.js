@@ -54,9 +54,9 @@ function pairElement(str) {
      * Example: "ATC" -> ["A", "T", "C"] -> [["A","T"], ["T","A"], ["C","G"]]
      */
     const pairedDNA = str
-        .split("")
-        .map(getPair);
+        .split("")  // Split string into array of characters
+        .map(getPair); // Map each character to its DNA pair
 
- 
+        // Return the resulting 2D array of base pairs
     return pairedDNA;
 }
