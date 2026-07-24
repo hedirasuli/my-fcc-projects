@@ -29,6 +29,7 @@ function pairElement(str) {
      * Uses a switch statement for clear, readable mapping of base pairs.
      */
     const getPair = (base) => {
+        // Match each base with its complementary pair
         switch (base) {
             case "A":
                 return ["A", "T"]; 
@@ -39,7 +40,8 @@ function pairElement(str) {
             case "G":
                 return ["G", "C"]; 
             default:
-            
+                // If an invalid character is encountered, return an empty array
+                // This handles edge cases gracefully without breaking the program
                 return [];
         }
     };
