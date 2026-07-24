@@ -19,7 +19,15 @@
  * pairElement("GCG");
  */
 function pairElement(str) {
-
+    /**
+     * getPair - Helper function that returns the complementary DNA pair for a given base.
+     * 
+     * @param {string} base - A single DNA base character (A, T, C, or G)
+     * @returns {Array<string>} - An array containing the original base and its complement
+     *                            Returns empty array for invalid input
+     * 
+     * Uses a switch statement for clear, readable mapping of base pairs.
+     */
     const getPair = (base) => {
         switch (base) {
             case "A":
