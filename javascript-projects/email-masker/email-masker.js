@@ -41,11 +41,16 @@ function maskEmail(email) {
         return username + domain;
     }
 
-    
+     // Step 5: Extract the first character of the username
+    // This will be visible (not masked)
     const firstChar = username[0];
+    // Step 6: Extract the last character of the username
+   // This will also be visible (not masked)
     const lastChar = username[len - 1];
 
-    
+    // Step 7: Calculate how many asterisks are needed
+    // We need to mask all characters except the first and last
+    // Example: "myEmail" (7 chars) -> keep 'm' and 'l', mask 5 chars
     const asteriskCount = len - 2;
     
     
