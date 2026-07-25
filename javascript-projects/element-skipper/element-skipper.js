@@ -5,7 +5,6 @@
  * @returns {Array<any>}
  */
 
-
 function dropElements(arr, func) {
    
 
