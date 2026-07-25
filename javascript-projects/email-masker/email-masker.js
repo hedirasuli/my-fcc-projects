@@ -28,13 +28,15 @@ function maskEmail(email) {
     // This separates the username from the domain
     const atIndex = email.indexOf('@');
 
-   
+    // Step 2: Split the email into username and domain parts
     const username = email.slice(0, atIndex);
     const domain = email.slice(atIndex);
-    
+
+    // Step 3: Get the length of the username
     const len = username.length;
 
-   
+    // Step 4: If username is 2 characters or fewer, return it unmasked
+    // Reason: With 1 or 2 chars, masking would hide all or most of it
     if (len <= 2) {
         return username + domain;
     }
