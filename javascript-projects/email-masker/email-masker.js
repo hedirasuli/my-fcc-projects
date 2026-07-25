@@ -53,15 +53,19 @@ function maskEmail(email) {
     // Example: "myEmail" (7 chars) -> keep 'm' and 'l', mask 5 chars
     const asteriskCount = len - 2;
     
-    
+    // Step 8: Generate the mask string
+    // repeat() creates a string with the specified number of asterisks
+    // Example: '*'.repeat(5) -> "*****"
     const mask = '*'.repeat(asteriskCount);
 
-    
+    // Step 9: Construct the final masked email
+    // Format: [firstChar] + [mask] + [lastChar] + [domain]
+    // Example: "m" + "*****" + "e" + "@email.com" = "m****e@email.com"
     return firstChar + mask + lastChar + domain;
 }
 
-
+// Test the function with an example email
 const email = "myEmail@email.com";
 
-
-console.log(maskEmail(email));
+// Log the result to the console
+console.log(maskEmail(email)); // Output: "m****e@email.com"
