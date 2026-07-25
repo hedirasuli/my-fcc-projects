@@ -24,7 +24,8 @@
  * maskEmail("john@email.com");
  */
 function maskEmail(email) {
-    
+    // Step 1: Find the position of the '@' symbol
+    // This separates the username from the domain
     const atIndex = email.indexOf('@');
 
    
