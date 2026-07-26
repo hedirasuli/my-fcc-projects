@@ -17,3 +17,25 @@ const POSITIONS = [
   "ST",
   "CF"
 ] as const;
+
+/**
+ * Union type representing valid player positions derived from POSITIONS array.
+ */
+type Position = typeof POSITIONS[number];
+
+/**
+ * Interface defining the complete structure of player data.
+ */
+interface PlayerData {
+  name: string;
+  overallRating: number;
+  position: string;
+  club: string;
+  imageUrl: string;
+  pac: number; // Pace
+  sho: number; // Shooting
+  pas: number; // Passing
+  dri: number; // Dribbling
+  def: number; // Defending
+  phy: number; // Physicality
+}
