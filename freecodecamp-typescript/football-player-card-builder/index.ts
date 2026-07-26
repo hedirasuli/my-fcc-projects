@@ -39,3 +39,27 @@ interface PlayerData {
   def: number; // Defending
   phy: number; // Physicality
 }
+
+/**
+ * Key used for storing and retrieving player data from browser's localStorage.
+ */
+const STORAGE_KEY = "football_player_card";
+
+/**
+ * Determines the tier tier-category based on the player's overall rating.
+ *
+ * @param rating - The overall rating score of the player.
+ * @returns Tier string ("elite", "gold", "silver", or "bronze").
+ */
+export function getPlayerTier(rating: number): string {
+  if (rating >= 92) return "elite";
+  if (rating >= 85) return "gold";
+  if (rating >= 75) return "silver";
+  return "bronze";
+}
+
+/**
+ * UI Component that renders the visual Football Card for a given player.
+ *
+ * @param props - Component props containing player object.
+ */
