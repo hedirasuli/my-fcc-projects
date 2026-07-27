@@ -80,22 +80,34 @@ button {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+/* Responsive design:
+   - On screens 768px and wider, buttons take 30% width
+   - This makes the buttons narrower and more compact on larger screens */
 @media (min-width: 768px) {
   .emoji-btn {
     width: 30%;
   }
 }
 
+/* Hover effect for buttons:
+   - Removes the gradient and uses a solid purple background
+   - Provides visual feedback when user hovers over a button */
 .emoji-btn:hover {
   background-color: var(--purple);
   background-image: none;
 }
 
+/* Title styling:
+   - Top margin for spacing
+   - Large font size (2rem = 32px) */
 .title {
   margin-top: 15px;
   font-size: 2rem;
 }
 
+/* Description/subtitle styling:
+   - Slightly smaller than title (1.4rem = 22.4px)
+   - Vertical margins for spacing */
 .description {
   font-size: 1.4rem;
   margin: 20px 0;
