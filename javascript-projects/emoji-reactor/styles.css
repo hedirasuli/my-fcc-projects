@@ -1,3 +1,6 @@
+/* Universal selector including pseudo-elements:
+   - Reset margins and padding to zero
+   - Apply border-box sizing for consistent box model */
 *,
 *::before,
 *::after {
@@ -6,6 +9,7 @@
   padding: 0;
 }
 
+/* CSS Custom Properties (variables) for consistent theming */
 :root {
   --light-grey: #efefef;
   --white: #ffffff;
@@ -15,12 +19,19 @@
   --purple: #8b5cf6;
 }
 
+/* Body styling:
+   - Very dark blue background
+   - Light grey text for readability
+   - Sans-serif font stack */
 body {
   background-color: var(--very-dark-blue);
   color: var(--light-grey);
   font-family: sans-serif;
 }
 
+/* Main content container:
+   - Centered text alignment
+   - Inner padding for spacing */
 main {
   text-align: center;
   padding: 10px;
