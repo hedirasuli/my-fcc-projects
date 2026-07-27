@@ -37,6 +37,9 @@ main {
   padding: 10px;
 }
 
+/* Shared flex layout for button containers and buttons:
+   - Evenly spaced items
+   - Centered vertically and horizontally */
 .btn-container,
 button {
   display: flex;
@@ -44,10 +47,21 @@ button {
   align-items: center;
 }
 
+/* Button container:
+   - Column layout stacks buttons vertically
+   - This creates a clean vertical list of emoji buttons */
 .btn-container {
   flex-direction: column;
 }
 
+/* Individual emoji button styling:
+   - 70% width on mobile devices
+   - Pointer cursor for interactivity
+   - White text for contrast
+   - Purple gradient background (light to medium)
+   - Purple border with rounded corners
+   - Padding, large font size, and spacing between buttons
+   - Smooth transitions for hover effects */
 .emoji-btn {
   width: 70%;
   cursor: pointer;
