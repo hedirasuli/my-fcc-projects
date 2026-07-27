@@ -24,13 +24,27 @@ const btns = document.querySelectorAll(".emoji-btn");
  */
 
 function updateCount(button) {
+  // Find the count span inside the button
+  // .count is the span that displays the rating (e.g., "0/10")
   const countEl = button.querySelector(".count"); 
+
+  // Get the current text content (e.g., "3/10")
   const currentText = countEl.textContent; 
+
+  // Split the string by '/' to separate count and max value
+  // Example: "3/10" -> ["3", "10"]
   const parts = currentText.split('/'); 
+
+  // Convert the first part (count) to a number
+  // Using Number() for explicit conversion
   let currCount = Number(parts[0]); 
 
+  // Check if the current count has not reached the maximum (10)
   if (currCount < 10) {
+    // Increment the count by 1
     currCount += 1; 
+    // Update the display with the new count
+    // Template literal creates string like "4/10"
     countEl.textContent = `${currCount}/10`; 
   }
 }
