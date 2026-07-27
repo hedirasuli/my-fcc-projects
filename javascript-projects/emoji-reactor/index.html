@@ -19,6 +19,7 @@
           <p class="description">
             Click on the buttons below to rate your emotions.
           </p>
+          <!-- Container for all emoji buttons -->
           <div class="btn-container">
             <button id="happy-btn" class="emoji-btn" aria-label="Happy face emoji">
               <span role="img" aria-hidden="true">😊</span>
@@ -32,6 +33,8 @@
               <span role="img" aria-hidden="true">😕</span>
               <span class="count">0/10</span>
             </button>
+
+            <!-- Confused emoji button -->
             <button id="sad-btn" class="emoji-btn" aria-label="Angry face emoji">
               <span role="img" aria-hidden="true">😠</span>
               <span class="count">0/10</span>
@@ -46,6 +49,7 @@
             </button>
           </div>
         </main>
+        <!-- External JavaScript file containing the emoji reactor logic -->
       <script src="emoji-reactor.js"></script>
     </body>
 </html>
