@@ -49,11 +49,14 @@ function updateCount(button) {
   }
 }
 
-
+// Step 2: Add click event listeners to all buttons
+// Iterate through each button using forEach
 btns.forEach(btn => {
- 
+  // Add a click event listener to each button
+  // When clicked, it calls the updateCount function with the button as argument
   btn.addEventListener("click", () => {
-  
+    // Pass the current button to updateCount
+    // The arrow function ensures 'this' refers to the button
     updateCount(btn); 
   });
 });
