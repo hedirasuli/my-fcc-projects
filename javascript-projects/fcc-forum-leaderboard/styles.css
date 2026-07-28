@@ -1,9 +1,11 @@
+/* Reset default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* CSS custom properties for consistent theming */
 :root {
   --main-bg-color: #2a2a40;
   --black: #000;
@@ -21,32 +23,33 @@
   --green: #6bca6b;
 }
 
+/* Body background */
 body {
   background-color: var(--main-bg-color);
 }
-
+/* Navigation bar */
 nav {
   background-color: var(--dark-navy);
   padding: 10px 0;
 }
-
+/* freeCodeCamp logo */
 .fcc-logo {
   width: 210px;
   display: block;
   margin: auto;
 }
-
+/* Page title */
 .title {
   margin: 25px 0;
   text-align: center;
   color: var(--light-grey);
 }
-
+/* Table wrapper for horizontal scroll on small screens */
 .table-wrapper {
   padding: 0 25px;
   overflow-x: auto;
 }
-
+/* Table styling */
 table {
   width: 100%;
   color: var(--dark-grey);
@@ -55,18 +58,18 @@ table {
   border-collapse: collapse;
   overflow-x: scroll;
 }
-
+/* Topics column - wider than others */
 #topics {
   text-align: start;
   width: 60%;
 }
-
+/* Table header cells */
 th {
   border-bottom: 2px solid var(--dark-grey);
   padding-bottom: 10px;
   font-size: 1.3rem;
 }
-
+/* Center-align all cells except first column */
 td:not(:first-child) {
   text-align: center;
 }
