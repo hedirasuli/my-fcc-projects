@@ -1,9 +1,11 @@
+/* Reset default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* CSS custom properties for consistent theming */
 :root {
   --main-bg-color: #1b1b32;
   --light-grey: #f5f6f7;
@@ -11,22 +13,26 @@
   --golden-yellow: #feac32;
 }
 
+/* Body styling with dark background and centered text */
 body {
   background-color: var(--main-bg-color);
   text-align: center;
 }
 
+/* Page title styling */
 .title {
   color: var(--light-grey);
   margin: 20px 0;
 }
 
+/* Author grid container - flex wrap for responsive layout */
 #author-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
+/* Individual author card */
 .user-card {
   border-radius: 15px;
   width: 300px;
@@ -35,6 +41,7 @@ body {
   margin: 20px;
 }
 
+/* Author avatar image - cover fit with fixed dimensions */
 .user-img {
   width: 150px;
   height: 150px;
