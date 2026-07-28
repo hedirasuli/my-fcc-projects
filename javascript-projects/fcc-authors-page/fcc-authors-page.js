@@ -1,10 +1,13 @@
+// Get DOM elements for author container and load more button
 const authorContainer = document.getElementById('author-container');
 const loadMoreBtn = document.getElementById('load-more-btn');
 
+// Track pagination range for displaying authors
 let startingIndex = 0;
 let endingIndex = 8;
 let authorDataArr = [];
 
+// Fetch author data from API
 fetch('https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json')
   .then((res) => res.json())
   .then((data) => {
@@ -12,9 +15,11 @@ fetch('https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json')
     displayAuthors(authorDataArr.slice(startingIndex, endingIndex));  
   })
   .catch((err) => {
+    // Show error message if fetch fails
    authorContainer.innerHTML = '<p class="error-msg">There was an error loading the authors</p>';
   });
 
+  // Load next batch of 8 authors
 const fetchMoreAuthors = () => {
   startingIndex += 8;
   endingIndex += 8;
