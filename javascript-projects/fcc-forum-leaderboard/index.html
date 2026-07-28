@@ -8,6 +8,7 @@
       <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
+      <!-- Header with logo and title -->
       <header>
         <nav>
           <img
@@ -19,6 +20,7 @@
         <h1 class="title">Latest Topics</h1>
       </header>
       <main>
+        <!-- Main content: forum leaderboard table -->
         <div class="table-wrapper">
           <table>
             <thead>
@@ -30,10 +32,12 @@
                 <th id="activity">Activity</th>
               </tr>
             </thead>
+            <!-- Dynamic table body populated by JavaScript -->
             <tbody id="posts-container"></tbody>
           </table>
         </div>
       </main>
+      <!-- JavaScript for fetching and displaying forum data -->
       <script src="fcc-forum-leaderboard.js"></script>
     </body>
 </html>
