@@ -50,7 +50,7 @@ const forumCategory = (id) => {
   const { category, className } = selectedCategory;
   return `<a class="category ${className}" href="${forumCategoryUrl}${className}/${id}">${category}</a>`;
 };
-
+// Generate avatar images HTML for posters
 const avatars = (posters, users) => {
   return posters.map((poster) => {
     const user = users.find((user) => user.id === poster.user_id);
@@ -64,6 +64,7 @@ const avatars = (posters, users) => {
   }).join("");
 };
 
+// Render forum topics into the table
 const showLatestPosts = (data) => {
   const { users, topic_list } = data;
   const { topics } = topic_list;
@@ -88,7 +89,7 @@ const showLatestPosts = (data) => {
       </tr>`;
   }).join("");
 };
-
+// Fetch data from API and render
 const fetchData = async () => {
   try {
     const res = await fetch(forumLatest);
