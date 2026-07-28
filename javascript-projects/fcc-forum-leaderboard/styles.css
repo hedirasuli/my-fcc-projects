@@ -74,17 +74,20 @@ td:not(:first-child) {
   text-align: center;
 }
 
+/* Table data cells */
 td {
   border-bottom: 1px solid var(--dark-grey);
   padding: 20px 0;
 }
 
+/* Post title link */
 .post-title {
   font-size: 1.2rem;
   color: var(--medium-grey);
   text-decoration: none;
 }
 
+/* Category badge styling */
 .category {
   padding: 3px;
   color: var(--black);
@@ -94,6 +97,7 @@ td {
   margin: 10px 0 10px;
 }
 
+/* Category color variants */
 .career {
   background-color: var(--salmon-color);
 }
@@ -127,6 +131,7 @@ td {
   background-color: var(--peach);
 }
 
+/* Avatar container - flex layout for multiple avatars */
 .avatar-container {
   display: flex;
   justify-content: center;
@@ -134,11 +139,13 @@ td {
   flex-wrap: wrap;
 }
 
+/* Avatar images */
 .avatar-container img {
   width: 30px;
   height: 30px;
 }
 
+/* Responsive: tablets and smaller screens */
 @media (max-width: 750px) {
   .table-wrapper {
     padding: 0 15px;
