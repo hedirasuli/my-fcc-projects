@@ -1,4 +1,4 @@
-
+/* Favorite icon button styling */
 .favorite-icon {
     font-size: 24px;
     cursor: pointer;
@@ -7,12 +7,13 @@
     background: none;
 }
 
-
+/* Styling for the filled state of the favorite icon */
 .filled { 
     color: red; 
     font-weight: bold;
 }
 
+/* Styling for the list of items */
 .item-list {
     list-style: none;
     padding: 0;
@@ -20,6 +21,7 @@
     direction: rtl;
 }
 
+/* Styling for individual list items */
 .item-list li {
     padding: 10px;
     border-bottom: 1px solid #eee;
