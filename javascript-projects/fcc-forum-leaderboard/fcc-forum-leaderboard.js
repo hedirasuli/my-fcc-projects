@@ -1,9 +1,11 @@
+// API endpoints and base URLs
 const forumLatest =
   'https://cdn.freecodecamp.org/curriculum/forum-latest/latest.json';
 const forumTopicUrl = 'https://forum.freecodecamp.org/t/';
 const forumCategoryUrl = 'https://forum.freecodecamp.org/c/';
 const avatarUrl = 'https://cdn.freecodecamp.org/curriculum/forum-latest';
 
+// Category mapping with IDs, names, and CSS classes
 const allCategories = {
   299: { category: 'Career Advice', className: 'career' },
   409: { category: 'Project Feedback', className: 'feedback' },
@@ -14,6 +16,8 @@ const allCategories = {
   432: { category: 'You Can Do This!', className: 'motivation' },
   560: { category: 'Backend Development', className: 'backend' }
 };
+
+// Convert timestamp to relative time (e.g., "5m ago", "2h ago", "3d ago")
 const timeAgo = (timestamp) => {
   const date = new Date(timestamp);
   const now = new Date();
@@ -27,6 +31,7 @@ const timeAgo = (timestamp) => {
   return `${days}d ago`;
 };
 
+// Format view count (e.g., 1000 → "1k")
 const viewCount = (views) => {
   if (views >= 1000) {
     return Math.floor(views / 1000) + "k";
@@ -34,6 +39,7 @@ const viewCount = (views) => {
   return views;
 };
 
+// Generate category badge HTML
 const forumCategory = (id) => {
   let selectedCategory = allCategories[id];
 
