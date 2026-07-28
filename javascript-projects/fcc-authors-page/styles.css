@@ -48,24 +48,29 @@ body {
   object-fit: cover;
 }
 
+/* Decorative purple divider line */
 .purple-divider {
   background-color: var(--dark-purple);
   width: 100%;
   height: 15px;
 }
 
+/* Author name spacing */
 .author-name {
   margin: 10px;
 }
 
+/* Author bio spacing */
 .bio {
   margin: 20px;
 }
 
+/* Error message text color */
 .error-msg {
   color: var(--light-grey);
 }
 
+/* Load more button styling */
 .btn {
   cursor: pointer;
   width: 200px;
