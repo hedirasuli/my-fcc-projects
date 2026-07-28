@@ -25,6 +25,7 @@ const fetchMoreAuthors = () => {
   endingIndex += 8;
 
   displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
+  // Disable button if no more data to load
   if (authorDataArr.length <= endingIndex) {
     loadMoreBtn.disabled = true;
   loadMoreBtn.style.cursor = "not-allowed";
@@ -32,6 +33,7 @@ const fetchMoreAuthors = () => {
   }
 };
 
+// Render author cards in the container
 const displayAuthors = (authors) => {
   authors.forEach(({ author, image, url, bio }, index) => {
     authorContainer.innerHTML += `
@@ -45,5 +47,5 @@ const displayAuthors = (authors) => {
   `;
   });
 };
-
+// Event listener for load more button
 loadMoreBtn.addEventListener('click', fetchMoreAuthors);
