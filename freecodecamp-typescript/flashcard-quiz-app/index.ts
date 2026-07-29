@@ -135,3 +135,5 @@ if (entryForm) {
 
 // Initial render
 renderCard();
+
+export {};
