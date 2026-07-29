@@ -65,3 +65,67 @@ body {
     perspective: 1000px;
     cursor: pointer;
 }
+/* Inner wrapper handling the 3D transition */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Flipped state triggered by JS (Test #6) */
+.flashcard.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Common styles for Front & Back faces */
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #e5e7eb;
+}
+
+.card-front {
+    background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+    color: #1f2937;
+}
+
+.card-back {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    color: #1e40af;
+    border-color: #bfdbfe;
+    transform: rotateY(180deg);
+}
+
+.card-label {
+    position: absolute;
+    top: 14px;
+    left: 18px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.6;
+}
+
+.card-front p,
+.card-back p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.5;
+    word-break: break-word;
+}
