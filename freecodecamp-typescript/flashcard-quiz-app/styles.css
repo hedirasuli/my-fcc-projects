@@ -129,3 +129,109 @@ body {
     line-height: 1.5;
     word-break: break-word;
 }
+
+/* ==========================================
+   4. Control Buttons
+   ========================================== */
+.controls {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+.btn-secondary:hover {
+    background-color: #e5e7eb;
+}
+
+.btn-danger {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.btn-danger:hover {
+    background-color: #fca5a5;
+    color: #991b1b;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: #ffffff;
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+/* ==========================================
+   5. Form Section Styles
+   ========================================== */
+.form-section {
+    border-top: 2px dashed #f3f4f6;
+    padding-top: 24px;
+}
+
+.form-section h2 {
+    font-size: 1.2rem;
+    color: #374151;
+    margin-bottom: 16px;
+}
+
+.entry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.error-message {
+    color: #dc2626;
+    font-size: 0.85rem;
+    font-weight: 500;
+    min-height: 18px;
+}
