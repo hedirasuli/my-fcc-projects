@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flashcard Quiz App</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div class="app-container">
+            <header class="app-header">
+                <h1>Flashcard Quiz App</h1>
+                <p>Click the card to flip, or add your own custom flashcards!</p>
+            </header>
+
+            <main class="main-content">
+                <!-- Flashcard Display Section -->
+                <section class="card-section">
+                    <!-- Main Flashcard Element (User Story #1 & Test #1) -->
+                    <div id="flashcard" class="flashcard">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-label">Question</span>
+                                <p id="card-question">No cards available.</p>
+                            </div>
+                            <div class="card-back">
+                                <span class="card-label">Answer</span>
+                                <p id="card-answer">Please add a new flashcard.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Controls -->
+                    <div class="controls">
+                        <button id="prev-btn" class="btn btn-secondary" type="button">Previous</button>
+                        <!-- Delete Button (User Story #6 & Test #7) -->
+                        <button id="delete-btn" class="btn btn-danger" type="button">Delete Card</button>
+                        <button id="next-btn" class="btn btn-secondary" type="button">Next</button>
+                    </div>
+                </section>
+
+                <!-- Flashcard Entry Form Section (User Story #7 & Test #10) -->
+                <section class="form-section">
+                    <h2>Add New Flashcard</h2>
+                    <form id="entry-form" class="entry-form">
+                        <div class="form-group">
+                            <label for="front-text">Front (Question):</label>
+                            <!-- textarea element with id front-text (Test #11) -->
+                            <textarea id="front-text" name="frontText" rows="3"
+                                placeholder="Enter the question here..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="back-text">Back (Answer):</label>
+                            <!-- textarea element with id back-text (Test #11) -->
+                            <textarea id="back-text" name="backText" rows="3"
+                                placeholder="Enter the answer here..."></textarea>
+                        </div>
+
+                        <!-- Error message display -->
+                        <div id="error-message" class="error-message"></div>
+
+                        <button type="submit" class="btn btn-primary">Add Card</button>
+                    </form>
+                </section>
+            </main>
+        </div>
+
+        <script src="index.ts"></script>
+    </body>
+
+</html>
