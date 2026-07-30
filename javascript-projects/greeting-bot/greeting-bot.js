@@ -1,15 +1,20 @@
+// Initial greeting messages
 console.log("Hi there!");
 console.log("I am excited to talk to you.");
+
+// Declare and assign bot name
 let bot;
 bot = "teacherBot";
-
+// Bot location
 let botLocation = "the universe";
 
 console.log("Allow me to introduce myself.");
 
+// Introduce bot using string concatenation
 const botIntroduction = "My name is " + bot + ".";
 console.log(botIntroduction);
 
+// Tell where bot lives
 const botLocationSentence = "I live in " + botLocation + ".";
 console.log(botLocationSentence);
 
