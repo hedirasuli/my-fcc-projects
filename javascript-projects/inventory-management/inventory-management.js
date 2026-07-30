@@ -55,7 +55,7 @@ function removeProduct(productName, quantity) {
   const normalizedName = productName.toLowerCase();
   const index = findProductIndex(normalizedName);
 
-  
+  // Product not found
   if (index === -1) {
    
     console.log(normalizedName + " not found");
@@ -65,13 +65,13 @@ function removeProduct(productName, quantity) {
   
   const currentProduct = inventory[index];
   
-
+  // Check if enough quantity is available
   if (currentProduct.quantity >= quantity) {
     
     
     currentProduct.quantity -= quantity;
 
-    
+    // If quantity becomes zero, remove product from inventory
     if (currentProduct.quantity === 0) {
    
       inventory.splice(index, 1);
@@ -82,7 +82,7 @@ function removeProduct(productName, quantity) {
     }
   } 
   else {
-   
+    // Not enough quantity
     console.log("Not enough " + currentProduct.name + " available, remaining pieces: " + currentProduct.quantity);
   }
 }
