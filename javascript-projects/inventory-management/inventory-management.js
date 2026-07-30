@@ -1,3 +1,4 @@
+// Inventory array to store products
 const inventory = [];
 
 /**
@@ -14,21 +15,27 @@ function findProductIndex(productName) {
   return inventory.findIndex(product => product.name === searchName);
 }
 
+/**
+ * Adds a product to inventory or updates quantity if it already exists.
+ * @param {Object} product - Product object with name and quantity
+ * @param {string} product.name - Product name
+ * @param {number} product.quantity - Product quantity
+ */
 
 function addProduct(product) {
   
   const normalizedName = product.name.toLowerCase();
   const index = findProductIndex(normalizedName);
-
+  
   if (index !== -1) {
-   
+    // Product exists → update quantity
     inventory[index].quantity += product.quantity;
 
    
     console.log(normalizedName + " quantity updated");
   } 
   else {
-  
+    // Product doesn't exist → add new product
     product.name = normalizedName;
 
   
@@ -39,6 +46,11 @@ function addProduct(product) {
   }
 }
 
+/**
+ * Removes a specified quantity of a product from inventory.
+ * @param {string} productName - Name of the product to remove
+ * @param {number} quantity - Quantity to remove
+ */
 function removeProduct(productName, quantity) {
   const normalizedName = productName.toLowerCase();
   const index = findProductIndex(normalizedName);
