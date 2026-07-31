@@ -1,10 +1,11 @@
+/* Reset body and html margins/padding, full width and height */
 html, body {
     margin: 0;
     padding: 0;
     width: 100%; 
     height: 100%;
 }
-
+/* Gallery container - flex layout with gap, centered, max-width */
 .gallery {
     display: flex;
     gap: 10px;
@@ -14,14 +15,14 @@ html, body {
     margin-left: auto;
     margin-right: auto;
 }
-
+/* Gallery item - clickable with border and shadow */
 .gallery-item {
     cursor: pointer;
     overflow: hidden;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
 }
-
+/* Gallery image - fill container, cover fit, smooth hover zoom */
 .gallery-item img {
     width: 100%;
     height: 100%;
@@ -29,11 +30,11 @@ html, body {
     display: block;
     transition: transform 0.3s ease;
 }
-
+/* Hover effect - zoom in slightly */
 .gallery-item img:hover {
     transform: scale(1.05);
 }
-
+/* Lightbox overlay - fixed fullscreen, dark background, hidden by default */
 .lightbox {
     position: fixed;
     top: 0;
@@ -46,7 +47,7 @@ html, body {
     align-items: center;
     z-index: 1000;
 }
-
+/* Close button - top-right corner, white, transparent background */
 #close-btn {
     position: absolute;
     top: 20px;
@@ -58,7 +59,7 @@ html, body {
     z-index: 1001; 
     font-size: 24px; 
 }
-
+/* Lightbox image - max 90% of viewport, white border, glow shadow */
 #lightbox-image {
     max-width: 90%; 
     max-height: 90%; 
@@ -69,7 +70,7 @@ html, body {
     object-fit: contain; 
 }
 
-
+/* Page heading */
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: xx-large; 
@@ -79,11 +80,10 @@ h1 {
     margin-bottom: 20px;
     
 }
-
+/* Main content container - centered with max-width */
 .main-content {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
 }
-
