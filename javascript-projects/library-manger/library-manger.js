@@ -1,3 +1,4 @@
+// Library catalog with book objects
 const library = [
   {
     title: 'Your Next Five Moves: Master the Art of Business Strategy',
@@ -52,6 +53,7 @@ const library = [
 
 console.log("Books in the Library:\n");
 
+// Get formatted list of all books with titles and authors
 function getBookInformation(catalog) {
   return catalog.map(book => `${book.title} by ${book.author}`).join("\n");
 }
@@ -59,7 +61,7 @@ function getBookInformation(catalog) {
 console.log(getBookInformation(library));
 
 console.log("\nList of book summaries:\n");
-
+// Get all book summaries
 function getBookSummaries(catalog) {
   return catalog.map((book) => book.about).join("\n");
 }
@@ -78,7 +80,7 @@ console.log("\nList of books by James Clear:\n");
 console.log(getBooksByAuthor(library, "James Clear"));
 
 console.log("\nTotal number of pages for all library books:\n");
-
+// Calculate total pages using reduce
   function getTotalPages(catalog) {
     return catalog.reduce((total, book) => total + book.pages, 0);
   }
