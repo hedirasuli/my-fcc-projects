@@ -1,17 +1,35 @@
+// Array to store lunch menu items
 const lunches = [];
 
+/**
+ * Add an item to the end of the menu
+ * @param {Array} menuArray - The menu array
+ * @param {string} lunchItem - Item to add
+ * @returns {Array} - Updated menu array
+ */
 function addLunchToEnd(menuArray, lunchItem) {
     menuArray.push(lunchItem);
     console.log(`${lunchItem} added to the end of the lunch menu.`);
     return menuArray;
 }
 
+/**
+ * Add an item to the start of the menu
+ * @param {Array} menuArray - The menu array
+ * @param {string} lunchItem - Item to add
+ * @returns {Array} - Updated menu array
+ */
 function addLunchToStart(menuArray, lunchItem) {
     menuArray.unshift(lunchItem);
     console.log(`${lunchItem} added to the start of the lunch menu.`);
     return menuArray;
 }
 
+/**
+ * Remove the last item from the menu
+ * @param {Array} menuArray - The menu array
+ * @returns {Array} - Updated menu array
+ */
 function removeLastLunch(menuArray) {
     if (menuArray.length === 0) {
         console.log("No lunches to remove.");
