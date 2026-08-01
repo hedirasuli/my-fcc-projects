@@ -40,6 +40,11 @@ function removeLastLunch(menuArray) {
     return menuArray;
 }
 
+/**
+ * Remove the first item from the menu
+ * @param {Array} menuArray - The menu array
+ * @returns {Array} - Updated menu array
+ */
 function removeFirstLunch(menuArray) {
     if (menuArray.length === 0) {
         console.log("No lunches to remove.");
@@ -50,6 +55,10 @@ function removeFirstLunch(menuArray) {
     return menuArray;
 }
 
+/**
+ * Select and display a random lunch item
+ * @param {Array} menuArray - The menu array
+ */
 function getRandomLunch(menuArray) {
     if (menuArray.length === 0) {
         console.log("No lunches available.");
@@ -60,6 +69,10 @@ function getRandomLunch(menuArray) {
     }
 }
 
+/**
+ * Display all menu items as a comma-separated list
+ * @param {Array} menuArray - The menu array
+ */
 function showLunchMenu(menuArray) {
     if (menuArray.length === 0) {
         console.log("The menu is empty.");
@@ -68,20 +81,21 @@ function showLunchMenu(menuArray) {
         console.log(`Menu items: ${menuString}`);
     }
 }
-
+// Show initial empty menu
 showLunchMenu(lunches);
 
 addLunchToEnd(lunches, "Tacos");
 addLunchToStart(lunches, "Sushi");
 addLunchToEnd(lunches, "Burger");
+// Display current menu
 showLunchMenu(lunches);
-
+// Get a random lunch
 getRandomLunch(lunches);
-
+// Remove from end and start
 removeLastLunch(lunches);
 removeFirstLunch(lunches);
 showLunchMenu(lunches);
-
+// Try removing more items than available
 removeLastLunch(lunches);
 removeLastLunch(lunches);
 getRandomLunch(lunches);
