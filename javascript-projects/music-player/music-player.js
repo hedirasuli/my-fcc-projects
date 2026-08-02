@@ -151,7 +151,9 @@ const setPlayerDisplay = () => {
  * Highlight the currently playing song in the playlist
  */
 const highlightCurrentSong = () => {
+  // Remove highlight from previous song
   const previousCurrentSong = document.querySelector('.playlist-song[aria-current="true"]');
+  // Highlight the current song
   previousCurrentSong?.removeAttribute("aria-current");
   const songToHighlight = document.getElementById(
     `song-${userData.currentSong?.id}`
@@ -160,19 +162,28 @@ const highlightCurrentSong = () => {
   songToHighlight?.setAttribute("aria-current", "true");
 };
 
+/**
+ * Update play button's accessible label
+ */
 const setPlayButtonAccessibleText = () => {
   const song = userData.currentSong;
   playButton.setAttribute("aria-label", userData.currentSong ? `Play ${song.title}` : "Play");
 };
 
+// --- Event Listeners ---
+
+// Play button
 playButton.addEventListener("click", () => {
   if (userData.currentSong === null) {
+    // Start with first song
     playSong(userData.songs[0].id);
   } else {
+    // Resume current song
     playSong(userData.currentSong.id, false);
   }
 });
 
+// Playlist song buttons
 const songs = document.querySelectorAll(".playlist-song");
 
 songs.forEach((song) => {
@@ -183,10 +194,11 @@ songs.forEach((song) => {
   })
 })
 
+// Pause button
 pauseButton.addEventListener("click", pauseSong);
-
+// Next button
 nextButton.addEventListener("click", playNextSong);
-
+// Previous button
 previousButton.addEventListener("click", playPreviousSong);
-
-  audio.addEventListener("ended", playNextSong);
+// Auto-play next song when current ends
+audio.addEventListener("ended", playNextSong);
