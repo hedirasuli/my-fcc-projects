@@ -62,45 +62,62 @@ const userData = {
  * @param {boolean} start - Start from beginning (default: true)
  */
 const playSong = (id, start=true) => {
+  // Find the song by ID
   const song = userData.songs.find((song) => song.id === id);
+
+  // Set audio source
   audio.src = song.src;
   audio.title = song.title;
+
+  // Set current time (from beginning or saved position)
   if (userData.currentSong === null || start) {
     audio.currentTime = 0
   } else {
     audio.currentTime = userData.songCurrentTime;
   }
+  // Update state and UI
   userData.currentSong = song;
   playButton.classList.add("playing");
   setPlayerDisplay();
   highlightCurrentSong();
   setPlayButtonAccessibleText();
+  // Start playback
   audio.play();
 }
 
+/**
+ * Pause the current song
+ */
 const pauseSong = () => {
   userData.songCurrentTime = audio.currentTime;
   playButton.classList.remove("playing");
   audio.pause();
 }
 
+// Helper functions for song navigation
 const getCurrentSongIndex = () => userData.songs.indexOf(userData.currentSong);
-
 const getNextSong = () => userData.songs[getCurrentSongIndex() + 1];
-
 const getPreviousSong = () => userData.songs[getCurrentSongIndex() - 1];
 
+/**
+ * Play the previous song
+ */
 const playPreviousSong = () => {
   if (userData.currentSong === null) return;
   const previousSong = getPreviousSong();
   if (previousSong) {
     playSong(previousSong.id);
   } else {
+    // Loop to last song
     playSong(userData.songs[0].id);
   }
 };
 
+/**
+ * Play the next song
+ */
 const playNextSong = () => {
+  // If no song is playing, start with first
   if (userData.currentSong === null) {
     playSong(userData.songs[0].id);
     return
@@ -109,6 +126,7 @@ const playNextSong = () => {
   if (nextSong) {
     playSong(nextSong.id);
   } else {
+    // No next song - reset and stop
     userData.currentSong = null;
     userData.songCurrentTime = 0;
     setPlayerDisplay();
@@ -118,6 +136,9 @@ const playNextSong = () => {
   }
 }
 
+/**
+ * Update player display with current song info
+ */
 const setPlayerDisplay = () => {
   const currentTitle = userData.currentSong?.title;
   const currentArtist = userData.currentSong?.artist;
@@ -126,6 +147,9 @@ const setPlayerDisplay = () => {
   songArtist.textContent = currentArtist ? currentArtist : "";
 };
 
+/**
+ * Highlight the currently playing song in the playlist
+ */
 const highlightCurrentSong = () => {
   const previousCurrentSong = document.querySelector('.playlist-song[aria-current="true"]');
   previousCurrentSong?.removeAttribute("aria-current");
