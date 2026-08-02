@@ -1,3 +1,4 @@
+// DOM element references
 const playlistSongs = document.getElementById("playlist-songs");
 const playButton = document.getElementById("play");
 const pauseButton = document.getElementById("pause");
@@ -5,6 +6,8 @@ const nextButton = document.getElementById("next");
 const previousButton = document.getElementById("previous");
 const playingSong = document.getElementById("player-song-title");
 const songArtist = document.getElementById("player-song-artist");
+
+// Song data array
 const allSongs = [
   {
     id: 0,
@@ -43,14 +46,21 @@ const allSongs = [
   },
 ];
 
+// Audio object for playback
 const audio = new Audio();
 
+// User state
 const userData = {
   songs: allSongs,
   currentSong: null,
   songCurrentTime: 0,
 }
 
+/**
+ * Play a song by ID
+ * @param {number} id - Song ID
+ * @param {boolean} start - Start from beginning (default: true)
+ */
 const playSong = (id, start=true) => {
   const song = userData.songs.find((song) => song.id === id);
   audio.src = song.src;
