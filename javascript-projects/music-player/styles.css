@@ -230,6 +230,7 @@ Player Content
     padding: 5px;
   }
 
+/* Current playing song highlight */
   [aria-current="true"] {
     background-color: var(--background-color);
   }
@@ -249,6 +250,9 @@ Player Content
     font-family: var(--font-family);
   }
 
+/* ============================================
+Song Text Elements
+============================================ */
   #player-song-title,
   #player-song-artist {
     margin: 0;
@@ -297,6 +301,9 @@ Player Content
     fill: #ff0000;
   }
 
+/* ============================================
+Responsive: Mobile (max-width: 700px)
+============================================ */
   @media (max-width: 700px) {
     .player,
     .playlist {
@@ -316,6 +323,7 @@ Player Content
       scrollbar-width: thin;
     }
 
+/* WebKit scrollbar styling */
     #playlist-songs::-webkit-scrollbar {
       width: 5px;
     }
@@ -335,7 +343,7 @@ Player Content
     h2 {
       font-size: 0.75rem;
     }
-
+    /* Width adjustments for mobile */
     .player-bar,
     .playlist-bar,
     .player-content,
@@ -358,7 +366,7 @@ Player Content
     .playlist-song-duration > button {
       padding: 0;
     }
-
+    /* Player content overlay for mobile */
     .player-content {
       display: inline;
       position: relative;
