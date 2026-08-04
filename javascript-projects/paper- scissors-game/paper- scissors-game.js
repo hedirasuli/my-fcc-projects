@@ -1,10 +1,21 @@
+// Available options for the game
 const options = ["Rock", "Paper", "Scissors"];
 
+/**
+ * Get a random computer choice
+ * @returns {string} - Random choice: "Rock", "Paper", or "Scissors"
+ */
 function getRandomComputerResult() {
   const randomIndex = Math.floor(Math.random() * options.length);
   return options[randomIndex];
 }
 
+/**
+ * Check if the player won the round
+ * @param {string} playerChoice - Player's choice
+ * @param {string} computerChoice - Computer's choice
+ * @returns {boolean} - True if player wins, false otherwise
+ */
 function hasPlayerWonTheRound(playerChoice, computerChoice) {
   return (
     (playerChoice === "Rock" && computerChoice === "Scissors") ||
@@ -13,9 +24,15 @@ function hasPlayerWonTheRound(playerChoice, computerChoice) {
   );
 }
 
+// Score tracking
 let playerScore = 0;
 let computerScore = 0;
 
+/**
+ * Determine the result of a round and update scores
+ * @param {string} userOption - Player's choice
+ * @returns {string} - Result message
+ */
 function getRoundResults(userOption) {
   const computerResult = getRandomComputerResult();
 
