@@ -46,7 +46,7 @@ function getRoundResults(userOption) {
     return `Computer wins! ${computerResult} beats ${userOption}`;
   }
 }
-
+// DOM element references
 const playerScoreSpanElement = document.getElementById("player-score");
 const computerScoreSpanElement = document.getElementById("computer-score");
 const roundResultsMsg = document.getElementById("results-msg");
@@ -54,16 +54,22 @@ const winnerMsgElement = document.getElementById("winner-msg");
 const optionsContainer = document.querySelector(".options-container");
 const resetGameBtn = document.getElementById("reset-game-btn");
 
+/**
+ * Display round results and check for game winner
+ * @param {string} userOption - Player's choice
+ */
 function showResults(userOption) {
+  // Update round result message
   roundResultsMsg.innerText = getRoundResults(userOption);
+  // Update score display
   computerScoreSpanElement.innerText = computerScore;
   playerScoreSpanElement.innerText = playerScore;
-
+  // Check if game is over (first to 3 points wins)
   if (playerScore === 3 || computerScore === 3) {
     winnerMsgElement.innerText = `${
       playerScore === 3 ? "Player" : "Computer"
     } has won the game!`;
-
+    // Hide options and show reset button
     resetGameBtn.style.display = "block";
     optionsContainer.style.display = "none";
   }
