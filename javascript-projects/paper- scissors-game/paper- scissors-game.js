@@ -75,26 +75,29 @@ function showResults(userOption) {
   }
 };
 
+/**
+ * Reset the game to initial state
+ */
 function resetGame() {
-  
+  // Reset scores
   playerScore = 0;
   computerScore = 0;
 
-  
+  // Update score display
   playerScoreSpanElement.innerText = playerScore;
   computerScoreSpanElement.innerText = computerScore;
 
- 
+  // Clear result messages
   winnerMsgElement.innerText = "";
   roundResultsMsg.innerText = "";
 
-  
+  // Show options and hide reset button
   resetGameBtn.style.display = 'none';
   optionsContainer.style.display = 'flex'; 
 }
-
+// Event listener for reset button
 resetGameBtn.addEventListener("click", resetGame);
-
+// Button event listeners for player choices
 const rockBtn = document.getElementById("rock-btn");
 const paperBtn = document.getElementById("paper-btn");
 const scissorsBtn = document.getElementById("scissors-btn");
