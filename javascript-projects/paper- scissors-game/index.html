@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <!-- Page Title -->
     <h1>Let's play Rock, Paper, Scissors!</h1>
     <main>
+      <!-- Rules Accordion (expandable) -->
       <details class="rules-container">
         <summary>Rules to the game</summary>
 
@@ -27,7 +29,7 @@
           Paper), then no one gets the point.
         </p>
       </details>
-
+      <!-- Score Display -->
       <div class="score-container">
         <strong
           >Player Score: <span class="score" id="player-score">0</span></strong
@@ -37,7 +39,7 @@
           <span class="score" id="computer-score">0</span></strong
         >
       </div>
-
+      <!-- Options: Rock, Paper, Scissors buttons -->
       <section class="options-container">
         <h2>Choose an option:</h2>
         <div class="btn-container">
@@ -46,13 +48,14 @@
           <button id="scissors-btn" class="btn">Scissors</button>
         </div>
       </section>
-
+      <!-- Results Display -->
       <div class="results-container">
         <p id="results-msg"></p>
         <p id="winner-msg"></p>
         <button class="btn" id="reset-game-btn">Play again?</button>
       </div>
     </main>
+    <!-- JavaScript for game logic -->
     <script src="paper- scissors-game.js"></script>
   </body>
 </html>
