@@ -7,31 +7,36 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <!-- Tab container -->
     <div class="tabs">
+      <!-- Tab group title -->
       <h2 id="tabs-title">Planets</h2>
+      <!-- Tab list - role="tablist" for accessibility -->
       <div role="tablist" aria-labelledby="tabs-title">
         <button role="tab" aria-controls="panel-earth" aria-selected="true" id="tab-earth">🌍 Earth</button>
         <button role="tab" aria-controls="panel-saturn" aria-selected="false" id="tab-saturn">🪐 Saturn</button>
         <button role="tab" aria-controls="panel-mars" aria-selected="false" id="tab-mars">🔴 Mars</button>
       </div>
-
+      <!-- Tab Panel 1: Earth (visible by default) -->
       <div id="panel-earth" role="tabpanel" aria-labelledby="tab-earth">
         <p>
           Earth is our home planet, known for its abundant water, diverse ecosystems, and life-supporting atmosphere. It's the only planet in the solar system known to harbor life.
         </p>
       </div>
+      <!-- Tab Panel 2: Saturn (hidden by default) -->
       <div id="panel-saturn" role="tabpanel" aria-labelledby="tab-saturn" hidden>
         <p>
           Saturn is famous for its beautiful and extensive ring system made of ice and rock particles. It's a gas giant with dozens of moons orbiting it.
         </p>
       </div>
+      <!-- Tab Panel 3: Mars (hidden by default) -->
       <div id="panel-mars" role="tabpanel" aria-labelledby="tab-mars" hidden>
         <p>
           Mars, the red planet, is a rocky world with the tallest volcano and deepest canyon in the solar system. It's a key focus for exploration in the search for past or present life.
         </p>
       </div>
     </div>
-
+    <!-- JavaScript for tab functionality -->
     <script src="planets-tablist.js"></script>
   </body>
 </html>
