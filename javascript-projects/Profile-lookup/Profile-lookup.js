@@ -26,22 +26,24 @@ let contacts = [
 ];
 
 function lookUpProfile(name, prop) {
+  // Loop through each contact in the contacts array
   for (let i = 0; i < contacts.length; i++) {
+    // Store the current contact object for easier access
     const contact = contacts[i]; 
     
-
+    // Check if the current contact's firstName matches the provided name
     if (contact.firstName === name) {
       
-     
+      // Check if the contact has the property being searched for
       if (contact.hasOwnProperty(prop)) {
+        // If the property exists, return its value
         return contact[prop]; 
       } else {
-       
+        // If the property doesn't exist, return an error message
         return "No such property"; 
       }
     }
   }
-  
-  
+  // If the loop finishes without finding a matching contact, return an error message
   return "No such contact"; 
 }
