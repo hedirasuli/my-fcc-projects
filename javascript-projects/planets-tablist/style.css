@@ -1,9 +1,10 @@
+/* Tab list container */
 .tabs [role="tablist"] {
   display: flex;
   gap: 0.5rem;
   margin-bottom: 1rem;
 }
-
+/* Tab buttons */
 [role="tab"] {
   padding: 0.5rem 1rem;
   background: #eee;
@@ -11,12 +12,12 @@
   cursor: pointer;
   font-weight: bold;
 }
-
+/* Active tab */
 [role="tab"][aria-selected="true"] {
   background: #fff;
   border-bottom: 2px solid dodgerblue;
 }
-
+/* Tab panels — hidden by default, shown via JS */
 [role="tabpanel"] {
   border: 1px solid #ccc;
   padding: 1rem;
